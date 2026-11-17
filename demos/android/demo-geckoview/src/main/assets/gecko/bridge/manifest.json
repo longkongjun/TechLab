@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "name": "TechLab renderer bridge",
+  "version": "1.3",
+  "browser_specific_settings": {"gecko": {"id": "renderer@techlab.dev"}},
+  "permissions": ["geckoViewAddons", "nativeMessaging", "nativeMessagingFromContent"],
+  "content_scripts": [
+    {"matches": ["https://longkongjun.github.io/TechLab/geckoview/render/index.html?*"], "js": ["bridge.js"], "run_at": "document_start"}
+  ]
+}

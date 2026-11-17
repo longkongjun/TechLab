@@ -1,0 +1,27 @@
+
+START MENTAL_ARITHMETIC total=10 rendererPid=4657 cold=true
+
+ITEM id=Q0206 index=0 1000x106 time=6049 image=/data/user/0/dev.techlab.android/cache/rendered/811dad36-fe1d-43d1-a469-f44f63457bcc/001-Q0206.png
+
+ITEM id=Q0207 index=1 1000x106 time=6644 image=/data/user/0/dev.techlab.android/cache/rendered/811dad36-fe1d-43d1-a469-f44f63457bcc/002-Q0207.png
+
+ITEM id=Q0208 index=2 1000x106 time=7267 image=/data/user/0/dev.techlab.android/cache/rendered/811dad36-fe1d-43d1-a469-f44f63457bcc/003-Q0208.png
+
+ITEM id=Q0209 index=3 1000x106 time=7839 image=/data/user/0/dev.techlab.android/cache/rendered/811dad36-fe1d-43d1-a469-f44f63457bcc/004-Q0209.png
+
+ITEM id=Q0210 index=4 1000x106 time=8451 image=/data/user/0/dev.techlab.android/cache/rendered/811dad36-fe1d-43d1-a469-f44f63457bcc/005-Q0210.png
+
+ITEM id=Q0211 index=5 1000x106 time=9134 image=/data/user/0/dev.techlab.android/cache/rendered/811dad36-fe1d-43d1-a469-f44f63457bcc/006-Q0211.png
+
+ITEM id=Q0212 index=6 1000x106 time=9750 image=/data/user/0/dev.techlab.android/cache/rendered/811dad36-fe1d-43d1-a469-f44f63457bcc/007-Q0212.png
+
+ITEM id=Q0213 index=7 1000x106 time=10363 image=/data/user/0/dev.techlab.android/cache/rendered/811dad36-fe1d-43d1-a469-f44f63457bcc/008-Q0213.png
+
+ITEM id=Q0214 index=8 1000x106 time=11032 image=/data/user/0/dev.techlab.android/cache/rendered/811dad36-fe1d-43d1-a469-f44f63457bcc/009-Q0214.png
+
+ITEM id=Q0215 index=9 1000x106 time=11599 image=/data/user/0/dev.techlab.android/cache/rendered/811dad36-fe1d-43d1-a469-f44f63457bcc/010-Q0215.png
+
+DONE count=10 first=6049ms total=11652ms sampledRendererPss=190428KB
+
+PASS
+

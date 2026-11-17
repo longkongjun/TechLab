@@ -222,10 +222,9 @@ function render(input) {
     }
   }
   if (batch) {
-    frame().then(() => {
-      if (current !== state) return;
-      for (const card of cards) prepareBatchQuestion(state, card);
-    });
+    // Flush style/layout to start the fonts used by the new content before reading fonts.ready.
+    content.getBoundingClientRect();
+    for (const card of cards) prepareBatchQuestion(state, card);
     return;
   }
   const images = [...content.querySelectorAll("img")];
@@ -261,9 +260,9 @@ async function prepareBatchQuestion(state, card) {
     if (geometry[0].rect.height > card.parentElement.getBoundingClientRect().height) {
       throw new Error("题目高度超出离屏裁图区域");
     }
-    // Let the brackets and number alignments reach the rendered frame before native requests pixels.
-    await frame();
-    await frame();
+    // Native captureFullPage paints the current document, including offscreen regions. It doesn't
+    // read the last displayed frame; waiting for rAF here can stall a service without visible vsync.
+    card.getBoundingClientRect();
     if (current === state) send({ ...result, coordinateSpace: "document-css-pixels",
       pixelRatio: devicePixelRatio, geometry, formulaFallbacks: card.querySelectorAll("[data-fallback]").length });
   } catch (error) {
@@ -317,24 +316,25 @@ function textBaselineReader() {
 function fragmentsIn(card, baselines) {
   const fragments = [];
   const range = document.createRange();
-  function push(kind, block, regions, baseline) {
+  function push(kind, block, regions, baseline, shifted = false) {
     for (const r of regions) {
       if (r.width > 0 && r.height > 0) {
-        fragments.push({ kind, block, ...rect(r), baseLine: baseline ? baseline(r) + scrollY : undefined });
+        fragments.push({ kind, block, shifted, ...rect(r), baseLine: baseline ? baseline(r) + scrollY : undefined });
       }
     }
   }
-  function walk(node, block) {
+  function walk(node, block, shifted = false) {
     if (node.nodeType === Node.TEXT_NODE) {
       if (node.textContent.trim()) {
         range.selectNodeContents(node);
         const offset = baselines.forText(node);
-        push("text", block, range.getClientRects(), r => r.top + offset);
+        push("text", block, range.getClientRects(), r => r.top + offset, shifted);
       }
       return;
     }
     if (!(node instanceof Element) || node.matches(".subquestion, .question-heading")) return;
-    if (node.matches("p, td, th, li, .stem, figcaption")) block = node;
+    if (node.matches("p, tr, li, .stem, figcaption")) block = node;
+    if (node.matches("sup, sub")) shifted = true;
     if (node.matches("img")) {
       push("image", block, node.getClientRects());
       return;
@@ -345,12 +345,12 @@ function fragmentsIn(card, baselines) {
         const strut = base.querySelector(":scope > .strut");
         if (!strut) continue;
         const y = strut.getBoundingClientRect().bottom + (parseFloat(getComputedStyle(strut).verticalAlign) || 0);
-        push("formula", block, base.getClientRects(), () => y);
+        push("formula", block, base.getClientRects(), () => y, shifted);
       }
       return;
     }
     if (node.matches(".blank")) return;
-    for (const child of node.childNodes) walk(child, block);
+    for (const child of node.childNodes) walk(child, block, shifted);
   }
   for (const child of card.childNodes) walk(child, card);
   return fragments;
@@ -360,7 +360,7 @@ function linesIn(card, baselines) {
   const lines = [];
   const fragments = fragmentsIn(card, baselines);
   const add = (fragment, line) => {
-    const { block, kind, baseLine, ...r } = fragment;
+    const { block, kind, baseLine, shifted, ...r } = fragment;
     if (line) {
       line.rect = union(line.rect, r);
       line.kinds.add(kind);
@@ -370,19 +370,47 @@ function linesIn(card, baselines) {
         baselineAnchor: Number.isFinite(baseLine) ? fragment : null });
     }
   };
-  for (const f of fragments.filter(f => f.kind === "text")) {
+  // Normal text supplies the line baseline. KaTeX can anchor a line that has no text.
+  const addByBaseline = f => {
     const line = lines.find(line => line.block === f.block &&
-      Math.abs(line.anchor.baseLine - f.baseLine) <= 4);
+      Math.abs(line.baselineAnchor?.baseLine - f.baseLine) <= 4);
     add(f, line);
-  }
-  for (const f of fragments.filter(f => f.kind !== "text")) {
+  };
+  for (const f of fragments.filter(f => f.kind === "text" && !f.shifted)) addByBaseline(f);
+  for (const f of fragments.filter(f => f.kind === "formula" && !f.shifted)) addByBaseline(f);
+  // Scripts and images contribute their bounds to the nearest overlapping line in the same flow.
+  for (const f of fragments.filter(f => f.shifted || f.kind === "image")) {
+    const middle = r => r.y + r.height / 2;
     const candidates = lines.filter(line => line.block === f.block &&
       f.y < line.anchor.y + line.anchor.height && line.anchor.y < f.y + f.height);
-    candidates.sort((a, b) => Math.abs(a.anchor.y + a.anchor.height - f.y - f.height) -
-      Math.abs(b.anchor.y + b.anchor.height - f.y - f.height));
+    candidates.sort((a, b) => Math.abs(middle(a.anchor) - middle(f)) - Math.abs(middle(b.anchor) - middle(f)));
     add(f, candidates[0]);
   }
-  return lines.sort((a, b) => a.rect.y - b.rect.y || a.rect.x - b.rect.x)
+  const byPosition = (a, b) => a.rect.y - b.rect.y || a.rect.x - b.rect.x;
+  const optionRows = new Map();
+  const seenOptions = new Set();
+  const merged = [];
+  for (const line of lines.sort(byPosition)) {
+    const option = line.block;
+    if (option.matches(".options > li") && !seenOptions.has(option)) {
+      seenOptions.add(option);
+      const list = option.parentElement;
+      if (!optionRows.has(list)) optionRows.set(list, new Map());
+      const rows = optionRows.get(list);
+      // Grid items on the same row share a top even when their contents have different baselines.
+      const top = option.getBoundingClientRect().top;
+      const row = rows.get(top);
+      if (row) {
+        row.rect = union(row.rect, line.rect);
+        for (const kind of line.kinds) row.kinds.add(kind);
+        row.baselineAnchor ??= line.baselineAnchor;
+        continue;
+      }
+      rows.set(top, line);
+    }
+    merged.push(line);
+  }
+  return merged.sort(byPosition)
     .map(line => ({ rect: line.rect, kinds: [...line.kinds], baseLine: line.baselineAnchor?.baseLine }));
 }
 

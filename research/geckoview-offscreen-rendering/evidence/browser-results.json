@@ -1,0 +1,47 @@
+{
+  "result": {
+    "type": "object",
+    "value": [
+      {
+        "paper": 8826666,
+        "count": 17,
+        "lines": 52,
+        "checks": 33,
+        "images": 12,
+        "formulaFallbacks": []
+      },
+      {
+        "paper": 4269352,
+        "count": 26,
+        "lines": 163,
+        "checks": 21,
+        "images": 10,
+        "formulaFallbacks": []
+      },
+      {
+        "paper": 8905199,
+        "count": 15,
+        "lines": 375,
+        "checks": 55,
+        "images": 1,
+        "formulaFallbacks": []
+      },
+      {
+        "paper": 2440029,
+        "count": 19,
+        "lines": 175,
+        "checks": 26,
+        "images": 6,
+        "formulaFallbacks": []
+      },
+      {
+        "paper": 2444548,
+        "count": 35,
+        "lines": 203,
+        "checks": 75,
+        "images": 0,
+        "formulaFallbacks": []
+      }
+    ]
+  }
+}

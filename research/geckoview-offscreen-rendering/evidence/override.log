@@ -1,0 +1,9 @@
+
+START 4269352 total=1 rendererPid=29055 cold=true
+
+ITEM id=89776710 index=0 1000x223 time=5434 image=/data/user/0/dev.techlab.android/cache/rendered/d14a0da8-b8f4-425d-9066-17381de1d8ab/001-89776710.png
+
+DONE count=1 first=5434ms total=5536ms sampledRendererPss=178572KB
+
+PASS
+

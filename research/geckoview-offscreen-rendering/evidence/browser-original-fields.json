@@ -1,0 +1,42 @@
+{
+  "result": {
+    "type": "object",
+    "value": [
+      {
+        "paper": 8826666,
+        "count": 17,
+        "subquestions": 0,
+        "formulas": 38,
+        "sourceImages": 12
+      },
+      {
+        "paper": 4269352,
+        "count": 26,
+        "subquestions": 17,
+        "formulas": 196,
+        "sourceImages": 10
+      },
+      {
+        "paper": 8905199,
+        "count": 15,
+        "subquestions": 35,
+        "formulas": 0,
+        "sourceImages": 1
+      },
+      {
+        "paper": 2440029,
+        "count": 19,
+        "subquestions": 12,
+        "formulas": 38,
+        "sourceImages": 6
+      },
+      {
+        "paper": 2444548,
+        "count": 35,
+        "subquestions": 29,
+        "formulas": 0,
+        "sourceImages": 0
+      }
+    ]
+  }
+}

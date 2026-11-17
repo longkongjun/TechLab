@@ -1,0 +1,23 @@
+
+START 4269352 total=3 rendererPid=28459 cold=true
+
+ITEM id=89776710 index=0 1000x223 time=7015 image=/data/user/0/dev.techlab.android/cache/rendered/65c92b06-0e6c-434f-b7f4-5a88cf85849e/001-89776710.png
+
+ITEM id=89776728 index=1 1000x261 time=7853 image=/data/user/0/dev.techlab.android/cache/rendered/65c92b06-0e6c-434f-b7f4-5a88cf85849e/002-89776728.png
+
+ITEM id=89776741 index=2 1000x288 time=8561 image=/data/user/0/dev.techlab.android/cache/rendered/65c92b06-0e6c-434f-b7f4-5a88cf85849e/003-89776741.png
+
+DONE count=3 first=7015ms total=8638ms sampledRendererPss=162525KB
+
+START 4269352 total=3 rendererPid=28459 cold=false
+
+ITEM id=89776710 index=0 1000x223 time=932 image=/data/user/0/dev.techlab.android/cache/rendered/8aacdbbb-7c05-4842-a8f1-c25cb8dff255/001-89776710.png
+
+ITEM id=89776728 index=1 1000x261 time=1577 image=/data/user/0/dev.techlab.android/cache/rendered/8aacdbbb-7c05-4842-a8f1-c25cb8dff255/002-89776728.png
+
+ITEM id=89776741 index=2 1000x288 time=2310 image=/data/user/0/dev.techlab.android/cache/rendered/8aacdbbb-7c05-4842-a8f1-c25cb8dff255/003-89776741.png
+
+DONE count=3 first=932ms total=2383ms sampledRendererPss=180677KB
+
+PASS
+

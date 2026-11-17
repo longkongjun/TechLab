@@ -1,0 +1,259 @@
+
+START 8826666 total=17 rendererPid=29785 cold=true
+
+ITEM id=1308781 index=0 1000x429 time=4976 image=/data/user/0/dev.techlab.android/cache/rendered/760f9b24-17f4-4756-b611-ce6638e8789d/001-1308781.png
+
+ITEM id=1307003 index=1 1000x429 time=6165 image=/data/user/0/dev.techlab.android/cache/rendered/760f9b24-17f4-4756-b611-ce6638e8789d/002-1307003.png
+
+ITEM id=1307257 index=2 1000x528 time=6921 image=/data/user/0/dev.techlab.android/cache/rendered/760f9b24-17f4-4756-b611-ce6638e8789d/003-1307257.png
+
+ITEM id=1308534 index=3 1000x471 time=7684 image=/data/user/0/dev.techlab.android/cache/rendered/760f9b24-17f4-4756-b611-ce6638e8789d/004-1308534.png
+
+ITEM id=1307525 index=4 1000x453 time=8368 image=/data/user/0/dev.techlab.android/cache/rendered/760f9b24-17f4-4756-b611-ce6638e8789d/005-1307525.png
+
+ITEM id=1308275 index=5 1000x418 time=9119 image=/data/user/0/dev.techlab.android/cache/rendered/760f9b24-17f4-4756-b611-ce6638e8789d/006-1308275.png
+
+ITEM id=1307756 index=6 1000x319 time=9887 image=/data/user/0/dev.techlab.android/cache/rendered/760f9b24-17f4-4756-b611-ce6638e8789d/007-1307756.png
+
+ITEM id=1308535 index=7 1000x975 time=10731 image=/data/user/0/dev.techlab.android/cache/rendered/760f9b24-17f4-4756-b611-ce6638e8789d/008-1308535.png
+
+ITEM id=1307004 index=8 1000x531 time=11614 image=/data/user/0/dev.techlab.android/cache/rendered/760f9b24-17f4-4756-b611-ce6638e8789d/009-1307004.png
+
+ITEM id=1307258 index=9 1000x467 time=12354 image=/data/user/0/dev.techlab.android/cache/rendered/760f9b24-17f4-4756-b611-ce6638e8789d/010-1307258.png
+
+ITEM id=1308782 index=10 1000x498 time=13095 image=/data/user/0/dev.techlab.android/cache/rendered/760f9b24-17f4-4756-b611-ce6638e8789d/011-1308782.png
+
+ITEM id=1307005 index=11 1000x425 time=13808 image=/data/user/0/dev.techlab.android/cache/rendered/760f9b24-17f4-4756-b611-ce6638e8789d/012-1307005.png
+
+ITEM id=1307757 index=12 1000x597 time=14644 image=/data/user/0/dev.techlab.android/cache/rendered/760f9b24-17f4-4756-b611-ce6638e8789d/013-1307757.png
+
+ITEM id=1307021 index=13 1000x122 time=15305 image=/data/user/0/dev.techlab.android/cache/rendered/760f9b24-17f4-4756-b611-ce6638e8789d/014-1307021.png
+
+ITEM id=1308536 index=14 1000x122 time=15900 image=/data/user/0/dev.techlab.android/cache/rendered/760f9b24-17f4-4756-b611-ce6638e8789d/015-1308536.png
+
+ITEM id=1307526 index=15 1000x122 time=16566 image=/data/user/0/dev.techlab.android/cache/rendered/760f9b24-17f4-4756-b611-ce6638e8789d/016-1307526.png
+
+ITEM id=1307272 index=16 1000x567 time=17403 image=/data/user/0/dev.techlab.android/cache/rendered/760f9b24-17f4-4756-b611-ce6638e8789d/017-1307272.png
+
+DONE count=17 first=4976ms total=17503ms sampledRendererPss=237991KB
+
+PASS
+
+
+START 4269352 total=26 rendererPid=30187 cold=true
+
+ITEM id=89776710 index=0 1000x223 time=5000 image=/data/user/0/dev.techlab.android/cache/rendered/ab5c3036-e9eb-40f4-97aa-851f7d72fe82/001-89776710.png
+
+ITEM id=89776728 index=1 1000x261 time=5761 image=/data/user/0/dev.techlab.android/cache/rendered/ab5c3036-e9eb-40f4-97aa-851f7d72fe82/002-89776728.png
+
+ITEM id=89776741 index=2 1000x288 time=6649 image=/data/user/0/dev.techlab.android/cache/rendered/ab5c3036-e9eb-40f4-97aa-851f7d72fe82/003-89776741.png
+
+ITEM id=89776752 index=3 1000x223 time=7356 image=/data/user/0/dev.techlab.android/cache/rendered/ab5c3036-e9eb-40f4-97aa-851f7d72fe82/004-89776752.png
+
+ITEM id=89776784 index=4 1000x297 time=8291 image=/data/user/0/dev.techlab.android/cache/rendered/ab5c3036-e9eb-40f4-97aa-851f7d72fe82/005-89776784.png
+
+ITEM id=89790132 index=5 1000x422 time=9109 image=/data/user/0/dev.techlab.android/cache/rendered/ab5c3036-e9eb-40f4-97aa-851f7d72fe82/006-89790132.png
+
+ITEM id=89790168 index=6 1000x412 time=9834 image=/data/user/0/dev.techlab.android/cache/rendered/ab5c3036-e9eb-40f4-97aa-851f7d72fe82/007-89790168.png
+
+ITEM id=9774244 index=7 1000x374 time=10665 image=/data/user/0/dev.techlab.android/cache/rendered/ab5c3036-e9eb-40f4-97aa-851f7d72fe82/008-9774244.png
+
+ITEM id=89790611 index=8 1000x161 time=11385 image=/data/user/0/dev.techlab.android/cache/rendered/ab5c3036-e9eb-40f4-97aa-851f7d72fe82/009-89790611.png
+
+ITEM id=89790648 index=9 1000x123 time=12020 image=/data/user/0/dev.techlab.android/cache/rendered/ab5c3036-e9eb-40f4-97aa-851f7d72fe82/010-89790648.png
+
+ITEM id=89790682 index=10 1000x349 time=12937 image=/data/user/0/dev.techlab.android/cache/rendered/ab5c3036-e9eb-40f4-97aa-851f7d72fe82/011-89790682.png
+
+ITEM id=89790694 index=11 1000x123 time=13533 image=/data/user/0/dev.techlab.android/cache/rendered/ab5c3036-e9eb-40f4-97aa-851f7d72fe82/012-89790694.png
+
+ITEM id=89790729 index=12 1000x123 time=14077 image=/data/user/0/dev.techlab.android/cache/rendered/ab5c3036-e9eb-40f4-97aa-851f7d72fe82/013-89790729.png
+
+ITEM id=89790770 index=13 1000x452 time=14993 image=/data/user/0/dev.techlab.android/cache/rendered/ab5c3036-e9eb-40f4-97aa-851f7d72fe82/014-89790770.png
+
+ITEM id=89790781 index=14 1000x123 time=15696 image=/data/user/0/dev.techlab.android/cache/rendered/ab5c3036-e9eb-40f4-97aa-851f7d72fe82/015-89790781.png
+
+ITEM id=89790791 index=15 1000x236 time=16382 image=/data/user/0/dev.techlab.android/cache/rendered/ab5c3036-e9eb-40f4-97aa-851f7d72fe82/016-89790791.png
+
+ITEM id=89790806 index=16 1000x161 time=17021 image=/data/user/0/dev.techlab.android/cache/rendered/ab5c3036-e9eb-40f4-97aa-851f7d72fe82/017-89790806.png
+
+ITEM id=89790845 index=17 1000x200 time=17688 image=/data/user/0/dev.techlab.android/cache/rendered/ab5c3036-e9eb-40f4-97aa-851f7d72fe82/018-89790845.png
+
+ITEM id=89802747 index=18 1000x342 time=18324 image=/data/user/0/dev.techlab.android/cache/rendered/ab5c3036-e9eb-40f4-97aa-851f7d72fe82/019-89802747.png
+
+ITEM id=89802906 index=19 1000x601 time=19076 image=/data/user/0/dev.techlab.android/cache/rendered/ab5c3036-e9eb-40f4-97aa-851f7d72fe82/020-89802906.png
+
+ITEM id=89803045 index=20 1000x342 time=19695 image=/data/user/0/dev.techlab.android/cache/rendered/ab5c3036-e9eb-40f4-97aa-851f7d72fe82/021-89803045.png
+
+ITEM id=89803229 index=21 1000x342 time=20321 image=/data/user/0/dev.techlab.android/cache/rendered/ab5c3036-e9eb-40f4-97aa-851f7d72fe82/022-89803229.png
+
+ITEM id=89804429 index=22 1000x532 time=21146 image=/data/user/0/dev.techlab.android/cache/rendered/ab5c3036-e9eb-40f4-97aa-851f7d72fe82/023-89804429.png
+
+ITEM id=89804649 index=23 1000x654 time=22028 image=/data/user/0/dev.techlab.android/cache/rendered/ab5c3036-e9eb-40f4-97aa-851f7d72fe82/024-89804649.png
+
+ITEM id=89804789 index=24 1000x660 time=22904 image=/data/user/0/dev.techlab.android/cache/rendered/ab5c3036-e9eb-40f4-97aa-851f7d72fe82/025-89804789.png
+
+ITEM id=89804942 index=25 1000x1205 time=23999 image=/data/user/0/dev.techlab.android/cache/rendered/ab5c3036-e9eb-40f4-97aa-851f7d72fe82/026-89804942.png
+
+DONE count=26 first=5000ms total=24093ms sampledRendererPss=162627KB
+
+PASS
+
+
+START 8905199 total=15 rendererPid=30584 cold=true
+
+ITEM id=152286345 index=0 1000x320 time=4772 image=/data/user/0/dev.techlab.android/cache/rendered/da5c9eb3-667e-4967-9fc7-d524042a9168/001-152286345.png
+
+ITEM id=152286346 index=1 1000x271 time=5394 image=/data/user/0/dev.techlab.android/cache/rendered/da5c9eb3-667e-4967-9fc7-d524042a9168/002-152286346.png
+
+ITEM id=152286347 index=2 1000x271 time=6010 image=/data/user/0/dev.techlab.android/cache/rendered/da5c9eb3-667e-4967-9fc7-d524042a9168/003-152286347.png
+
+ITEM id=152286348 index=3 1000x320 time=6642 image=/data/user/0/dev.techlab.android/cache/rendered/da5c9eb3-667e-4967-9fc7-d524042a9168/004-152286348.png
+
+ITEM id=152286349 index=4 1000x271 time=7269 image=/data/user/0/dev.techlab.android/cache/rendered/da5c9eb3-667e-4967-9fc7-d524042a9168/005-152286349.png
+
+ITEM id=152286350 index=5 1000x271 time=7885 image=/data/user/0/dev.techlab.android/cache/rendered/da5c9eb3-667e-4967-9fc7-d524042a9168/006-152286350.png
+
+ITEM id=152286352 index=6 1000x271 time=8535 image=/data/user/0/dev.techlab.android/cache/rendered/da5c9eb3-667e-4967-9fc7-d524042a9168/007-152286352.png
+
+ITEM id=152286353 index=7 1000x271 time=9169 image=/data/user/0/dev.techlab.android/cache/rendered/da5c9eb3-667e-4967-9fc7-d524042a9168/008-152286353.png
+
+ITEM id=152286354 index=8 1000x271 time=9723 image=/data/user/0/dev.techlab.android/cache/rendered/da5c9eb3-667e-4967-9fc7-d524042a9168/009-152286354.png
+
+ITEM id=152286355 index=9 1000x271 time=10333 image=/data/user/0/dev.techlab.android/cache/rendered/da5c9eb3-667e-4967-9fc7-d524042a9168/010-152286355.png
+
+ITEM id=152286356 index=10 1000x1038 time=11237 image=/data/user/0/dev.techlab.android/cache/rendered/da5c9eb3-667e-4967-9fc7-d524042a9168/011-152286356.png
+
+ITEM id=152286367 index=11 1000x2209 time=12248 image=/data/user/0/dev.techlab.android/cache/rendered/da5c9eb3-667e-4967-9fc7-d524042a9168/012-152286367.png
+
+ITEM id=152286378 index=12 1000x1770 time=13206 image=/data/user/0/dev.techlab.android/cache/rendered/da5c9eb3-667e-4967-9fc7-d524042a9168/013-152286378.png
+
+ITEM id=152286388 index=13 1000x1830 time=14132 image=/data/user/0/dev.techlab.android/cache/rendered/da5c9eb3-667e-4967-9fc7-d524042a9168/014-152286388.png
+
+ITEM id=152286395 index=14 1000x1209 time=15018 image=/data/user/0/dev.techlab.android/cache/rendered/da5c9eb3-667e-4967-9fc7-d524042a9168/015-152286395.png
+
+DONE count=15 first=4772ms total=15095ms sampledRendererPss=163840KB
+
+PASS
+
+
+START 2440029 total=19 rendererPid=30972 cold=true
+
+ITEM id=97560056 index=0 1000x180 time=4746 image=/data/user/0/dev.techlab.android/cache/rendered/0c1c1743-ddc8-4275-b68e-d440fb17034e/001-97560056.png
+
+ITEM id=97560010 index=1 1000x330 time=5531 image=/data/user/0/dev.techlab.android/cache/rendered/0c1c1743-ddc8-4275-b68e-d440fb17034e/002-97560010.png
+
+ITEM id=97560076 index=2 1000x319 time=6168 image=/data/user/0/dev.techlab.android/cache/rendered/0c1c1743-ddc8-4275-b68e-d440fb17034e/003-97560076.png
+
+ITEM id=97560057 index=3 1000x180 time=6917 image=/data/user/0/dev.techlab.android/cache/rendered/0c1c1743-ddc8-4275-b68e-d440fb17034e/004-97560057.png
+
+ITEM id=97560058 index=4 1000x339 time=7631 image=/data/user/0/dev.techlab.android/cache/rendered/0c1c1743-ddc8-4275-b68e-d440fb17034e/005-97560058.png
+
+ITEM id=97560087 index=5 1000x210 time=8392 image=/data/user/0/dev.techlab.android/cache/rendered/0c1c1743-ddc8-4275-b68e-d440fb17034e/006-97560087.png
+
+ITEM id=97560060 index=6 1000x215 time=9112 image=/data/user/0/dev.techlab.android/cache/rendered/0c1c1743-ddc8-4275-b68e-d440fb17034e/007-97560060.png
+
+ITEM id=97560061 index=7 1000x219 time=9720 image=/data/user/0/dev.techlab.android/cache/rendered/0c1c1743-ddc8-4275-b68e-d440fb17034e/008-97560061.png
+
+ITEM id=97560070 index=8 1000x219 time=10376 image=/data/user/0/dev.techlab.android/cache/rendered/0c1c1743-ddc8-4275-b68e-d440fb17034e/009-97560070.png
+
+ITEM id=97560148 index=9 1000x224 time=11189 image=/data/user/0/dev.techlab.android/cache/rendered/0c1c1743-ddc8-4275-b68e-d440fb17034e/010-97560148.png
+
+ITEM id=97560075 index=10 1000x256 time=11865 image=/data/user/0/dev.techlab.android/cache/rendered/0c1c1743-ddc8-4275-b68e-d440fb17034e/011-97560075.png
+
+ITEM id=97560079 index=11 1000x161 time=12476 image=/data/user/0/dev.techlab.android/cache/rendered/0c1c1743-ddc8-4275-b68e-d440fb17034e/012-97560079.png
+
+ITEM id=97560080 index=12 1000x124 time=13076 image=/data/user/0/dev.techlab.android/cache/rendered/0c1c1743-ddc8-4275-b68e-d440fb17034e/013-97560080.png
+
+ITEM id=97560109 index=13 1000x357 time=13821 image=/data/user/0/dev.techlab.android/cache/rendered/0c1c1743-ddc8-4275-b68e-d440fb17034e/014-97560109.png
+
+ITEM id=97560084 index=14 1000x405 time=14440 image=/data/user/0/dev.techlab.android/cache/rendered/0c1c1743-ddc8-4275-b68e-d440fb17034e/015-97560084.png
+
+ITEM id=97560088 index=15 1000x364 time=15144 image=/data/user/0/dev.techlab.android/cache/rendered/0c1c1743-ddc8-4275-b68e-d440fb17034e/016-97560088.png
+
+ITEM id=97560091 index=16 1000x367 time=15819 image=/data/user/0/dev.techlab.android/cache/rendered/0c1c1743-ddc8-4275-b68e-d440fb17034e/017-97560091.png
+
+ITEM id=97560102 index=17 1000x796 time=16900 image=/data/user/0/dev.techlab.android/cache/rendered/0c1c1743-ddc8-4275-b68e-d440fb17034e/018-97560102.png
+
+ITEM id=97560096 index=18 1000x532 time=17590 image=/data/user/0/dev.techlab.android/cache/rendered/0c1c1743-ddc8-4275-b68e-d440fb17034e/019-97560096.png
+
+DONE count=19 first=4746ms total=17672ms sampledRendererPss=170148KB
+
+PASS
+
+
+START 2444548 total=35 rendererPid=31343 cold=true
+
+ITEM id=93574201 index=0 1000x123 time=4674 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/001-93574201.png
+
+ITEM id=93574202 index=1 1000x123 time=5347 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/002-93574202.png
+
+ITEM id=93574207 index=2 1000x123 time=5918 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/003-93574207.png
+
+ITEM id=93574205 index=3 1000x123 time=6493 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/004-93574205.png
+
+ITEM id=93574203 index=4 1000x123 time=7126 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/005-93574203.png
+
+ITEM id=93574199 index=5 1000x161 time=7792 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/006-93574199.png
+
+ITEM id=93574206 index=6 1000x123 time=8397 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/007-93574206.png
+
+ITEM id=93574204 index=7 1000x123 time=9019 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/008-93574204.png
+
+ITEM id=93574208 index=8 1000x161 time=9685 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/009-93574208.png
+
+ITEM id=93574200 index=9 1000x161 time=10304 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/010-93574200.png
+
+ITEM id=93574237 index=10 1000x1501 time=11177 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/011-93574237.png
+
+ITEM id=93574212 index=11 1000x123 time=11781 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/012-93574212.png
+
+ITEM id=93574215 index=12 1000x123 time=12336 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/013-93574215.png
+
+ITEM id=93574214 index=13 1000x123 time=12936 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/014-93574214.png
+
+ITEM id=93574217 index=14 1000x161 time=13559 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/015-93574217.png
+
+ITEM id=93574211 index=15 1000x161 time=14148 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/016-93574211.png
+
+ITEM id=93574218 index=16 1000x161 time=14664 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/017-93574218.png
+
+ITEM id=93574213 index=17 1000x123 time=15241 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/018-93574213.png
+
+ITEM id=93574216 index=18 1000x161 time=15909 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/019-93574216.png
+
+ITEM id=93574219 index=19 1000x161 time=16500 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/020-93574219.png
+
+ITEM id=93574222 index=20 1000x123 time=17118 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/021-93574222.png
+
+ITEM id=93574221 index=21 1000x123 time=17628 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/022-93574221.png
+
+ITEM id=93574220 index=22 1000x123 time=18237 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/023-93574220.png
+
+ITEM id=93574223 index=23 1000x123 time=18755 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/024-93574223.png
+
+ITEM id=93574224 index=24 1000x123 time=19334 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/025-93574224.png
+
+ITEM id=93574227 index=25 1000x123 time=19916 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/026-93574227.png
+
+ITEM id=93574271 index=26 1000x1774 time=20752 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/027-93574271.png
+
+ITEM id=93574233 index=27 1000x161 time=21352 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/028-93574233.png
+
+ITEM id=93574236 index=28 1000x161 time=21906 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/029-93574236.png
+
+ITEM id=93574232 index=29 1000x161 time=22602 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/030-93574232.png
+
+ITEM id=93574235 index=30 1000x199 time=23173 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/031-93574235.png
+
+ITEM id=93574245 index=31 1000x199 time=23836 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/032-93574245.png
+
+ITEM id=93574254 index=32 1000x349 time=24548 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/033-93574254.png
+
+ITEM id=93574259 index=33 1000x1856 time=25526 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/034-93574259.png
+
+ITEM id=93574265 index=34 1000x1586 time=26448 image=/data/user/0/dev.techlab.android/cache/rendered/7f0ee9bc-30cd-4aae-8e1d-38ea8284361c/035-93574265.png
+
+DONE count=35 first=4674ms total=26535ms sampledRendererPss=157319KB
+
+PASS
+

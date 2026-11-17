@@ -1,0 +1,9 @@
+
+START READING total=1 rendererPid=5057 cold=true
+
+ITEM id=Q0093 index=0 1000x1808 time=5200 image=/data/user/0/dev.techlab.android/cache/rendered/6acb5b54-5502-4755-b487-3d5b754eb893/001-Q0093.png
+
+DONE count=1 first=5200ms total=5280ms sampledRendererPss=178281KB
+
+PASS
+

@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application android:usesCleartextTraffic="false">
+        <activity android:name="dev.techlab.android.gecko.GeckoDemoActivity" android:exported="false" />
+        <service android:name="dev.techlab.android.gecko.ProducerService" android:process=":producer" android:exported="false" />
+    </application>
+</manifest>

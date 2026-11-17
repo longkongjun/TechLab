@@ -1,0 +1,22 @@
+{
+  "result": {
+    "type": "object",
+    "value": [
+      {
+        "token": "single",
+        "checks": 1,
+        "ids": [
+          "Q0206"
+        ]
+      },
+      {
+        "token": "list",
+        "checks": 1,
+        "ids": [
+          "example-a",
+          "example-b"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+
+START 8826666 total=2 rendererPid=1894 cold=true
+
+ITEM id=1308781 index=0 1000x429 time=6013 image=/data/user/0/dev.techlab.android/cache/rendered/441db414-3f04-4efe-9ba2-a1af527e72a5/001-1308781.png
+
+ITEM id=1307003 index=1 1000x429 time=6755 image=/data/user/0/dev.techlab.android/cache/rendered/441db414-3f04-4efe-9ba2-a1af527e72a5/002-1307003.png
+
+DONE count=2 first=6013ms total=6835ms sampledRendererPss=185300KB
+
+PASS
+

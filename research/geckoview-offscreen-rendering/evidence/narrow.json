@@ -1,0 +1,147 @@
+{
+  "paperId": 4269352,
+  "questionId": "89776710",
+  "questionIndex": 0,
+  "width": 720,
+  "height": 283,
+  "renderer": "bundled",
+  "formulaFallbacks": 0,
+  "coordinateSpace": "image-pixels",
+  "geometry": [
+    {
+      "checks": [
+        {
+          "source": "demo-choice",
+          "rect": {
+            "x": 73.44999,
+            "y": 227.05,
+            "width": 71.99999,
+            "height": 28.324997
+          },
+          "index": 0
+        }
+      ],
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 720,
+        "height": 282.35
+      },
+      "label": "1",
+      "lines": [
+        {
+          "rect": {
+            "x": 19.5,
+            "y": 55.82499,
+            "width": 410.8,
+            "height": 38.475014
+          },
+          "kinds": [
+            "text",
+            "formula"
+          ]
+        },
+        {
+          "rect": {
+            "x": 53.174995,
+            "y": 110.84999,
+            "width": 30.674995,
+            "height": 37.925003
+          },
+          "kinds": [
+            "formula"
+          ]
+        },
+        {
+          "rect": {
+            "x": 401.84998,
+            "y": 110.84999,
+            "width": 14.524994,
+            "height": 37.925003
+          },
+          "kinds": [
+            "formula"
+          ]
+        },
+        {
+          "rect": {
+            "x": 19.5,
+            "y": 115.3,
+            "width": 23.125008,
+            "height": 28.999985
+          },
+          "kinds": [
+            "text"
+          ]
+        },
+        {
+          "rect": {
+            "x": 369,
+            "y": 115.3,
+            "width": 22.299988,
+            "height": 28.999985
+          },
+          "kinds": [
+            "text"
+          ]
+        },
+        {
+          "rect": {
+            "x": 52.750008,
+            "y": 171.07501,
+            "width": 37.125,
+            "height": 37.924988
+          },
+          "kinds": [
+            "formula"
+          ]
+        },
+        {
+          "rect": {
+            "x": 400.7,
+            "y": 171.07501,
+            "width": 37.125,
+            "height": 37.924988
+          },
+          "kinds": [
+            "formula"
+          ]
+        },
+        {
+          "rect": {
+            "x": 19.5,
+            "y": 175.525,
+            "width": 22.699997,
+            "height": 29.000015
+          },
+          "kinds": [
+            "text"
+          ]
+        },
+        {
+          "rect": {
+            "x": 369,
+            "y": 175.525,
+            "width": 21.150024,
+            "height": 29.000015
+          },
+          "kinds": [
+            "text"
+          ]
+        },
+        {
+          "rect": {
+            "x": 19.5,
+            "y": 227.375,
+            "width": 53.94999,
+            "height": 35
+          },
+          "kinds": [
+            "text"
+          ]
+        }
+      ],
+      "questionId": "89776710"
+    }
+  ]
+}

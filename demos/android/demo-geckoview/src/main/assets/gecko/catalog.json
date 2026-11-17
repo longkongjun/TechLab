@@ -1,0 +1,1382 @@
+[
+  {
+    "questionType": "SINGLE_CHOICE",
+    "questions": [
+      {
+        "id": "Q0018",
+        "html": "<p><span>一个数的绝对值是<span data-tex=\"$$5$$%\"></span></span><span>，则这个数是（&nbsp; ）.</span></p>",
+        "options": [
+          "<p><span data-tex=\"$$|5|$$%\"></span></p>",
+          "<p><span data-tex=\"$$5$$%\"></span></p>",
+          "<p><span data-tex=\"$$-5$$%\"></span></p>",
+          "<p><span data-tex=\"$$\\pm 5$$%\"></span></p>"
+        ]
+      },
+      {
+        "id": "Q0019",
+        "html": "<p><span>每天供给地球光和热的太阳与我们的距离非常遥远，它距地球的距离约为<span data-tex=\"$$150000000$$%\"></span></span><span>千米，将<span data-tex=\"$$150000000$$%\"></span></span><span>千米用科学记数法表示为（&nbsp; ）.</span></p>",
+        "options": [
+          "<p><span><span data-tex=\"$$0.15\\times 10^9$$%\"></span>千米</span></p>",
+          "<p><span data-tex=\"$$1.5\\times 10^8$$%\"></span><span>千米</span></p>",
+          "<p><span data-tex=\"$$15\\times 10^7$$%\"></span><span>千米</span></p>",
+          "<p><span data-tex=\"$$1.5\\times 10^7$$%\"></span><span>千米</span></p>"
+        ]
+      },
+      {
+        "id": "Q0020",
+        "html": "<p><span>下列运算正确的是（&nbsp; ）.</span></p>",
+        "options": [
+          "<p><span data-tex=\"$$5m+n=5mn$$%\"></span></p>",
+          "<p><span data-tex=\"$$4m-n=3$$%\"></span></p>",
+          "<p><span data-tex=\"$$3n^2+2n^3=5n^5$$%\"></span></p>",
+          "<p><span data-tex=\"$$-m^2n+2m^2n=m^2n$$%\"></span></p>"
+        ]
+      },
+      {
+        "id": "Q0021",
+        "html": "<p><span>如果一个角等于它余角的<span data-tex=\"$$2$$%\"></span></span><span>倍，那么这个角的度数是（&nbsp; ）.</span></p>",
+        "options": [
+          "<p><span data-tex=\"$$30^{\\circ} $$%\"></span></p>",
+          "<p><span data-tex=\"$$60^{\\circ} $$%\"></span></p>",
+          "<p><span data-tex=\"$$90^{\\circ} $$%\"></span></p>",
+          "<p><span data-tex=\"$$120^{\\circ} $$%\"></span></p>"
+        ]
+      },
+      {
+        "id": "Q0022",
+        "html": "<p><span>有理数<span data-tex=\"$$a$$%\"></span></span><span>、<span data-tex=\"$$b$$%\"></span></span><span>在数轴上的位置如图所示，则<span data-tex=\"$$|a+b|-2|b-a|$$%\"></span></span><span>化简后为（&nbsp; ）.</span></p><p><span>&nbsp;<img width=\"192\" src=\"https://longkongjun.github.io/TechLab/geckoview/images/1931aa55e51ff42.png\"></span></p>",
+        "options": [
+          "<p><span data-tex=\"$$2a+b$$%\"></span></p>",
+          "<p><span data-tex=\"$$-2a-b$$%\"></span></p>",
+          "<p><span data-tex=\"$$-3a+b$$%\"></span></p>",
+          "<p><span data-tex=\"$$-3a-b$$%\"></span></p>"
+        ]
+      },
+      {
+        "id": "Q0023",
+        "html": "<p><span>如图是一个小正方体的展开图，把展开图折叠成小正方体后，有“建”字一面的相对面上的字是（&nbsp; ）.</span></p><p><img width=\"131\" src=\"https://longkongjun.github.io/TechLab/geckoview/images/1931ada7616edf1.png\"></p>",
+        "options": [
+          "<p><span>和</span></p>",
+          "<p><span>谐</span></p>",
+          "<p><span>社</span></p>",
+          "<p><span>会</span></p>"
+        ]
+      },
+      {
+        "id": "Q0024",
+        "html": "<p><span>下列方程变形中，正确的是（&nbsp; ）.</span></p>",
+        "options": [
+          "<p><span>方程<span data-tex=\"$$\\frac{x-1}{2} -\\frac{x}{5} =1$$%\"></span></span><span>，去分母得<span data-tex=\"$$5(x-1)-2x=10$$%\"></span></span></p>",
+          "<p><span>方程<span data-tex=\"$$3-x=2-5(x-1)$$%\"></span></span><span>，去括号得<span data-tex=\"$$3-x=2-5x-1$$%\"></span></span></p>",
+          "<p><span>方程<span data-tex=\"$$\\frac{2}{3} t=\\frac{3}{2} $$%\"></span></span><span>，系数化为<span data-tex=\"$$1$$%\"></span></span><span>得<span data-tex=\"$$t=1$$%\"></span></span></p>",
+          "<p><span>方程<span data-tex=\"$$3x-2=2x+1$$%\"></span></span><span>，移项得<span data-tex=\"$$3x-2x=-1+2$$%\"></span></span></p>"
+        ]
+      },
+      {
+        "id": "Q0025",
+        "html": "<p>已知线段<span data-tex=\"$$AB=4{cm}$$%\"></span>，点<span data-tex=\"$$C$$%\"></span>是直线<span data-tex=\"$$AB$$%\"></span>上一点（不同于点<span data-tex=\"$$A$$%\"></span>、<span data-tex=\"$$B$$%\"></span>）．下列说法：①若点<span data-tex=\"$$C$$%\"></span>为线段<span data-tex=\"$$AB$$%\"></span>的中点，则<span data-tex=\"$$AC=2{cm}$$%\"></span>；②若<span data-tex=\"$$AC=1{cm}$$%\"></span>，则点<span data-tex=\"$$C$$%\"></span>为线段<span data-tex=\"$$AB$$%\"></span>的四等分点；③若<span data-tex=\"$$AC+BC=4{cm}$$%\"></span>，则点<span data-tex=\"$$C$$%\"></span>一定在线段<span data-tex=\"$$AB$$%\"></span>上；④若<span data-tex=\"$$AC+BC&gt;4{cm}$$%\"></span>，则点<span data-tex=\"$$C$$%\"></span>一定在线段<span data-tex=\"$$AB$$%\"></span>的延长线上；⑤若<span data-tex=\"$$AC+BC=8{cm}$$%\"></span>，则<span data-tex=\"$$AC=2{cm}$$%\"></span>．其中正确的个数有（ &nbsp; ）．</p>",
+        "options": [
+          "<p><span data-tex=\"$$1$$%\"></span>个</p>",
+          "<p><span data-tex=\"$$2$$%\"></span>个</p>",
+          "<p><span data-tex=\"$$3$$%\"></span>个</p>",
+          "<p><span data-tex=\"$$4$$%\"></span>个</p>"
+        ]
+      },
+      {
+        "id": "Q0061",
+        "html": "<p>选择正确的答案。</p>\n<p>&mdash;&nbsp;______&nbsp;the&nbsp;weather&nbsp;______&nbsp;today?</p>\n<p>&mdash;&nbsp;It&rsquo;s&nbsp;hot.</p>",
+        "options": [
+          "<p>What&rsquo;s; /</p>",
+          "<p>What&rsquo;s;&nbsp;like</p>",
+          "<p>How&rsquo;s; like</p>",
+          "<p>How;&nbsp;is</p>"
+        ]
+      },
+      {
+        "id": "Q0062",
+        "html": "<p>选择正确的答案。</p>\n<p>Here&nbsp;______&nbsp;photos&nbsp;of&nbsp;me.&nbsp;And&nbsp;here&nbsp;______&nbsp;a&nbsp;photo&nbsp;of&nbsp;my&nbsp;family.</p>",
+        "options": [
+          "<p>is; is</p>",
+          "<p>are;&nbsp;is</p>",
+          "<p>is; are</p>",
+          "<p>are;&nbsp;are</p>"
+        ]
+      },
+      {
+        "id": "Q0063",
+        "html": "<p>选择正确的答案。</p>\n<p>Miss&nbsp;Wang&nbsp;teaches&nbsp;______&nbsp;English.&nbsp;We&nbsp;all&nbsp;like&nbsp;______.</p>",
+        "options": [
+          "<p>we; she</p>",
+          "<p>we;&nbsp;her</p>",
+          "<p>us; her</p>",
+          "<p>us;&nbsp;she</p>"
+        ]
+      },
+      {
+        "id": "Q0064",
+        "html": "<p>选择正确的答案。</p>\n<p>&mdash;&nbsp;______&nbsp;students&nbsp;are&nbsp;there&nbsp;in&nbsp;your&nbsp;class?</p>\n<p>&mdash;&nbsp;There&nbsp;are&nbsp;only&nbsp;twenty.</p>",
+        "options": [
+          "<p>How long</p>",
+          "<p>How&nbsp;much</p>",
+          "<p>How many</p>",
+          "<p>How&nbsp;old</p>"
+        ]
+      },
+      {
+        "id": "Q0065",
+        "html": "<p>选择正确的答案。</p>\n<p>There&nbsp;______&nbsp;one&nbsp;teacher&nbsp;and&nbsp;forty&nbsp;students&nbsp;in&nbsp;the&nbsp;classroom.</p>",
+        "options": [
+          "<p>am</p>",
+          "<p>is</p>",
+          "<p>are</p>",
+          "<p>be</p>"
+        ]
+      },
+      {
+        "id": "Q0066",
+        "html": "<p>选择正确的答案。</p>\n<p>Tony,&nbsp;let&rsquo;s&nbsp;go&nbsp;shopping&nbsp;for&nbsp;food&nbsp;and&nbsp;drink.&nbsp;Now,&nbsp;we&nbsp;______&nbsp;any&nbsp;meat.</p>",
+        "options": [
+          "<p>haven&rsquo;t got</p>",
+          "<p>have&nbsp;got</p>",
+          "<p>got</p>",
+          "<p>hasn&rsquo;t&nbsp;got</p>"
+        ]
+      },
+      {
+        "id": "Q0067",
+        "html": "<p>选择正确的答案。</p>\n<p>We&nbsp;don&rsquo;t&nbsp;have&nbsp;______&nbsp;rice.&nbsp;Would&nbsp;you&nbsp;like&nbsp;______&nbsp;noodles,&nbsp;please?</p>",
+        "options": [
+          "<p>any, any</p>",
+          "<p>some,&nbsp;some</p>",
+          "<p>some, any</p>",
+          "<p>any,&nbsp;some</p>"
+        ]
+      },
+      {
+        "id": "Q0068",
+        "html": "<p>选择正确的答案。</p><p>Let&rsquo;s&nbsp;______&nbsp;some&nbsp;______&nbsp;and&nbsp;carrots.</p>",
+        "options": [
+          "<p>buy, potatoes</p>",
+          "<p>buy, potato</p>",
+          "<p>to buy, potatoes</p>",
+          "<p>buying, potatoes</p>"
+        ]
+      },
+      {
+        "id": "Q0069",
+        "html": "<p>选择正确的答案。</p>\n<p>Don&rsquo;t&nbsp;______&nbsp;too&nbsp;late,&nbsp;or&nbsp;you&rsquo;ll&nbsp;feel&nbsp;tired&nbsp;in&nbsp;tomorrow&rsquo;s&nbsp;classes.</p>",
+        "options": [
+          "<p>stay&nbsp;up</p>",
+          "<p>wake&nbsp;up</p>",
+          "<p>get&nbsp;up</p>",
+          "<p>give&nbsp;up</p>"
+        ]
+      },
+      {
+        "id": "Q0070",
+        "html": "<p>选择正确的答案。</p>\n<p>We&nbsp;have&nbsp;English&nbsp;classes&nbsp;______&nbsp;8:50&nbsp;in&nbsp;the&nbsp;morning.</p>",
+        "options": [
+          "<p>at</p>",
+          "<p>in</p>",
+          "<p>on</p>",
+          "<p>for</p>"
+        ]
+      },
+      {
+        "id": "Q0111",
+        "html": "<p>已知集合<i>A</i>={<i>x</i>∈<strong>Z</strong>|-1&lt;<i>x</i>&lt;3}，<i>B</i>={<i>x</i>|3<i>x</i>-<i>a</i>&lt;0}，且<i>A</i>∩(<span class=\"tex-source\">$$∁$$</span><sub><strong>R</strong></sub><i>B</i>)={1，2}，则实数<i>a</i>的取值范围为 <input size=\"4\"></p>",
+        "options": [
+          "<p>(0，4)</p>",
+          "<p>(0，4］</p>",
+          "<p>(0，3］</p>",
+          "<p>(0，3)</p>"
+        ]
+      },
+      {
+        "id": "Q0112",
+        "html": "<p>函数<i>f</i>(<i>x</i>)=<span class=\"tex-source\">$$\\frac{1}{2}$$</span><i>x</i><sup>2</sup>+cos <i>x</i>在［-π，π］上的图象大致为 <input size=\"4\"></p>",
+        "options": [
+          "<p><img src=\"https://longkongjun.github.io/TechLab/geckoview/images/19913560216d3a9.jpg\"></p>",
+          "<p><img src=\"https://longkongjun.github.io/TechLab/geckoview/images/1991356026f497c.jpg\"></p>",
+          "<p><img src=\"https://longkongjun.github.io/TechLab/geckoview/images/199135602c08e79.jpg\"></p>",
+          "<p><img src=\"https://longkongjun.github.io/TechLab/geckoview/images/199135602f89190.jpg\"></p>"
+        ]
+      },
+      {
+        "id": "Q0113",
+        "html": "<p>如图，已知函数<i>y</i>=|<i>x</i>|的图象与函数<i>y</i>=|<i>x</i>-<i>m</i>|的图象关于直线<i>x</i>=1对称，则<i>m</i>= <input size=\"4\"><br><img width=\"97\" src=\"https://longkongjun.github.io/TechLab/geckoview/images/19d126d13512ce4.jpg\"></p>",
+        "options": [
+          "<p>0.5</p>",
+          "<p>1</p>",
+          "<p>1.5</p>",
+          "<p>2</p>"
+        ]
+      },
+      {
+        "id": "Q0114",
+        "html": "<p>已知<i>α</i>-<i>β</i>=<span class=\"tex-source\">$$\\frac{\\pi }{3}$$</span>，tan <i>α</i>-tan <i>β</i>=2，则cos(<i>α</i>+<i>β</i>)的值是 <input size=\"4\"></p>",
+        "options": [
+          "<p><span class=\"tex-source\">$$\\frac{\\sqrt{3}-1}{2}$$</span></p>",
+          "<p><span class=\"tex-source\">$$\\frac{1-\\sqrt{3}}{2}$$</span></p>",
+          "<p><span class=\"tex-source\">$$\\frac{\\sqrt{3}+1}{4}$$</span></p>",
+          "<p><span class=\"tex-source\">$$\\frac{\\sqrt{3}-1}{4}$$</span></p>"
+        ]
+      },
+      {
+        "id": "Q0115",
+        "html": "<p>化学平衡状态是指在一定条件下的可逆反应，正反应和逆反应的速率相等，反应混合物中各组分的浓度保持不变的状态．利用温度(<i>T</i>)与可逆反应的平衡常数(<i>K</i>)的关系式：Δ<i>H</i>-<i>T</i>Δ<i>S</i>=-<i>RT</i>ln <i>K</i>（Δ<i>H</i>为焓变(在一定温度变化范围内视为定值)，Δ<i>S</i>为熵变，<i>R</i>为气体常数），我们可以处理不同温度下，有关多重可逆反应的平衡常数之间关系的计算．已知当温度为<i>T</i><sub>1</sub>时，可逆反应的平衡常数为<i>K</i><sub>1</sub>；当温度为<i>T</i><sub>2</sub>时，可逆反应的平衡常数为<i>K</i><sub>2</sub>，则ln<span class=\"tex-source\">$$\\frac{K_1}{K_2}$$</span>= <input size=\"4\"></p>",
+        "options": [
+          "<p><span class=\"tex-source\">$$\\frac{\\Delta H(T_1-T_2)}{RT_1T_2}$$</span></p>",
+          "<p><span class=\"tex-source\">$$\\frac{\\Delta H(T_2-T_1)}{RT_1T_2}$$</span></p>",
+          "<p><span class=\"tex-source\">$$\\frac{\\Delta S(T_1-T_2)}{R}$$</span></p>",
+          "<p><span class=\"tex-source\">$$\\frac{\\Delta S(T_2-T_1)}{R}$$</span></p>"
+        ]
+      },
+      {
+        "id": "Q0116",
+        "html": "<p>已知<i>f</i>(<i>x</i>)=<span class=\"tex-source\">$$\\left\\{\\begin{matrix}|\\lg \\ x|,x&gt;0,\\\\\\ 2^{|x|},x\\leq 0,\\end{matrix}\\right.$$</span>则函数<i>y</i>=2［<i>f</i>(<i>x</i>)］<sup>2</sup>-3<i>f</i>(<i>x</i>)+1的零点个数是 <input size=\"4\"></p>",
+        "options": [
+          "<p>5</p>",
+          "<p>4</p>",
+          "<p>3</p>",
+          "<p>2</p>"
+        ]
+      },
+      {
+        "id": "Q0117",
+        "html": "<p>已知函数<i>f</i>(<i>x</i>)，<i>g</i>(<i>x</i>)的定义域均为<strong>R</strong>，函数<i>f</i>(<i>x</i>)的图象关于点(-1，-1)对称，函数<i>g</i>(<i>x</i>+1)的图象关于<i>y</i>轴对称，<i>f</i>(<i>x</i>+2)+<i>g</i>(<i>x</i>+1)=-1，<i>f</i>(-4)=0，则<i>f</i>(2 030)-<i>g</i>(2 017)= <input size=\"4\"></p>",
+        "options": [
+          "<p>-4</p>",
+          "<p>-3</p>",
+          "<p>3</p>",
+          "<p>4</p>"
+        ]
+      },
+      {
+        "id": "Q0118",
+        "html": "<p>定义：正割sec <i>α</i>=<span class=\"tex-source\">$$\\frac{1}{\\cos \\ \\alpha }$$</span>，余割csc <i>α</i>=<span class=\"tex-source\">$$\\frac{1}{\\sin \\ \\alpha }$$</span>.已知<i>m</i>为正实数，且<i>m</i>·csc<sup>2</sup><i>x</i>+tan<sup>2</sup><i>x</i>≥15对任意的实数<i>x</i><span class=\"tex-source\">$$\\left(\\right.$$</span><i>x</i>≠<span class=\"tex-source\">$$\\frac{k\\pi }{2}$$</span>，<i>k</i>∈<strong>Z</strong><span class=\"tex-source\">$$\\left)\\right.$$</span>均成立，则<i>m</i>的最小值为 <input size=\"4\"></p>",
+        "options": [
+          "<p>1</p>",
+          "<p>4</p>",
+          "<p>8</p>",
+          "<p>9</p>"
+        ]
+      }
+    ]
+  },
+  {
+    "questionType": "MULTIPLE_CHOICE",
+    "questions": [
+      {
+        "id": "Q0119",
+        "html": "<p>下列说法正确的是 <input size=\"4\"></p>",
+        "options": [
+          "<p>若<i>a</i>&gt;<i>b</i>&gt;0，则<span class=\"tex-source\">$$\\frac{1}{a}$$</span>&lt;<span class=\"tex-source\">$$\\frac{1}{b}$$</span></p>",
+          "<p>若<i>a</i>&gt;<i>b</i>&gt;<i>c</i>，则<i>ac</i>&gt;<i>bc</i></p>",
+          "<p>若<i>a</i>&gt;<i>b</i>&gt;-<i>c</i>&gt;0，则<i>ab</i>&gt;<i>c</i><sup>2</sup></p>",
+          "<p>若0&lt;<i>a</i>+<i>b</i>&lt;2，2&lt;<i>a</i>-<i>b</i>&lt;4，则2&lt;3<i>a</i>+<i>b</i>&lt;8</p>"
+        ]
+      },
+      {
+        "id": "Q0120",
+        "html": "<p>若函数<i>f</i>(<i>x</i>)对于任意<i>x</i><sub>1</sub>,<i>x</i><sub>2</sub>∈(0,+∞)，都有<span class=\"tex-source\">$$\\frac{f(x_1)+f(x_2)}{2}$$</span>≤<i>f</i> <span class=\"tex-source\">$$\\left(\\frac{x_1+x_2}{2}\\right)$$</span>，则称<i>f</i>(<i>x</i>)具有性质<i>M</i>．下列函数中，具有性质<i>M</i>的有 <input size=\"4\"></p>",
+        "options": [
+          "<p><i>f</i>(<i>x</i>)=<span class=\"tex-source\">$$\\sqrt{x}$$</span></p>",
+          "<p><i>f</i>(<i>x</i>)=e<sup><i>x</i></sup></p>",
+          "<p><i>f</i>(<i>x</i>)=ln <i>x</i></p>",
+          "<p><i>f</i>(<i>x</i>)=-<span class=\"tex-source\">$$\\frac{1}{x+2}$$</span></p>"
+        ]
+      },
+      {
+        "id": "Q0121",
+        "html": "<p>已知函数<i>f</i>(<i>x</i>)=(sin <i>x</i>+cos <i>x</i>)<sup>2</sup>+<span class=\"tex-source\">$$\\sqrt{3}$$</span>cos 2<i>x</i>，则 <input size=\"4\"></p>",
+        "options": [
+          "<p><i>f</i>(<i>x</i>)的最小正周期为π</p>",
+          "<p><i>f</i>(<i>x</i>)图象的一个对称中心为点<span class=\"tex-source\">$$\\left(-\\frac{\\pi }{6},0\\right)$$</span></p>",
+          "<p><i>f</i>(<i>x</i>)在区间<span class=\"tex-source\">$$\\left(\\frac{\\pi }{6},\\frac{\\pi }{2}\\right)$$</span>上单调递减</p>",
+          "<p><i>f</i>(<i>x</i>)在区间<span class=\"tex-source\">$$\\left[-\\frac{\\pi }{2},\\frac{3\\pi }{2}\\right]$$</span>上有3个零点</p>"
+        ]
+      }
+    ]
+  },
+  {
+    "questionType": "FILL_IN",
+    "questions": [
+      {
+        "id": "Q0002",
+        "html": "<p>按顺序填数。</p><p><img width=\"487\" src=\"https://longkongjun.github.io/TechLab/geckoview/images/18de9d4e85e37ad.png\"></p><p>（1）<span data-tex=\"$$2$$%\"></span>前面的数是<input size=\"4\">，后面的数是<input size=\"4\">。</p><p>（2）比<span data-tex=\"$$5$$%\"></span>大比<span data-tex=\"$$7$$%\"></span>小的数是<input size=\"4\">；比<span data-tex=\"$$1$$%\"></span>小的数是<input size=\"4\">。</p><p>（3）与<span data-tex=\"$$1$$%\"></span>相邻的两个数分别是<input size=\"4\">和<input size=\"4\">。</p><p>（4）<span data-tex=\"$$7$$%\"></span>前面相邻的一个数是<input size=\"4\">，<span data-tex=\"$$9$$%\"></span>后面相邻的一个数是<input size=\"4\">。</p>"
+      },
+      {
+        "id": "Q0003",
+        "html": "<p>比一比，填一填。</p><p><img width=\"503\" src=\"https://longkongjun.github.io/TechLab/geckoview/images/18de9d50d63780c.png\"></p><p>（1）第一行有<input size=\"4\">把伞。</p><p>（2）第二行有<input size=\"4\">把伞。</p><p>（3）第二行比第一行多<input size=\"4\">把。</p><p>（4）从第二行移<input size=\"4\">把到第一行，两行的伞就同样多。</p>"
+      },
+      {
+        "id": "Q0004",
+        "html": "<p>圈一圈，画一画。</p><p><img src=\"https://longkongjun.github.io/TechLab/geckoview/images/18acace3913853d.png\"></p><p>（1）数一数，一共有<input size=\"4\">只动物。</p><p>（2）从左边数，小狗排在第<input size=\"4\">位，从右边数，小狗排在第<input size=\"4\">位，小狗的前面有<input size=\"4\">只动物，小狗的后面有<input size=\"4\">只动物。</p><p>（3）小兔在小狗的<input size=\"4\">面，在蝴蝶的<input size=\"4\">面。</p>"
+      },
+      {
+        "id": "Q0005",
+        "html": "<p>数一数，填一填。</p><p><img width=\"178\" src=\"https://longkongjun.github.io/TechLab/geckoview/images/18de9d517afac53.png\"></p><p>长方体有<input size=\"4\">个，正方体有<input size=\"4\">个，圆柱有<input size=\"4\">个，球有<input size=\"4\">个。</p>"
+      },
+      {
+        "id": "Q0006",
+        "html": "<p>在横线上填上“<span data-tex=\"$$&amp;gt;$$%\"></span>”、“<span data-tex=\"$$&amp;lt;$$%\"></span>”或“<span data-tex=\"$$=$$%\"></span>”。</p><p><span data-tex=\"$$4+3$$%\"></span><input size=\"4\"><span data-tex=\"$$6$$%\"></span></p><p><span data-tex=\"$$5$$%\"></span><input size=\"4\"><span data-tex=\"$$2+4$$%\"></span></p><p><span data-tex=\"$$5+2$$%\"></span><input size=\"4\"><span data-tex=\"$$3+3$$%\"></span></p><p><span data-tex=\"$$5-1$$%\"></span><input size=\"4\"><span data-tex=\"$$2+2$$%\"></span></p><p><span data-tex=\"$$6+4$$%\"></span><input size=\"4\"><span data-tex=\"$$7+3$$%\"></span></p><p><span data-tex=\"$$10-4$$%\"></span><input size=\"4\"><span data-tex=\"$$8$$%\"></span></p>"
+      },
+      {
+        "id": "Q0007",
+        "html": "<p>在横线上填上合适的数。</p><p><input size=\"4\"><span data-tex=\"$$+2=8$$%\"></span></p><p><span data-tex=\"$$5+$$%\"></span><input size=\"4\"><span data-tex=\"$$=9$$%\"></span></p><p><span data-tex=\"$$7-$$%\"></span><input size=\"4\"><span data-tex=\"$$=7$$%\"></span></p><p><span data-tex=\"$$10-$$%\"></span><input size=\"4\"><span data-tex=\"$$=3$$%\"></span></p>"
+      },
+      {
+        "id": "Q0026",
+        "html": "<p><span>中国是最早采用正负数来表示相反意义的量的国家，如果盈利<span data-tex=\"$$50$$%\"></span></span><span>元，记作“<span data-tex=\"$$+50$$%\"></span></span><span>元”，那么亏损<span data-tex=\"$$30$$%\"></span></span><span>元，记作<input size=\"4\"></span><span>元．</span></p>"
+      },
+      {
+        "id": "Q0027",
+        "html": "<p><span>大于<span data-tex=\"$$-2.5$$%\"></span></span><span>而小于<span data-tex=\"$$3.5$$%\"></span></span><span>的整数共有<input size=\"4\"></span><span>个．</span></p>"
+      },
+      {
+        "id": "Q0028",
+        "html": "<p><span>如图所示的网格是正方形网格，<span data-tex=\"$$\\angle ABC$$%\"></span><input size=\"4\"><span data-tex=\"$$\\angle DEF$$%\"></span></span><span>（填“<span data-tex=\"$$&gt;$$%\"></span></span><span>”，“</span> <span data-tex=\"$$=$$%\"></span><span>”或“<span data-tex=\"$$&lt;$$%\"></span></span><span>”）.</span></p><p><img width=\"169\" src=\"https://longkongjun.github.io/TechLab/geckoview/images/1931adb28593bb8.png\"></p>"
+      },
+      {
+        "id": "Q0029",
+        "html": "<p><span>如果单项式<span data-tex=\"$$3x^{m+6}y^2$$%\"></span></span><span>与<span data-tex=\"$$x^3y^n$$%\"></span></span><span>可以合并，那么<span data-tex=\"$$(m+n)^{2023}=$$%\"></span><input size=\"4\"></span><span>．</span></p>"
+      },
+      {
+        "id": "Q0030",
+        "html": "<p><span>若<span data-tex=\"$$x=-3$$%\"></span></span><span>是关于<span data-tex=\"$$x$$%\"></span></span><span>的方程<span data-tex=\"$$2x-a+2b=0$$%\"></span></span><span>的解，则代数式<span data-tex=\"$$2a-4b+1$$%\"></span></span><span>的值为<input size=\"4\"></span><span>．</span></p>"
+      },
+      {
+        "id": "Q0031",
+        "html": "<p><span>如图，将一副三角板叠放在一起，使直角顶点重合于<span data-tex=\"$$O$$%\"></span></span><span>点，则<span data-tex=\"$$\\angle AOC+\\angle BOD=$$%\"></span><input size=\"4\"></span><span>度．</span></p><p><img width=\"204\" src=\"https://longkongjun.github.io/TechLab/geckoview/images/1931adbd523172a.png\"></p>"
+      },
+      {
+        "id": "Q0032",
+        "html": "<p><span>计算：<span data-tex=\"$$89^{\\degree} {6}^{\\prime} {24}^{\\prime\\prime} -24^{\\degree} {27}^{\\prime} {35}^{\\prime\\prime}$$%\"></span><input size=\"8\"></span><span>．</span></p>"
+      },
+      {
+        "id": "Q0033",
+        "html": "<p><span>我国古代《算法统宗》里有这样一首诗：“我问开店李三公，众客都来到店中，一房七客多七客，一房九客一房空．”诗中后面两句的意思是：如果每一间客房住<span data-tex=\"$$7$$%\"></span></span><span>人，那么有<span data-tex=\"$$7$$%\"></span></span><span>人无房可住；如果每一间客房住<span data-tex=\"$$9$$%\"></span></span><span>人，那么就空出一间客房．设有<span data-tex=\"$$x$$%\"></span></span><span>间客房，可列方程为：<input size=\"14\"></span><span>．</span></p>"
+      },
+      {
+        "id": "Q0034",
+        "html": "<p><span>我们规定两种新运算“<span data-tex=\"$$*$$%\"></span></span><span>”和“<span data-tex=\"$$\\triangle $$%\"></span>”，其规则为<span data-tex=\"$$a*b=ab+a-b$$%\"></span>，<span data-tex=\"$$a\\triangle b=\\frac{a-b}{2} $$%\"></span></span><span>，则关于<span data-tex=\"$$x$$%\"></span></span><span>的方程<span data-tex=\"$$5\\triangle (3*x)=3$$%\"></span></span><span>的解是<input size=\"6\"></span><span>．</span></p>"
+      },
+      {
+        "id": "Q0035",
+        "html": "<p><span>已知<span data-tex=\"$$a$$%\"></span></span><span>是不为<span data-tex=\"$$1$$%\"></span></span><span>的有理数，我们把<span data-tex=\"$$\\frac{1}{1-a} $$%\"></span></span><span>称为<span data-tex=\"$$a$$%\"></span></span><span>的差倒数，如：<span data-tex=\"$$3$$%\"></span></span><span>的差倒数是<span data-tex=\"$$\\frac{1}{1-3} =-\\frac{1}{2} $$%\"></span></span><span>．已知<span data-tex=\"$$a_1=-1$$%\"></span></span><span>，<span data-tex=\"$$a_2$$%\"></span></span><span>是<span data-tex=\"$$a_1$$%\"></span></span><span>的差倒数，<span data-tex=\"$$a_3$$%\"></span></span><span>是<span data-tex=\"$$a_2$$%\"></span></span><span>的差倒数，<span data-tex=\"$$a_4$$%\"></span></span><span>是<span data-tex=\"$$a_3$$%\"></span></span><span>的差倒数，<span data-tex=\"$$\\cdots$$%\"></span></span><span>，以此类推，<span data-tex=\"$$a_n$$%\"></span></span><span>为<span data-tex=\"$$a_{n-1}$$%\"></span></span><span>的差倒数，则<span data-tex=\"$$a_2=$$%\"></span><input size=\"4\"></span><span>；若<span data-tex=\"$$a_1+a_2+\\cdots+a_n=55$$%\"></span></span><span>，则<span data-tex=\"$$n=$$%\"></span><input size=\"4\"></span><span>．</span></p>"
+      },
+      {
+        "id": "Q0122",
+        "html": "<p>若函数<i>f</i>(<i>x</i>)=sin <i>ωx</i>+<span class=\"tex-source\">$$\\sqrt{3}$$</span>cos <i>ωx</i>-1在［0，2π］上恰有5个零点，且在<span class=\"tex-source\">$$\\left[-\\frac{\\pi }{4},\\frac{\\pi }{15}\\right]$$</span>上单调递增，则正实数<i>ω</i>的取值范围是<input size=\"7\">.</p>"
+      },
+      {
+        "id": "Q0123",
+        "html": "<p>已知<i>a</i>&gt;0,<i>b</i>&gt;0,2<i>a</i>+<i>b</i>=<i>ab</i>，则<span class=\"tex-source\">$$\\frac{1}{a-1}$$</span>+<span class=\"tex-source\">$$\\frac{5}{b-2}$$</span>的最小值为<input size=\"4\">．</p>"
+      },
+      {
+        "id": "Q0124",
+        "html": "<p>函数<i>f</i>(<i>x</i>)=tan(<i>ωx</i>+<i>φ</i>)<span class=\"tex-source\">$$\\left(\\omega &gt;0,|\\varphi |&lt;\\frac{\\pi }{2}\\right)$$</span>的部分图象如图所示，图中阴影部分的面积为6π，则<i>φ</i>=<input size=\"4\">.<br><img width=\"162\" src=\"https://longkongjun.github.io/TechLab/geckoview/images/19d126e1afbf48d.jpg\"></p>"
+      },
+      {
+        "id": "Q0163",
+        "html": "<p>Huawei’s business <input size=\"7\">(strategy) help it to be successful in the 5G technology.</p>"
+      },
+      {
+        "id": "Q0164",
+        "html": "<p>After leaving school, Jane set up an <input size=\"9\">(organise) to help homeless people.</p>"
+      },
+      {
+        "id": "Q0165",
+        "html": "<p>They are waiting <input size=\"7\">(anxious) to see who will win the competition.</p>"
+      },
+      {
+        "id": "Q0166",
+        "html": "<p>The ceremony, <input size=\"6\">(formal) held every year, is an important event that all students must attend.</p>"
+      },
+      {
+        "id": "Q0167",
+        "html": "<p>He got <input size=\"7\">(annoy) about the <input size=\"7\">(annoy) noise around him when he was reading books.</p>"
+      },
+      {
+        "id": "Q0168",
+        "html": "<p>The programme <input size=\"8\">(design) to help people who have been out of work for a long time.</p>"
+      },
+      {
+        "id": "Q0169",
+        "html": "<p><input size=\"6\">(revise) my writing, I asked my friend to check the grammar mistakes.</p>"
+      },
+      {
+        "id": "Q0170",
+        "html": "<p>From the story, I have learned that we should believe in ourselves and be <input size=\"7\">(confidence) about our future.</p>"
+      },
+      {
+        "id": "Q0171",
+        "html": "<p>During the long history, the mystery of the universe has been attracting mankind and our <input size=\"8\">(explore) of it has been ongoing.</p>"
+      },
+      {
+        "id": "Q0172",
+        "html": "<p>In high school, I became curious <input size=\"4\"> the computer and built my first website.</p>"
+      },
+      {
+        "id": "Q0173",
+        "html": "<p>The lecture was <input size=\"8\"> (impress) and everyone was engaged.</p>"
+      },
+      {
+        "id": "Q0174",
+        "html": "<p>No studies found that eating breakfast was bad for <input size=\"10\">(concentrate).</p>"
+      },
+      {
+        "id": "Q0175",
+        "html": "<p>His humorous <input size=\"8\"> (personal) makes every class lively and fun.</p>"
+      },
+      {
+        "id": "Q0176",
+        "html": "<p>The flash <input size=\"7\">(frighten) the baby when we took a photo at night.</p>"
+      },
+      {
+        "id": "Q0177",
+        "html": "<p>I found most of my classmates <input size=\"5\"> (friend) and I enjoyed spending time with them.</p>"
+      },
+      {
+        "id": "Q0189",
+        "html": "<p>如果她能给交换生们做一个如何提高汉语水平的讲座会怎么样呢？（What if）<br><input size=\"15\"> the exchange students a lecture on how to improve their Chinese?</p>"
+      },
+      {
+        "id": "Q0190",
+        "html": "<p>老师发现汤姆在全班同学面前做实验时很自信。(find+宾语+宾语补足语)<br>The teacher <input size=\"14\"> when he was doing the experiment before the whole class.</p>"
+      },
+      {
+        "id": "Q0191",
+        "html": "<p>当我被单独留下的时候，我感到比以往任何时候都更焦虑。(比较级+than)<br>When I was left alone, I felt <input size=\"13\"> ever.</p>"
+      },
+      {
+        "id": "Q0192",
+        "html": "<p>复习课程将帮助你更好地理解所学内容，并在考试中表现出色。(动词-ing形式作主语)<br><input size=\"15\"> will help you understand what you have learned better and do well in exams.</p>"
+      },
+      {
+        "id": "Q0193",
+        "html": "<p>作为一名交换生，探索新学校并满足你的好奇心是很有趣的。［It is/was+<i>adj</i>.+(for/of sb.)to do sth.］<br>As an exchange student, <input size=\"17\"> the new campus and satisfy your curiosity.</p>"
+      }
+    ]
+  },
+  {
+    "questionType": "WORD_SPELLING",
+    "questions": [
+      {
+        "id": "Q0142",
+        "html": "<p>I am an <span data-block-type=\"answer-field\" data-block-answer-method=\"2\"><span class=\"underline\">o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span> boy and can easily get along with others.</p>"
+      },
+      {
+        "id": "Q0143",
+        "html": "<p>People develop a preference for a particular <input size=\"4\">(风格) of learning at an early age.</p>"
+      },
+      {
+        "id": "Q0144",
+        "html": "<p>With all her time devoted to the <input size=\"10\">(实验), she has no time for housework.</p>"
+      },
+      {
+        "id": "Q0145",
+        "html": "<p>With the high voter <input size=\"8\">(登记), many will be voting for the first time.</p>"
+      },
+      {
+        "id": "Q0146",
+        "html": "<p>During the group activity, my <span data-block-type=\"answer-field\" data-block-answer-method=\"2\"><span class=\"underline\">p&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span> and I shared ideas to solve the math problem.</p>"
+      },
+      {
+        "id": "Q0147",
+        "html": "<p>Only if you have a <span data-block-type=\"answer-field\" data-block-answer-method=\"2\"><span class=\"underline\">g&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span> and go for it with perseverance(毅力) can you realise your dream.</p>"
+      },
+      {
+        "id": "Q0148",
+        "html": "<p>We students should often <span data-block-type=\"answer-field\" data-block-answer-method=\"2\"><span class=\"underline\">e&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span> ideas with our parents, who are rich in experience.</p>"
+      },
+      {
+        "id": "Q0149",
+        "html": "<p>I still remember what you have done to <input size=\"6\">(改进) my oral English and English writing.</p>"
+      },
+      {
+        "id": "Q0150",
+        "html": "<p>You should spare some time to keep her <span data-block-type=\"answer-field\" data-block-answer-method=\"2\"><span class=\"underline\">c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span> because love is the best medicine to cure her loneliness.</p>"
+      },
+      {
+        "id": "Q0151",
+        "html": "<p>A notice was put up in order to remind the exchange students of the changed <input size=\"5\">(讲座) time.</p>"
+      }
+    ]
+  },
+  {
+    "questionType": "MENTAL_ARITHMETIC",
+    "questions": [
+      {
+        "id": "Q0206",
+        "tex": "7+8-1=\\square"
+      },
+      {
+        "id": "Q0207",
+        "tex": "8+5+3=\\square"
+      },
+      {
+        "id": "Q0208",
+        "tex": "9+3+5=\\square"
+      },
+      {
+        "id": "Q0209",
+        "tex": "6+8+2=\\square"
+      },
+      {
+        "id": "Q0210",
+        "tex": "9+6+2=\\square"
+      },
+      {
+        "id": "Q0211",
+        "tex": "8+7-5=\\square"
+      },
+      {
+        "id": "Q0212",
+        "tex": "9+9-7=\\square"
+      },
+      {
+        "id": "Q0213",
+        "tex": "9+4+2=\\square"
+      },
+      {
+        "id": "Q0214",
+        "tex": "7+6+1=\\square"
+      },
+      {
+        "id": "Q0215",
+        "tex": "18-3-1=\\square"
+      }
+    ]
+  },
+  {
+    "questionType": "CALCULATION",
+    "questions": [
+      {
+        "id": "Q0001",
+        "html": "<p>看谁算得又对又快。</p><p><img width=\"700\" src=\"https://longkongjun.github.io/TechLab/geckoview/images/18de9d5666deef6.png\"></p>"
+      },
+      {
+        "id": "Q0008",
+        "html": "<p>按要求画一画。</p><p><img width=\"444\" src=\"https://longkongjun.github.io/TechLab/geckoview/images/18de9d559c7caa7.png\"></p>"
+      },
+      {
+        "id": "Q0009",
+        "html": "<p>看图列式。</p><p><img width=\"700\" src=\"https://longkongjun.github.io/TechLab/geckoview/images/18de9d4e8fe7ded.png\"></p>"
+      },
+      {
+        "id": "Q0010",
+        "html": "<p>看图列式。</p><p><img width=\"360\" src=\"https://longkongjun.github.io/TechLab/geckoview/images/18de9d50df46247.png\"></p>"
+      },
+      {
+        "id": "Q0011",
+        "html": "<p>看图列式。</p><p><img width=\"325\" src=\"https://longkongjun.github.io/TechLab/geckoview/images/18de9d5678168eb.png\"></p>"
+      },
+      {
+        "id": "Q0012",
+        "html": "<p>看图列式。</p><p><img width=\"551\" src=\"https://longkongjun.github.io/TechLab/geckoview/images/18de9d4e996b411.png\"></p>"
+      },
+      {
+        "id": "Q0013",
+        "html": "<p>看图列式。</p><p><img width=\"520\" src=\"https://longkongjun.github.io/TechLab/geckoview/images/18de9d529222226.png\"></p>"
+      },
+      {
+        "id": "Q0014",
+        "html": "<p>小红剪了<span data-tex=\"$$4$$%\"></span>张窗花，小雨剪了<span data-tex=\"$$5$$%\"></span>张窗花。一共剪了多少张窗花？</p>"
+      },
+      {
+        "id": "Q0015",
+        "html": "<p>车上原来有<span data-tex=\"$$7$$%\"></span>个人，下去<span data-tex=\"$$2$$%\"></span>个人，又上来<span data-tex=\"$$3$$%\"></span>个人，现在车上有多少个人。</p>"
+      },
+      {
+        "id": "Q0016",
+        "html": "<p>小敏的左边有<span data-tex=\"$$4$$%\"></span>人，右边有<span data-tex=\"$$5$$%\"></span>人，这一排一共有多少人？</p>"
+      },
+      {
+        "id": "Q0017",
+        "html": "<p>在圈中填数，使每条线上的<span data-tex=\"$$3$$%\"></span>个数相加都得<span data-tex=\"$$10$$%\"></span>。</p><p><img width=\"307\" src=\"https://longkongjun.github.io/TechLab/geckoview/images/18de9d507fd0f1e.png\"></p>"
+      }
+    ]
+  },
+  {
+    "questionType": "WORKED_SOLUTION",
+    "questions": [
+      {
+        "id": "Q0036",
+        "html": "<p>计算</p>"
+      },
+      {
+        "id": "Q0037",
+        "html": "<p><span data-tex=\"$$(\\frac{2}{3} -\\frac{3}{4} +\\frac{1}{6} )\\div (-\\frac{1}{24} )$$%\"></span></p>",
+        "parentId": "Q0036"
+      },
+      {
+        "id": "Q0038",
+        "html": "<p><span data-tex=\"$$-2^3+3\\times (-1)^{2023}-|3-7|$$%\"></span></p>",
+        "parentId": "Q0036"
+      },
+      {
+        "id": "Q0039",
+        "html": "<p>如图，点<span data-tex=\"$$C$$%\"></span>是线段<span data-tex=\"$$AB$$%\"></span>外一点，按要求画图：</p><p><span><img width=\"172\" src=\"https://longkongjun.github.io/TechLab/geckoview/images/19306c18af4b793.png\"></span></p>"
+      },
+      {
+        "id": "Q0040",
+        "html": "<p><span>画射线<span data-tex=\"$$CB$$%\"></span></span><span>；</span></p>",
+        "parentId": "Q0039",
+        "answerInMaterial": true
+      },
+      {
+        "id": "Q0041",
+        "html": "<p><span>连接<span data-tex=\"$$AC$$%\"></span></span><span>，并延长<span data-tex=\"$$AC$$%\"></span></span><span>到<span data-tex=\"$$D$$%\"></span></span><span>，使<span data-tex=\"$$CD=AC$$%\"></span></span><span>；</span></p>",
+        "parentId": "Q0039",
+        "answerInMaterial": true
+      },
+      {
+        "id": "Q0042",
+        "html": "<p><span>观察画完的图形，比较大小：<span data-tex=\"$$AB+AC$$%\"></span><input size=\"4\"><span data-tex=\"$$BC$$%\"></span></span><span>，根据数学道理是<input size=\"6\"></span><span>．</span></p>",
+        "parentId": "Q0039"
+      },
+      {
+        "id": "Q0043",
+        "html": "<p><span>解下列方程：</span></p>"
+      },
+      {
+        "id": "Q0044",
+        "html": "<p><span data-tex=\"$$4(x-1)+1=2x-6$$%\"></span></p>",
+        "parentId": "Q0043"
+      },
+      {
+        "id": "Q0045",
+        "html": "<p><span data-tex=\"$$\\frac{x-2}{2} -\\frac{5x+2}{6} =1$$%\"></span></p>",
+        "parentId": "Q0043"
+      },
+      {
+        "id": "Q0046",
+        "html": "<p><span>已知<span data-tex=\"$$A=-3x^2-2mx+3x+1$$%\"></span></span><span>，<span data-tex=\"$$B=2x^2+2mx-1$$%\"></span></span><span>．</span></p>"
+      },
+      {
+        "id": "Q0047",
+        "html": "<p><span>求：<span data-tex=\"$$2A+3B$$%\"></span></span><span>．</span></p>",
+        "parentId": "Q0046"
+      },
+      {
+        "id": "Q0048",
+        "html": "<p><span>若<span data-tex=\"$$2A+3B$$%\"></span></span><span>的值与<span data-tex=\"$$x$$%\"></span></span><span>的取值无关，求<span data-tex=\"$$m$$%\"></span></span><span>的值．</span></p>",
+        "parentId": "Q0046"
+      },
+      {
+        "id": "Q0049",
+        "html": "<p><span>为了相应国家号召“保护环境，低碳生活”，苏老师家换了一辆某品牌的新能源纯电小汽车，该车官方宣称续航能力（充满一次电可以跑的里程）为<span data-tex=\"$$250\\rm{km}-300\\rm{km}$$%\"></span></span><span>．为了解小汽车的使用情况，苏老师连续记录了这周<span data-tex=\"$$7$$%\"></span></span><span>天小汽车每天行驶的路程．以<span data-tex=\"$$30\\rm{km}$$%\"></span></span><span>为标准，每天超过或不足<span data-tex=\"$$30\\rm{km}$$%\"></span></span><span>的部分分别用正数、负数表示．下面是她记录的数据（单位：<span data-tex=\"$$\\rm{km}$$%\"></span>）：<span data-tex=\"$$+4$$%\"></span></span><span>，<span data-tex=\"$$-2$$%\"></span></span><span>，<span data-tex=\"$$-4$$%\"></span></span><span>，<span data-tex=\"$$+8$$%\"></span></span><span>，<span data-tex=\"$$+6$$%\"></span></span><span>，<span data-tex=\"$$-3$$%\"></span></span><span>，<span data-tex=\"$$+4$$%\"></span></span><span>．</span></p>"
+      },
+      {
+        "id": "Q0050",
+        "html": "<p><span>苏老师家小汽车这<span data-tex=\"$$7$$%\"></span></span><span>天中，行驶路程最多的一天比最少的一天多多少<span data-tex=\"$$\\rm{km}$$%\"></span></span><span>？</span></p>",
+        "parentId": "Q0049"
+      },
+      {
+        "id": "Q0051",
+        "html": "<p><span>如果这周开始记录时小汽车是满电状态，请你计算说明苏老师本周中途需要给小汽车充电吗？</span></p>",
+        "parentId": "Q0049"
+      },
+      {
+        "id": "Q0052",
+        "html": "<p><span>为进一步加强学生“学党史、知党情、跟党走”的信心，培养学生的民族精神和爱国主义情怀，某学校组织开展以“观看红色电影，点燃红色初心”为主题的教育活动．电影票价格表如下：</span></p><p><span><img width=\"450\" src=\"https://longkongjun.github.io/TechLab/geckoview/images/1930715af836042.png\"></span></p><p><span><span>该校七年级两个班共有<span data-tex=\"$$83$$%\"></span></span><span>名学生去看电影，其中七（<span data-tex=\"$$1$$%\"></span></span><span>）班的学生人数超过<span data-tex=\"$$30$$%\"></span></span><span>，但不足<span data-tex=\"$$40$$%\"></span></span><span>．</span></span></p>"
+      },
+      {
+        "id": "Q0053",
+        "html": "<p><span>如果两个班都以班为单位单独购票，一共付了<span data-tex=\"$$1572$$%\"></span></span><span>元．求七（<span data-tex=\"$$2$$%\"></span></span><span>）班学生的人数；</span></p>",
+        "parentId": "Q0052"
+      },
+      {
+        "id": "Q0054",
+        "html": "<p><span>在（<span data-tex=\"$$1$$%\"></span></span><span>）所得的班级学生人数下，如果七（<span data-tex=\"$$1$$%\"></span></span><span>）班有<span data-tex=\"$$7$$%\"></span></span><span>名学生因有比赛任务不能参加这次活动，请你为两个班级设计购买电影票的方案，并指出最省钱的方案．</span></p>",
+        "parentId": "Q0052"
+      },
+      {
+        "id": "Q0055",
+        "html": "<p><span>如图，<span data-tex=\"$$\\angle AOC$$%\"></span></span><span>与<span data-tex=\"$$\\angle BOC$$%\"></span></span><span>互为补角，<span data-tex=\"$$\\angle BOC$$%\"></span></span><span>与<span data-tex=\"$$\\angle BOD$$%\"></span></span><span>互为余角，且<span data-tex=\"$$\\angle BOC=4\\angle BOD$$%\"></span></span><span>．</span></p><p><img width=\"234\" src=\"https://longkongjun.github.io/TechLab/geckoview/images/1931ade3d0caae7.png\"></p>"
+      },
+      {
+        "id": "Q0056",
+        "html": "<p><span>求<span data-tex=\"$$\\angle BOC$$%\"></span></span><span>的度数；</span></p>",
+        "parentId": "Q0055"
+      },
+      {
+        "id": "Q0057",
+        "html": "<p><span>若<span data-tex=\"$$OE$$%\"></span></span><span>平分<span data-tex=\"$$\\angle AOC$$%\"></span></span><span>，求<span data-tex=\"$$\\angle BOE$$%\"></span></span><span>的度数．</span></p>",
+        "parentId": "Q0055"
+      },
+      {
+        "id": "Q0058",
+        "html": "<p><span>如图<span data-tex=\"$$1$$%\"></span></span><span>，点<span data-tex=\"$$O$$%\"></span></span><span>为直线<span data-tex=\"$$AB$$%\"></span></span><span>上一点，过点<span data-tex=\"$$O$$%\"></span></span><span>作射线<span data-tex=\"$$OC$$%\"></span></span><span>，使<span data-tex=\"$$\\angle BOC=110^{\\circ} $$%\"></span></span><span>，将一直角三角板的直角顶点放在点<span data-tex=\"$$O$$%\"></span></span><span>处（<span data-tex=\"$$\\angle OMN=30^{\\circ} $$%\"></span>）</span><span>，一边<span data-tex=\"$$OM$$%\"></span></span><span>在射线<span data-tex=\"$$OB$$%\"></span></span><span>上，另一边<span data-tex=\"$$ON$$%\"></span></span><span>在直线<span data-tex=\"$$AB$$%\"></span></span><span>的下方．</span></p><p><span><img width=\"366\" src=\"https://longkongjun.github.io/TechLab/geckoview/images/193072fef1ea0de.png\"></span></p>"
+      },
+      {
+        "id": "Q0059",
+        "html": "<p><span>将图<span data-tex=\"$$1$$%\"></span></span><span>中的三角板绕点<span data-tex=\"$$O$$%\"></span></span><span>逆时针旋转至图<span data-tex=\"$$2$$%\"></span></span><span>，使一边<span data-tex=\"$$OM$$%\"></span></span><span>在<span data-tex=\"$$\\angle BOC$$%\"></span></span><span>的内部，且恰好平分<span data-tex=\"$$\\angle BOC$$%\"></span></span><span>，求<span data-tex=\"$$\\angle BON$$%\"></span></span><span>的度数．</span></p><p><span><img width=\"366\" src=\"https://longkongjun.github.io/TechLab/geckoview/images/193072fef1ea0de.png\"></span></p>",
+        "parentId": "Q0058"
+      },
+      {
+        "id": "Q0060",
+        "html": "<p><span>将图<span data-tex=\"$$1$$%\"></span></span><span>中三角板绕点<span data-tex=\"$$O$$%\"></span></span><span>以每秒<span data-tex=\"$$5^{\\circ} $$%\"></span></span><span>的速度沿逆时针方向旋转一周，同时射线<span data-tex=\"$$OP$$%\"></span></span><span>从<span data-tex=\"$$OC$$%\"></span></span><span>开始绕点<span data-tex=\"$$O$$%\"></span></span><span>以每秒<span data-tex=\"$$2^{\\circ} $$%\"></span></span><span>的速度沿顺时针方向旋转，当三角板停止运动时，射线<span data-tex=\"$$OP$$%\"></span></span><span>也停止运动．设旋转时间为<span data-tex=\"$$t$$%\"></span></span><span>秒．</span></p><p><span>①</span><span>在运动过程中，当<span data-tex=\"$$\\angle POM=40^{\\circ} $$%\"></span></span><span>时，求<span data-tex=\"$$t$$%\"></span></span><span>的值．</span></p><p><span>②</span><span>当<span data-tex=\"$$40&lt;t&lt;54$$%\"></span></span><span>时，在旋转的过程中<span data-tex=\"$$\\angle CON$$%\"></span></span><span>与<span data-tex=\"$$∠AOM$$%\"></span></span><span>始终满足关系<span data-tex=\"$$m\\angle CON+\\angle AOM=n^{\\circ} $$%\"></span></span><span>，（<span data-tex=\"$$m$$%\"></span>，<span data-tex=\"$$n$$%\"></span></span><span>为常数），求<span data-tex=\"$$m+n$$%\"></span></span><span>的值．</span></p><p><span><img width=\"366\" src=\"https://longkongjun.github.io/TechLab/geckoview/images/193072fef1ea0de.png\"></span></p>",
+        "parentId": "Q0058"
+      },
+      {
+        "id": "Q0125",
+        "html": "<p>已知函数<i>f</i>(<i>x</i>)=2<sup><i>x</i></sup>+<i>a</i>．</p>"
+      },
+      {
+        "id": "Q0126",
+        "html": "<p>若<i>f</i>(<i>x</i>)的图象经过第一、二、三象限，求<i>f</i>(<i>a</i>)的取值范围；<span data-block-type=\"answer-field\" data-block-answer-method=\"3\"> </span></p>",
+        "parentId": "Q0125"
+      },
+      {
+        "id": "Q0127",
+        "html": "<p>当<i>a</i>=0时，是否存在实数<i>m</i>，使得|<i>mf</i>(<i>x</i>)-3|≤<i>f</i>(<i>x</i>)-1对任意的<i>x</i>∈［2,+∞)恒成立？若存在，求出<i>m</i>的取值范围；若不存在，说明理由．<span data-block-type=\"answer-field\" data-block-answer-method=\"3\"> </span></p>",
+        "parentId": "Q0125"
+      },
+      {
+        "id": "Q0128",
+        "html": "<p>设函数<i>f</i>(<i>x</i>)=sin  <i>x</i>+cos  <i>x</i>(<i>x</i>∈<strong>R</strong>).</p>"
+      },
+      {
+        "id": "Q0129",
+        "html": "<p>求<i>y</i>=<span class=\"tex-source\">$$\\left[f\\\\ \\left(x+\\frac{\\pi\\ }{2}\\right)\\right]^2$$</span>的最小正周期；<span data-block-type=\"answer-field\" data-block-answer-method=\"3\"> </span></p>",
+        "parentId": "Q0128"
+      },
+      {
+        "id": "Q0130",
+        "html": "<p>求<i>y</i>=<i>f</i>(<i>x</i>)<i>f</i> <span class=\"tex-source\">$$\\left(x-\\frac{\\pi }{4}\\right)$$</span>在<span class=\"tex-source\">$$\\left[0,\\frac{\\pi }{2}\\right]$$</span>上的最大值.<span data-block-type=\"answer-field\" data-block-answer-method=\"3\"> </span></p>",
+        "parentId": "Q0128"
+      },
+      {
+        "id": "Q0131",
+        "html": "<p>已知<i>a</i>，<i>b</i>∈（0，+∞），函数<i>f</i>（<i>x</i>）=<i>ax</i><sup>2</sup>-<i>x</i>+<i>b</i>满足<i>f</i>（1）=0.</p>"
+      },
+      {
+        "id": "Q0132",
+        "html": "<p>求<span class=\"tex-source\">$$\\frac{a+4}{a}$$</span>+<span class=\"tex-source\">$$\\frac{1}{b}$$</span>的最小值；<span data-block-type=\"answer-field\" data-block-answer-method=\"3\"> </span></p>",
+        "parentId": "Q0131"
+      },
+      {
+        "id": "Q0133",
+        "html": "<p>解关于<i>x</i>的不等式<i>f</i>（<i>x</i>）≤0.<span data-block-type=\"answer-field\" data-block-answer-method=\"3\"> </span></p>",
+        "parentId": "Q0131"
+      },
+      {
+        "id": "Q0134",
+        "html": "<p>某产品近日开始上市，通过市场调查，得到该产品每件的市场价<i>y</i>（单位：元）与上市时间<i>x</i>（单位：天）的数据如下：<br><br><table><tr><td><i>x</i></td><td>4</td><td>10</td><td>36</td></tr><tr><td><i>y</i></td><td>90</td><td>51</td><td>90</td></tr></table></p>"
+      },
+      {
+        "id": "Q0135",
+        "html": "<p>根据上表数据，从下列函数中选取一个恰当的函数描述该产品的市场价<i>y</i>（单位：元）与上市时间<i>x</i>（单位：天）的变化关系，并简要说明你选取的理由；①<i>y</i>=<i>ax</i>+<i>b</i>（<i>a</i>≠0）;②<i>y</i>=<i>ax</i><sup>2</sup>+<i>bx</i>+<i>c</i>（<i>a</i>≠0）;③<i>y</i>=<i>a</i>log<sub><i>b</i></sub><i>x</i>（<i>a</i>≠0,<i>b</i>&gt;0,<i>b</i>≠1）;<span data-block-type=\"answer-field\" data-block-answer-method=\"3\"> </span></p>",
+        "parentId": "Q0134"
+      },
+      {
+        "id": "Q0136",
+        "html": "<p>利用你选取的函数，求该产品市场价最低时的上市天数以及最低的价格；<span data-block-type=\"answer-field\" data-block-answer-method=\"3\"> </span></p>",
+        "parentId": "Q0134"
+      },
+      {
+        "id": "Q0137",
+        "html": "<p>设你所选取的函数为<i>f</i>（<i>x</i>），若对任意实数<i>k</i>，关于<i>x</i>的方程<i>f</i>（<i>x</i>）=<i>kx</i>+2<i>m</i>+120恒有两个相异实数根，求实数<i>m</i>的取值范围.<span data-block-type=\"answer-field\" data-block-answer-method=\"3\"> </span></p>",
+        "parentId": "Q0134"
+      },
+      {
+        "id": "Q0138",
+        "html": "<p>已知函数<i>f</i>(<i>x</i>)=ln(e<sup><i>x</i></sup>-1)-ln(e<sup><i>x</i></sup>+1)．</p>"
+      },
+      {
+        "id": "Q0139",
+        "html": "<p>求函数<i>f</i>(<i>x</i>)的定义域；<span data-block-type=\"answer-field\" data-block-answer-method=\"3\"> </span></p>",
+        "parentId": "Q0138"
+      },
+      {
+        "id": "Q0140",
+        "html": "<p>试判断<i>f</i>(<i>x</i>)的单调性，并说明理由；<span data-block-type=\"answer-field\" data-block-answer-method=\"3\"> </span></p>",
+        "parentId": "Q0138"
+      },
+      {
+        "id": "Q0141",
+        "html": "<p>定义：若函数<i>F</i>(<i>x</i>)在区间［<i>m</i>,<i>n</i>］上的值域为［<i>m</i>,<i>n</i>］，则称区间［<i>m</i>,<i>n</i>］是函数<i>F</i>(<i>x</i>)的“完美区间”．若函数<i>g</i>(<i>x</i>)=<i>f</i>(<i>x</i>)+ln <i>b</i>存在“完美区间”，求实数<i>b</i>的取值范围．<span data-block-type=\"answer-field\" data-block-answer-method=\"3\"> </span></p>",
+        "parentId": "Q0138"
+      }
+    ]
+  },
+  {
+    "questionType": "READING",
+    "questions": [
+      {
+        "id": "Q0093",
+        "html": "<p>阅读材料，选择正确的答案。</p>\n<p>&nbsp; &nbsp; &nbsp; &nbsp;Every day, you may go to school by school bus. But, do you have lessons on the bus? One small farm in Mexico, there are no schools. A bus is the school. The driver of the bus is the teacher. It&rsquo;s a school bus, but it doesn&rsquo;t take the children to school. It just goes around from place to place, and sometimes it comes to this farm. The bus will stay here for three months. The farmers call it a school on wheels. Every time the bus comes, the farmers will come, running to it, shouting and laughing. They warmly welcome the school bus.</p>\n<p>&nbsp; &nbsp; &nbsp; &nbsp;When the bus is on the farm, in the morning, the teacher teaches the small children. In the afternoon, the bigger children come to have their lessons because they must work in the morning. At night, the fathers and mothers come to school. They want to learn, too.</p>\n<p>&nbsp; &nbsp; &nbsp; &nbsp;However, the farmers hope that they can have a real school some day.<span></span></p>"
+      },
+      {
+        "id": "Q0094",
+        "html": "<p>The driver of the bus is&nbsp;<input size=\"4\">.</p>",
+        "options": [
+          "<p>the&nbsp;teacher</p>",
+          "<p>the&nbsp;student</p>",
+          "<p>the&nbsp;farmer</p>",
+          "<p>the&nbsp;school</p>"
+        ],
+        "parentId": "Q0093"
+      },
+      {
+        "id": "Q0095",
+        "html": "<p>The bus school will&nbsp;<input size=\"4\">.</p>",
+        "options": [
+          "<p>take&nbsp;the&nbsp;children&nbsp;to&nbsp;school</p>",
+          "<p>stay&nbsp;at&nbsp;a&nbsp;place&nbsp;for&nbsp;a&nbsp;whole&nbsp;year</p>",
+          "<p>go&nbsp;around&nbsp;from&nbsp;place&nbsp;to&nbsp;place</p>",
+          "<p>take&nbsp;the&nbsp;fathers&nbsp;and&nbsp;mothers&nbsp;to&nbsp;school</p>"
+        ],
+        "parentId": "Q0093"
+      },
+      {
+        "id": "Q0096",
+        "html": "<p>The bigger children have their lessons in the afternoon because in the morning&nbsp;<input size=\"4\">.</p>",
+        "options": [
+          "<p>they&nbsp;have&nbsp;to&nbsp;work</p>",
+          "<p>they&nbsp;can&rsquo;t&nbsp;get&nbsp;up&nbsp;early</p>",
+          "<p>they&nbsp;have&nbsp;to&nbsp;do&nbsp;their&nbsp;homework</p>",
+          "<p>the&nbsp;teacher&nbsp;wants&nbsp;to&nbsp;teach&nbsp;the&nbsp;small&nbsp;children&nbsp;first</p>"
+        ],
+        "parentId": "Q0093"
+      },
+      {
+        "id": "Q0097",
+        "html": "<p>Which of the following is TRUE according to the passage?</p>",
+        "options": [
+          "<p>The&nbsp;school&nbsp;bus&nbsp;takes&nbsp;children&nbsp;to&nbsp;the&nbsp;school&nbsp;every&nbsp;day.</p>",
+          "<p>The&nbsp;farmers&nbsp;don&rsquo;t&nbsp;welcome&nbsp;the&nbsp;school&nbsp;bus&nbsp;to&nbsp;the&nbsp;farm.</p>",
+          "<p>The&nbsp;students&nbsp;are&nbsp;the&nbsp;same&nbsp;from&nbsp;morning&nbsp;to&nbsp;evening.</p>",
+          "<p>Farmers&nbsp;on&nbsp;the&nbsp;farm&nbsp;hope&nbsp;to&nbsp;have&nbsp;a&nbsp;real&nbsp;school&nbsp;some&nbsp;day.</p>"
+        ],
+        "parentId": "Q0093"
+      },
+      {
+        "id": "Q0098",
+        "html": "<p>What is the best title (标题) for the passage?</p>",
+        "options": [
+          "<p>The&nbsp;School&nbsp;Bus.</p>",
+          "<p>A&nbsp;Real&nbsp;School.</p>",
+          "<p>School&nbsp;in&nbsp;Mexico.</p>",
+          "<p>A&nbsp;School&nbsp;on&nbsp;Wheels.</p>"
+        ],
+        "parentId": "Q0093"
+      },
+      {
+        "id": "Q0099",
+        "html": "<p>阅读材料，选择正确的答案。</p>\n<p>&nbsp; &nbsp; &nbsp; &nbsp;Joe Brown lives with his family in London. His father, Mr. Brown, is a doctor. He goes to work in his car every day. He is very busy.</p>\n<p>&nbsp; &nbsp; &nbsp; &nbsp;Joe and his sister Susan are students. They go to school by bus every day. They work hard at their lessons and they are the best students. Susan is good at singing. She wants to be a singer in the future. Joe likes ball games and basketball is his favorite. He plays it with his friends after school every day. Joe and his sister always have lunch at school because their school is far from their home.</p>\n<p>&nbsp; &nbsp; &nbsp; &nbsp;Joe&rsquo;s mother is a housewife, but she is very busy. She gets up early in the morning to cook breakfast. Then she goes shopping. She looks after the garden in the afternoon. Sometimes she visits her friends at weekends.<span></span></p>"
+      },
+      {
+        "id": "Q0100",
+        "html": "<p>Where&nbsp;does&nbsp;Joe&nbsp;Brown&nbsp;live&nbsp;with&nbsp;his&nbsp;family?</p>",
+        "options": [
+          "<p>In&nbsp;China.</p>",
+          "<p>In&nbsp;England.</p>",
+          "<p>In&nbsp;Canada.</p>",
+          "<p>In&nbsp;America.</p>"
+        ],
+        "parentId": "Q0099"
+      },
+      {
+        "id": "Q0101",
+        "html": "<p>Joe&nbsp;and&nbsp;his&nbsp;sister&nbsp;Susan&nbsp;go&nbsp;to&nbsp;school&nbsp;______&nbsp;every&nbsp;day.</p>",
+        "options": [
+          "<p>by&nbsp;bus</p>",
+          "<p>by&nbsp;car</p>",
+          "<p>by&nbsp;bike</p>",
+          "<p>on&nbsp;foot</p>"
+        ],
+        "parentId": "Q0099"
+      },
+      {
+        "id": "Q0102",
+        "html": "<p>Susan&nbsp;wants&nbsp;to&nbsp;be&nbsp;______&nbsp;in&nbsp;the&nbsp;future.</p>",
+        "options": [
+          "<p>a&nbsp;housewife</p>",
+          "<p>a&nbsp;doctor</p>",
+          "<p>a&nbsp;singer</p>",
+          "<p>a&nbsp;basketball&nbsp;player</p>"
+        ],
+        "parentId": "Q0099"
+      },
+      {
+        "id": "Q0103",
+        "html": "<p>What&nbsp;does&nbsp;Joe&nbsp;usually&nbsp;do&nbsp;after&nbsp;school&nbsp;every&nbsp;day?</p>",
+        "options": [
+          "<p>He&nbsp;cooks&nbsp;breakfast&nbsp;with&nbsp;his&nbsp;mother.</p>",
+          "<p>He&nbsp;plays&nbsp;basketball&nbsp;with&nbsp;his&nbsp;friends.</p>",
+          "<p>He&nbsp;visits&nbsp;his&nbsp;friends&nbsp;with&nbsp;his&nbsp;sister.</p>",
+          "<p>He&nbsp;looks&nbsp;after&nbsp;the&nbsp;garden&nbsp;at&nbsp;home.</p>"
+        ],
+        "parentId": "Q0099"
+      },
+      {
+        "id": "Q0104",
+        "html": "<p>Which of the following is RIGHT according to the passage?</p>",
+        "options": [
+          "<p>Joe&rsquo;s&nbsp;mother&nbsp;is&nbsp;good&nbsp;at&nbsp;singing.</p>",
+          "<p>Joe&nbsp;and&nbsp;Susan&nbsp;do&nbsp;well&nbsp;in&nbsp;their&nbsp;lessons.</p>",
+          "<p>Joe&nbsp;and&nbsp;Susan&nbsp;have&nbsp;lunch&nbsp;at&nbsp;home&nbsp;every&nbsp;day.</p>",
+          "<p>Joe&rsquo;s&nbsp;mother&nbsp;often&nbsp;goes&nbsp;shopping&nbsp;at&nbsp;weekends.</p>"
+        ],
+        "parentId": "Q0099"
+      },
+      {
+        "id": "Q0195",
+        "html": "<p>  You may have heard video game characters deliver lines like “Shatter(击碎) the darkness with thunder!” But it’s refreshing to hear it in an unexpected place—the classroom. Xia Zhendong is a physics teacher working at a school in south China. Now in his 30s, Xia has won the hearts of millions of online viewers with his classroom experiments.<br>  In one video, Xia pointed a self-made “thunderbolt wand(魔杖)” toward a hanging light tube in his classroom and said, “Shatter the darkness with thunder.” Suddenly, an electric arc(弧线) emerged from the tip of the wand, <span class=\"underline\">illuminating</span> the tube. After the cheers from his students, he went on to explain the science behind it—static electricity (静电) and point discharge(尖端放电).<br>  “The idea came when I enjoyed playing a popular game on my smart phone,” he said. In his spare time, he likes to try out what students are interested in to get closer to them. Apart from the “thunderbolt wand”, Xia has done many other creative experiments. Once, he lit steel wool with a battery to show the heating effect of electric currents. Another time, he used a “laser weapon” to pop balloons while explaining the principles of lasers.<br>  For Xia, physics is supposed to be fun. So, when he saw his students struggle with physics, he decided to make a change. “Circuit diagrams(电路图) are abstract, and I want them to actually see the electricity through lightning to realize that knowledge is not just on paper. You can see it and even touch it,” Xia said. Now, Xia has also started free live classes online. “I hope that through online classes, more students can also have access to fun physics lessons. And their parents can also join in. I hope that physics could make them feel happier,” Xia said.</p>"
+      },
+      {
+        "id": "Q0196",
+        "html": "<p>What does the underlined word “illuminating” mean in paragraph 2?<input size=\"4\"></p>",
+        "options": [
+          "<p>Shining light on.</p>",
+          "<p>Cutting down on.</p>",
+          "<p>Getting stuck in.</p>",
+          "<p>Taking advantage of.</p>"
+        ],
+        "parentId": "Q0195"
+      },
+      {
+        "id": "Q0197",
+        "html": "<p>What inspired Xia Zhendong to have such an idea?<input size=\"4\"></p>",
+        "options": [
+          "<p>Wild cheers from his students.</p>",
+          "<p>Online viewers of his videos.</p>",
+          "<p>The pleasure in playing an online game.</p>",
+          "<p>The effect of acting a video game character.</p>"
+        ],
+        "parentId": "Q0195"
+      },
+      {
+        "id": "Q0198",
+        "html": "<p>Why does he start free live classes online?<input size=\"4\"></p>",
+        "options": [
+          "<p>Because he hopes to get more students to have his classes.</p>",
+          "<p>Because he wishes to get more parents involved in his lessons.</p>",
+          "<p>Because he expects more students to have fun in learning physics.</p>",
+          "<p>Because he wants to win more hearts of online viewers of his videos.</p>"
+        ],
+        "parentId": "Q0195"
+      },
+      {
+        "id": "Q0199",
+        "html": "<p>Which of the following can be the best title for the text?<input size=\"4\"></p>",
+        "options": [
+          "<p>What makes a fun teacher.</p>",
+          "<p>Bringing magic to school.</p>",
+          "<p>How to make physics fun.</p>",
+          "<p>Getting students to learn physics.</p>"
+        ],
+        "parentId": "Q0195"
+      }
+    ]
+  },
+  {
+    "questionType": "CLOZE",
+    "questions": [
+      {
+        "id": "Q0082",
+        "html": "<p>完形填空。</p>\n<p>&nbsp; &nbsp; &nbsp; &nbsp;In China, many children like fast food such as fried chicken or fried potato chips.&nbsp;It&rsquo;s <input size=\"4\">&nbsp;to find a fast food restaurant in the streets nearby. Many world famous fast food restaurants have chain shops (连锁店) in China today. Fast food is very <input size=\"4\">&nbsp;in the world.</p>\n<p>&nbsp; &nbsp; &nbsp; &nbsp;Is fast food healthy? If you don&rsquo;t eat <input size=\"4\">&nbsp;of it, it will not do harm to you. But if you often have it, you may gain weight because there is <input size=\"4\">&nbsp;sugar and fat in fast food.</p>\n<p>&nbsp; &nbsp; &nbsp; &nbsp;Now, five to ten percent of Chinese children are overweight.</p>\n<p>&nbsp; &nbsp; &nbsp; &nbsp;Why do Chinese children like fast food so much? Some parents think chicken is a kind of healthy food. It is good for their <input size=\"4\">. For the young, fast food has a delicious taste and it is quite <input size=\"4\"> home cooking. Most of our children are tired of everyday <input size=\"4\">, and they want to try <input size=\"4\">&nbsp;from outside. So fast food is just the &ldquo;right&rdquo; choice for them.</p>\n<p>&nbsp; &nbsp; &nbsp; &nbsp;Now, people are trying <input size=\"4\">&nbsp;fast food healthier. It is really good news for us. Try to take in more healthy&nbsp;<input size=\"4\">&nbsp;such as milk, eggs, fruits and vegetables in our daily life. Only in this way can we become healthier and healthier.<span></span></p>"
+      },
+      {
+        "id": "Q0083",
+        "html": "<p><input size=\"4\"></p>",
+        "options": [
+          "difficult",
+          "hard",
+          "not difficult",
+          "not easy"
+        ],
+        "parentId": "Q0082"
+      },
+      {
+        "id": "Q0084",
+        "html": "<p><input size=\"4\"></p>",
+        "options": [
+          "popular",
+          "healthy",
+          "interesting",
+          "wide"
+        ],
+        "parentId": "Q0082"
+      },
+      {
+        "id": "Q0085",
+        "html": "<p><input size=\"4\"></p>",
+        "options": [
+          "much too",
+          "too much",
+          "many too",
+          "too many"
+        ],
+        "parentId": "Q0082"
+      },
+      {
+        "id": "Q0086",
+        "html": "<p><input size=\"4\"></p>",
+        "options": [
+          "many",
+          "little",
+          "a lot of",
+          "a few"
+        ],
+        "parentId": "Q0082"
+      },
+      {
+        "id": "Q0087",
+        "html": "<p><input size=\"4\"></p>",
+        "options": [
+          "children",
+          "students",
+          "friends",
+          "cousins"
+        ],
+        "parentId": "Q0082"
+      },
+      {
+        "id": "Q0088",
+        "html": "<p><input size=\"4\"></p>",
+        "options": [
+          "the same as",
+          "the same with",
+          "different with",
+          "different from"
+        ],
+        "parentId": "Q0082"
+      },
+      {
+        "id": "Q0089",
+        "html": "<p><input size=\"4\"></p>",
+        "options": [
+          "cooking",
+          "work",
+          "life",
+          "stories"
+        ],
+        "parentId": "Q0082"
+      },
+      {
+        "id": "Q0090",
+        "html": "<p><input size=\"4\"></p>",
+        "options": [
+          "nothing",
+          "some new things",
+          "new anything",
+          "some old things"
+        ],
+        "parentId": "Q0082"
+      },
+      {
+        "id": "Q0091",
+        "html": "<p><input size=\"4\"></p>",
+        "options": [
+          "doing",
+          "making",
+          "to do",
+          "to make"
+        ],
+        "parentId": "Q0082"
+      },
+      {
+        "id": "Q0092",
+        "html": "<p><input size=\"4\"></p>",
+        "options": [
+          "drink",
+          "meat",
+          "food",
+          "apples"
+        ],
+        "parentId": "Q0082"
+      }
+    ]
+  },
+  {
+    "questionType": "WORD_BANK",
+    "questions": [
+      {
+        "id": "Q0071",
+        "html": "<p>用所给单词的适当形式补全短文。（每词限用一次）</p>\n<p><img src=\"https://longkongjun.github.io/TechLab/geckoview/images/199bf8c8e8f9178.png\"></p>\n<p>&nbsp; &nbsp; &nbsp; &nbsp;My name is Alice. I am fourteen <input size=\"4\"> old. I have good eating habits. For breakfast, I have two <input size=\"4\"> and some bread. I don&rsquo;t like milk, <input size=\"4\">&nbsp;I have some milk because milk <input size=\"4\">&nbsp;healthy. For lunch, I have <input size=\"4\">&nbsp;with meat and vegetables. <input size=\"4\"> is my favourite meat. Carrots are my favourite <input size=\"4\">.&nbsp;They are very healthy.&nbsp;I have vegetables and noodles for <input size=\"4\">. After dinner, I <input size=\"4\"> some fruit. Bananas and apples are my favourite fruit. What food don&rsquo;t I like? Hamburgers! They aren&rsquo;t <input size=\"4\">. Good eating habits help me to be healthy.<span></span></p>",
+        "inlineAnswers": [
+          "Q0072",
+          "Q0073",
+          "Q0074",
+          "Q0075",
+          "Q0076",
+          "Q0077",
+          "Q0078",
+          "Q0079",
+          "Q0080",
+          "Q0081"
+        ]
+      },
+      {
+        "id": "Q0072",
+        "html": "",
+        "parentId": "Q0071"
+      },
+      {
+        "id": "Q0073",
+        "html": "",
+        "parentId": "Q0071"
+      },
+      {
+        "id": "Q0074",
+        "html": "",
+        "parentId": "Q0071"
+      },
+      {
+        "id": "Q0075",
+        "html": "",
+        "parentId": "Q0071"
+      },
+      {
+        "id": "Q0076",
+        "html": "",
+        "parentId": "Q0071"
+      },
+      {
+        "id": "Q0077",
+        "html": "",
+        "parentId": "Q0071"
+      },
+      {
+        "id": "Q0078",
+        "html": "",
+        "parentId": "Q0071"
+      },
+      {
+        "id": "Q0079",
+        "html": "",
+        "parentId": "Q0071"
+      },
+      {
+        "id": "Q0080",
+        "html": "",
+        "parentId": "Q0071"
+      },
+      {
+        "id": "Q0081",
+        "html": "",
+        "parentId": "Q0071"
+      },
+      {
+        "id": "Q0152",
+        "html": "<p>  用方框中所给的本单元所学短语的适当形式填空。<br><span>write down;leave alone;keep a diary;look forward to;at last;come true;concentrate on;depend on;take notes;make an impression on</span></p>"
+      },
+      {
+        "id": "Q0153",
+        "html": "<p>Her gentleness has <input size=\"16\"> me when I met her for the first time.</p>",
+        "parentId": "Q0152"
+      },
+      {
+        "id": "Q0154",
+        "html": "<p>I hope the advice above will be helpful to you and I am<input size=\"13\"> your good news.</p>",
+        "parentId": "Q0152"
+      },
+      {
+        "id": "Q0155",
+        "html": "<p>Tom<input size=\"10\"> as he had been concentrating on doing research on the small robot.</p>",
+        "parentId": "Q0152"
+      },
+      {
+        "id": "Q0156",
+        "html": "<p>Please<input size=\"8\"> the singer’s name, age and the date of the event if it is necessary.</p>",
+        "parentId": "Q0152"
+      },
+      {
+        "id": "Q0157",
+        "html": "<p>My nephew made such rapid progress that he was able to<input size=\"8\"> in English before long.</p>",
+        "parentId": "Q0152"
+      },
+      {
+        "id": "Q0158",
+        "html": "<p>If we achieve our dreams at the cost of ignoring the present situation, we will probably fail <input size=\"5\">.</p>",
+        "parentId": "Q0152"
+      },
+      {
+        "id": "Q0159",
+        "html": "<p>The exams are likely to work out as expected and my dream to be admitted into my favorite university will<input size=\"5\">.</p>",
+        "parentId": "Q0152"
+      },
+      {
+        "id": "Q0160",
+        "html": "<p>Now, <input size=\"12\"> learning is his main task and he is looking forward to getting a good result in the final examination.</p>",
+        "parentId": "Q0152"
+      },
+      {
+        "id": "Q0161",
+        "html": "<p><input size=\"10\"> what they collect, people exchange their trash for cash, food and services.</p>",
+        "parentId": "Q0152"
+      },
+      {
+        "id": "Q0162",
+        "html": "<p>The students listened and <input size=\"7\"> carefully as the teacher gave them a lecture.</p>",
+        "parentId": "Q0152"
+      }
+    ]
+  },
+  {
+    "questionType": "CONTEXT_FILL",
+    "questions": [
+      {
+        "id": "Q0178",
+        "html": "<p> Han Jing entered senior high school. She was not outgoing so she was a little anxious. She wondered <span>1.</span><input size=\"8\"> would happen and wanted to make a good first <span>2.</span><input size=\"8\">(impress).<br> She found that her first maths class was difficult, but <span>3.</span><input size=\"8\">(lucky) she had a kind and friendly teacher. He even <span>4.</span><input size=\"8\">(tell) the students a funny story and everyone laughed. In the afternoon, a chemistry class <span>5.</span><input size=\"8\">(give) in the science lab. The lab was new and the lesson was great. However, the guy next <span>6.</span><input size=\"8\"> her tried to talk to her the whole time. That made <span>7.</span><input size=\"8\"> difficult for her to concentrate on the experiment. She was annoyed and wanted him to be quiet.<br> However, after the first school day was over, Han Jing’s worry disappeared. She didn’t feel awkward or <span>8.</span><input size=\"8\">(frighten) any longer. Although she misses her friends from junior high school, she believes that she will make new friends here. What’s more, there is a lot for her <span>9.</span><input size=\"8\">(explore) at senior high. She becomes much more confident, <span>10.</span><input size=\"8\">(believe) that tomorrow will be a great day!</p>",
+        "inlineAnswers": [
+          "Q0179",
+          "Q0180",
+          "Q0181",
+          "Q0182",
+          "Q0183",
+          "Q0184",
+          "Q0185",
+          "Q0186",
+          "Q0187",
+          "Q0188"
+        ]
+      },
+      {
+        "id": "Q0179",
+        "html": "<p><input size=\"4\"></p>",
+        "parentId": "Q0178"
+      },
+      {
+        "id": "Q0180",
+        "html": "<p><input size=\"4\"></p>",
+        "parentId": "Q0178"
+      },
+      {
+        "id": "Q0181",
+        "html": "<p><input size=\"4\"></p>",
+        "parentId": "Q0178"
+      },
+      {
+        "id": "Q0182",
+        "html": "<p><input size=\"4\"></p>",
+        "parentId": "Q0178"
+      },
+      {
+        "id": "Q0183",
+        "html": "<p><input size=\"4\"></p>",
+        "parentId": "Q0178"
+      },
+      {
+        "id": "Q0184",
+        "html": "<p><input size=\"4\"></p>",
+        "parentId": "Q0178"
+      },
+      {
+        "id": "Q0185",
+        "html": "<p><input size=\"4\"></p>",
+        "parentId": "Q0178"
+      },
+      {
+        "id": "Q0186",
+        "html": "<p><input size=\"4\"></p>",
+        "parentId": "Q0178"
+      },
+      {
+        "id": "Q0187",
+        "html": "<p><input size=\"4\"></p>",
+        "parentId": "Q0178"
+      },
+      {
+        "id": "Q0188",
+        "html": "<p><input size=\"4\"></p>",
+        "parentId": "Q0178"
+      }
+    ]
+  },
+  {
+    "questionType": "PASSAGE_COMPLETION",
+    "questions": [
+      {
+        "id": "Q0105",
+        "html": "<p>请阅读全文，从文后的七个选项中选择五个还原到原文中，使原文意思完整、连贯。<span></span></p>\n<p>A:&nbsp;Sam,&nbsp;we&nbsp;want&nbsp;to&nbsp;know&nbsp;about&nbsp;your&nbsp;school&nbsp;day.</p>\n<p>B:&nbsp;OK!</p>\n<p>A:&nbsp;<input size=\"4\"></p>\n<p>B:&nbsp;Hmm,&nbsp;usually&nbsp;at&nbsp;about&nbsp;6:00&nbsp;a.m.</p>\n<p>A:&nbsp;<input size=\"4\">　&nbsp;&nbsp;&nbsp;　</p>\n<p>B:&nbsp;At&nbsp;7:00&nbsp;a.m.&nbsp;And&nbsp;I&nbsp;go&nbsp;to&nbsp;school&nbsp;at&nbsp;about&nbsp;8:00&nbsp;a.m.</p>\n<p>A:&nbsp;Wow!&nbsp;You&nbsp;go&nbsp;home&nbsp;at&nbsp;...?</p>\n<p>B:&nbsp;<input size=\"4\">　&nbsp;&nbsp;&nbsp;　</p>\n<p>A:&nbsp;Then&nbsp;you&nbsp;have&nbsp;dinner&nbsp;at&nbsp;6:00&nbsp;p.m.&nbsp;<input size=\"4\">　&nbsp;&nbsp;&nbsp;　</p>\n<p>B:&nbsp;I&nbsp;do&nbsp;my&nbsp;homework.&nbsp;<input size=\"4\">&nbsp;&nbsp;&nbsp;　</p>\n<p>A:&nbsp;That&rsquo;s&nbsp;early.</p>\n<p>B:&nbsp;Of&nbsp;course.</p>",
+        "options": [
+          "At&nbsp;4:15&nbsp;in&nbsp;the&nbsp;afternoon.",
+          "How&nbsp;is&nbsp;your&nbsp;weekday?",
+          "When&nbsp;do&nbsp;you&nbsp;have&nbsp;breakfast?",
+          "I&nbsp;often&nbsp;go&nbsp;to&nbsp;bed&nbsp;at&nbsp;8:30&nbsp;p.m.",
+          "What&nbsp;do&nbsp;you&nbsp;do&nbsp;after&nbsp;it&nbsp;in&nbsp;the&nbsp;evening?",
+          "When&nbsp;do&nbsp;you&nbsp;get&nbsp;up?",
+          "Where&nbsp;do&nbsp;you&nbsp;usually&nbsp;go&nbsp;in&nbsp;the&nbsp;evening?"
+        ]
+      },
+      {
+        "id": "Q0106",
+        "html": "",
+        "parentId": "Q0105"
+      },
+      {
+        "id": "Q0107",
+        "html": "",
+        "parentId": "Q0105"
+      },
+      {
+        "id": "Q0108",
+        "html": "",
+        "parentId": "Q0105"
+      },
+      {
+        "id": "Q0109",
+        "html": "",
+        "parentId": "Q0105"
+      },
+      {
+        "id": "Q0110",
+        "html": "",
+        "parentId": "Q0105"
+      },
+      {
+        "id": "Q0200",
+        "html": "<p>  The act of making and being a friend is as simple as it is difficult. Here are a few tips to help you make new friends as well as to take better care of the friendships you already have.<br>  Accept the awkwardness. It’s a little bit awkward to reach out to someone you don’t know well—whether that’s sending the first text messages or starting small talk in the elevator. <span></span><span data-block-type=\"answer-field\" data-block-answer-method=\"0\"><span class=\"underline\"> 1 </span></span> Otherwise you can’t make any new friends.<br>  <span></span><span data-block-type=\"answer-field\" data-block-answer-method=\"0\"><span class=\"underline\"> 2 </span></span> Actually this advice is based on a well-known theory and some field research. Gallian Sandstorm, a senior lecturer in psychology at the university of Essex in the UK, has done research on something called the “liking gap”, which says that the little voice in your head telling you that somebody doesn’t like you very much is wrong. <span></span><span data-block-type=\"answer-field\" data-block-answer-method=\"0\"><span class=\"underline\"> 3 </span></span> Instead, remember that when you talk to someone else, you are actually brightening their day.<br>  Invest in activities that you love. Ask anyone about how to make friends and they will most likely tell you to try a new hobby. It might sound empty, but it works. <span></span><span data-block-type=\"answer-field\" data-block-answer-method=\"0\"><span class=\"underline\"> 4 </span></span> Then people will be drawn to you because you will be in the right place.<br>  Be present. The planet is warming, and there is so much good television out there to watch. We get it. But if you want to keep your friendships, you have to show up for them. <span></span><span data-block-type=\"answer-field\" data-block-answer-method=\"0\"><span class=\"underline\"> 5 </span></span></p>",
+        "options": [
+          "So don’t listen to it.",
+          "But you have to accept it.",
+          "Do the things you are crazy about.",
+          "You don’t have to be interested in just one thing.",
+          "You have to listen and notice things about your friend.",
+          "Remember that people will like you more than you think they will.",
+          "We have a few tips for being present and engaging with your friends."
+        ]
+      },
+      {
+        "id": "Q0201",
+        "html": "<p><input size=\"4\"></p>",
+        "parentId": "Q0200"
+      },
+      {
+        "id": "Q0202",
+        "html": "<p><input size=\"4\"></p>",
+        "parentId": "Q0200"
+      },
+      {
+        "id": "Q0203",
+        "html": "<p><input size=\"4\"></p>",
+        "parentId": "Q0200"
+      },
+      {
+        "id": "Q0204",
+        "html": "<p><input size=\"4\"></p>",
+        "parentId": "Q0200"
+      },
+      {
+        "id": "Q0205",
+        "html": "<p><input size=\"4\"></p>",
+        "parentId": "Q0200"
+      }
+    ]
+  },
+  {
+    "questionType": "WRITING",
+    "questions": [
+      {
+        "id": "Q0194",
+        "html": "<p> 根据下列提示，写一篇给交换生提出建议的小短文。注意使用恰当的衔接词。<br> 1.作为一名交换生，在新校区注册会让你感到焦虑。(动词-ing形式作主语)<br> 2.集中精力学习并保持自信是很重要的。（it作形式主语；concentrate on）<br> 3.探索校园很有趣，并有助于给你留下好印象。(动词-ing形式作主语；make an impression on)<br> 4.不要害怕提问问题，尽量利用学习和成长的机会。（并列的祈使句）<br> 5.有了决心和专注，你可以在学习中取得进步。(with determination；make progress)<br></p>"
+      }
+    ]
+  }
+]
