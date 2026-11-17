@@ -1,0 +1,39 @@
+:root { color-scheme: light; font: medium/1.58 system-ui, sans-serif; color: #182433; background: #f4f6f8; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+[hidden] { display: none !important; }
+#paper { position: relative; padding: 10px 0; }
+#content { display: grid; grid-template-columns: minmax(2ch, max-content) minmax(0, 1fr); column-gap: .48em; }
+.question { background: #fff; padding: 11px 13px; margin: 0 0 10px; overflow-wrap: anywhere; }
+.question-heading { font-size: .9rem; font-weight: 650; color: #34536f; }
+.subquestion { margin-top: 6px; padding: 2px 0; }
+.question, .subquestion { display: grid; grid-column: 1 / -1; grid-template-columns: subgrid; align-items: start; }
+.question-heading { white-space: nowrap; }
+.question-number { display: inline-block; }
+.question-body { min-width: 0; }
+p { margin: .24em 0 .44em; }
+img { max-width: 100%; height: auto; vertical-align: middle; }
+table { border-collapse: collapse; max-width: 100%; }
+td, th { border: 1px solid #a9b5c0; padding: 4px 6px; }
+.options { list-style: none; padding: 0; margin: .45em 0 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px 12px; }
+.options > li { grid-column: span 4; display: flex; align-items: baseline; gap: .44em; min-width: 0; }
+.options[data-columns="2"] > li { grid-column: span 2; }
+.options[data-columns="4"] > li { grid-column: span 1; }
+.options > li > strong { flex-shrink: 0; white-space: nowrap; }
+.measure-options .options > li { width: max-content; }
+.option-body { min-width: 0; }
+.formula { display: inline-block; max-width: 100%; }
+.blank, .answer-slot { display: inline-block; vertical-align: baseline; min-width: var(--blank, 3em); min-height: 1.18em; border-bottom: 1px solid #526273; }
+.answer-slot[data-method="3"] { min-width: 6em; min-height: 1.6em; }
+.underline { text-decoration: underline; }
+.choice-tail { white-space: nowrap; }
+.choice-anchor, .choice-answer { display: inline-block; }
+.choice-anchor { margin-inline-start: .6em; }
+body.producer, html:has(body.producer) { background: white; }
+.producer #paper { padding: 0; }
+.producer .question { margin: 0; }
+.batch-slot { display: grid; grid-column: 1 / -1; grid-template-columns: subgrid; align-items: start; height: 100vh; overflow: clip; }
+.material-blank { display: inline-block; min-width: 3.5ch; padding-inline: .35em; border-bottom: 1px solid #526273; text-align: center; color: #34536f; font-weight: 650; }
+.arithmetic-answer { display: inline-block; width: 1.35em; height: 1.1em; margin-left: .28em; vertical-align: -.12em; border: 1px solid #526273; }
+.baseline-reference { position: absolute; top: 0; left: 0; visibility: hidden; white-space: nowrap; pointer-events: none; }
+.baseline-probe { display: inline-block; width: 0; height: 0; vertical-align: baseline; }
