@@ -5,6 +5,7 @@ plugins {
 val demoAbi = providers.gradleProperty("techlabAbi").orNull
 
 android {
+    buildFeatures { viewBinding = true }
     namespace = "dev.techlab.android"
     compileSdk {
         version = release(37) { minorApiLevel = 2 }

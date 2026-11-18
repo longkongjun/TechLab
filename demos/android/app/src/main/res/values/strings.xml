@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_title">TechLab Android</string>
+    <string name="open_renderer">GeckoView 题目渲染</string>
+</resources>

@@ -5,15 +5,14 @@ import android.graphics.Canvas
 import android.graphics.Matrix
 import android.graphics.Paint
 import android.graphics.RectF
+import android.util.AttributeSet
 import android.view.View
 import org.json.JSONArray
 import org.json.JSONObject
 
-internal class GeometryOverlay(
-    context: Context,
-    private val visibility: BooleanArray,
-    private val pageToView: (Matrix) -> Boolean,
-) : View(context) {
+internal class GeometryOverlay(context: Context, attrs: AttributeSet) : View(context, attrs) {
+    val layers = BooleanArray(4)
+    var pageToView: (Matrix) -> Boolean = { false }
     private var rectangles = GeometryRectangles(null)
     private val pageToSurface = Matrix()
 
@@ -24,7 +23,7 @@ internal class GeometryOverlay(
 
     override fun onDraw(canvas: Canvas) {
         if (!pageToView(pageToSurface)) return
-        rectangles.draw(canvas, pageToSurface, visibility, width, height)
+        rectangles.draw(canvas, pageToSurface, layers, width, height)
     }
 }
 

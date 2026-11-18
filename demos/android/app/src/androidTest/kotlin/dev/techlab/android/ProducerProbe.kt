@@ -14,6 +14,7 @@ import android.os.Looper
 import android.os.Message
 import android.os.Messenger
 import android.os.Process
+import dev.techlab.android.gecko.EXTRA_DEFER_RENDER_INPUT
 import dev.techlab.android.gecko.ProducerService
 import org.json.JSONObject
 import java.io.File
@@ -22,11 +23,11 @@ import java.util.concurrent.TimeUnit
 
 /** Starts only the bound service and checks outputs as each question becomes available. */
 class ProducerProbe : Instrumentation() {
-    private lateinit var args: Bundle
+    private val args = Bundle()
 
     override fun onCreate(arguments: Bundle?) {
         super.onCreate(arguments)
-        args = Bundle(arguments ?: Bundle())
+        arguments?.let(args::putAll)
         start()
     }
 
@@ -63,52 +64,60 @@ class ProducerProbe : Instrumentation() {
             val limit = args.getString("limit")?.toInt() ?: 3
             val offset = args.getString("start")?.toInt() ?: 0
             val expectedFirst = args.getString("firstQuestion")
-            val captured = mutableListOf<Long>()
-            val indices = mutableSetOf<Int>()
-            val failures = mutableListOf<String>()
-            var peak = 0L
-            producer.send(Message.obtain(null, ProducerService.START).apply {
-                replyTo = client
-                data = Bundle().apply {
-                    putString("questionType", questionType)
-                    putInt("limit", limit)
-                    putInt("startIndex", offset)
-                    putInt("width", args.getString("width")?.toInt() ?: 1000)
-                }
-            })
-            var total = 0
-            while (true) {
-                val (type, data) = checkNotNull(events.poll(40, TimeUnit.SECONDS)) { "Timed out waiting for result" }
-                when (type) {
-                    ProducerService.STARTED -> {
-                        check(data.getInt("rendererPid") != Process.myPid()) { "Renderer must be a distinct process" }
-                        total = data.getInt("total")
-                        print("START $questionType total=$total rendererPid=${data.getInt("rendererPid")} cold=${data.getBoolean("coldRuntime")}")
+            var previousPage: Long? = null
+            val widths = listOfNotNull(args.getString("width")?.toInt() ?: 1000, args.getString("secondWidth")?.toInt())
+            for (width in widths) {
+                val captured = mutableListOf<Long>()
+                val indices = mutableSetOf<Int>()
+                val failures = mutableListOf<String>()
+                var peak = 0L
+                producer.send(Message.obtain(null, ProducerService.START).apply {
+                    replyTo = client
+                    data = Bundle().apply {
+                        putString("questionType", questionType)
+                        putBoolean(EXTRA_DEFER_RENDER_INPUT, args.getString(EXTRA_DEFER_RENDER_INPUT).toBoolean())
+                        putInt("limit", limit)
+                        putInt("startIndex", offset)
+                        putInt("width", width)
                     }
-                    ProducerService.ITEM -> {
-                        val id = data.getString("questionId")!!
-                        val index = data.getInt("questionIndex")
-                        check(index in offset until offset + total && indices.add(index))
-                        if (index == offset && expectedFirst != null) check(id == expectedFirst)
-                        validateQuestion(data, questionType)
-                        val elapsed = data.getLong("elapsedMs", -1)
-                        check(elapsed >= 0 && elapsed == data.getLong("questionMs", -1))
-                        peak = maxOf(peak, data.getLong("rendererPssKb"))
-                        captured += elapsed
-                        print("ITEM id=$id index=$index ${data.getInt("width")}x${data.getInt("height")} " +
-                            "time=$elapsed image=${data.getString("image")}")
+                })
+                var total = 0
+                results@ while (true) {
+                    val (type, data) = checkNotNull(events.poll(40, TimeUnit.SECONDS)) { "Timed out waiting for result" }
+                    when (type) {
+                        ProducerService.STARTED -> {
+                            check(data.getInt("rendererPid") != Process.myPid()) { "Renderer must be a distinct process" }
+                            val page = data.getLong("pageNavigationAt")
+                            check(page > 0 && (previousPage == null || previousPage == page)) { "Batch navigated to another page" }
+                            previousPage = page
+                            total = data.getInt("total")
+                            print("START $questionType total=$total rendererPid=${data.getInt("rendererPid")} cold=${data.getBoolean("coldRuntime")}")
+                        }
+                        ProducerService.ITEM -> {
+                            val id = data.getString("questionId")!!
+                            val index = data.getInt("questionIndex")
+                            check(index in offset until offset + total && indices.add(index))
+                            if (index == offset && expectedFirst != null) check(id == expectedFirst)
+                            validateQuestion(data, questionType)
+                            val elapsed = data.getLong("elapsedMs", -1)
+                            check(elapsed >= 0 && elapsed == data.getLong("questionMs", -1))
+                            peak = maxOf(peak, data.getLong("rendererPssKb"))
+                            captured += elapsed
+                            print("ITEM id=$id index=$index ${data.getInt("width")}x${data.getInt("height")} " +
+                                "time=$elapsed image=${data.getString("image")}")
+                        }
+                        ProducerService.ITEM_ERROR -> failures += "${data.getInt("questionIndex")}: ${data.getString("error")}"
+                        ProducerService.DONE -> {
+                            check(failures.isEmpty()) { failures.joinToString() }
+                            check(captured.size == total && data.getInt("succeeded") == total)
+                            check(captured.first() == data.getLong("firstMs"))
+                            check(captured.max() <= data.getLong("elapsedMs"))
+                            if (total > 1) check(captured.first() < data.getLong("elapsedMs")) { "First result was not streamed" }
+                            print("DONE count=$total first=${captured.first()}ms total=${data.getLong("elapsedMs")}ms sampledRendererPss=${peak}KB")
+                            break@results
+                        }
+                        ProducerService.ERROR -> error(data.getString("error").orEmpty())
                     }
-                    ProducerService.ITEM_ERROR -> failures += "${data.getInt("questionIndex")}: ${data.getString("error")}"
-                    ProducerService.DONE -> {
-                        check(failures.isEmpty()) { failures.joinToString() }
-                        check(captured.size == total && data.getInt("succeeded") == total)
-                        check(captured.first() == data.getLong("firstMs"))
-                        check(captured.max() <= data.getLong("elapsedMs"))
-                        if (total > 1) check(captured.first() < data.getLong("elapsedMs")) { "First result was not streamed" }
-                        print("DONE count=$total first=${captured.first()}ms total=${data.getLong("elapsedMs")}ms sampledRendererPss=${peak}KB")
-                        return
-                    }
-                    ProducerService.ERROR -> error(data.getString("error").orEmpty())
                 }
             }
         } finally {

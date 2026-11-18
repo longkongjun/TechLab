@@ -1,0 +1,16 @@
+<resources>
+    <string name="gecko_tab">GeckoView 排版</string>
+    <string name="web_tab">WebView 排版</string>
+    <string name="producer_tab">后台产图</string>
+    <string name="picker">选择题型</string>
+    <string name="question_boxes">题目框</string>
+    <string name="line_info">行信息</string>
+    <string name="check_boxes">优先批改框</string>
+    <string name="baselines">基线</string>
+    <string name="fresh_instance">新建实例</string>
+    <string name="retest">重测当前</string>
+    <string name="result_caption">%1$d. %2$s · 批次 +%3$d ms</string>
+    <string name="result_error">%1$s · 失败：%2$s</string>
+    <string name="result_size">%1$s · %2$d×%3$d</string>
+    <string name="result_unreadable">%1$s · 读取产物失败</string>
+</resources>

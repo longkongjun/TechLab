@@ -24,16 +24,23 @@ internal enum class QuestionType(val title: String) {
 }
 
 internal class QuestionCatalog(context: Context) {
-    class Group(val type: QuestionType, val questions: List<JSONObject>)
+    class Group(val type: QuestionType, val entries: List<JSONObject>) {
+        val questions = entries.filterNot { it.has("parentId") }
+        val hasMath by lazy {
+            fun markup(text: String) = text.contains("data-tex", ignoreCase = true) || text.contains("tex-source")
+            entries.any { question ->
+                val options = question.optJSONArray("options")
+                question.has("tex") || markup(question.optString("html")) ||
+                    (options != null && (0 until options.length()).any { markup(options.optString(it)) })
+            }
+        }
+    }
 
     private val resources = context.resources
-    private val sourceGroups = JSONArray(context.assets.open("gecko/catalog.json").bufferedReader().use { it.readText() })
+    val groups = JSONArray(context.assets.open("gecko/catalog.json").bufferedReader().use { it.readText() })
         .objects().map { Group(QuestionType.valueOf(it.getString("questionType")), it.items("questions")) }
-    private val byParent = sourceGroups.flatMap { it.questions }.filter { it.has("parentId") }
+    private val byParent = groups.flatMap { it.entries }.filter { it.has("parentId") }
         .groupBy { it.getString("parentId") }
-    val groups = sourceGroups.map { group ->
-        Group(group.type, group.questions.filterNot { it.has("parentId") })
-    }
 
     fun request(
         token: String,
@@ -44,6 +51,7 @@ internal class QuestionCatalog(context: Context) {
     ): JSONObject = JSONObject()
         .put("token", token)
         .put("presentation", if (background) "batch" else "list")
+        .put("hasMath", group.hasMath)
         .put("fontSizePx", (fontSizeDp * resources.displayMetrics.density).toDouble())
         .put("questions", JSONArray(indices.map { index ->
             renderEntry(group.questions[index], group.type, (index + 1).toString())

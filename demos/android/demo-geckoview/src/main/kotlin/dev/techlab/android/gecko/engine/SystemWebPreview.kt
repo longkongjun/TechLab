@@ -1,30 +1,27 @@
-package dev.techlab.android.gecko
+package dev.techlab.android.gecko.engine
 
 import android.content.Context
 import android.os.Build
+import android.view.LayoutInflater
 import android.webkit.RenderProcessGoneDetail
 import android.webkit.WebResourceError
 import android.webkit.WebResourceRequest
 import android.webkit.WebResourceResponse
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.widget.FrameLayout
 import androidx.webkit.WebViewCompat
 import androidx.webkit.WebViewFeature
+import dev.techlab.android.gecko.databinding.ResidentWebPreviewBinding
 import org.json.JSONObject
 
-internal class SystemWebPreview(
-    context: Context,
-    layers: BooleanArray,
-    input: (String) -> JSONObject?,
-    receive: (JSONObject) -> Unit,
-    onLost: () -> Unit,
-) {
-    val frame = FrameLayout(context)
-    private val web: WebView
-    private val overlay: GeometryOverlay
+internal class SystemWebPreview(context: Context) {
+    val document = RenderDocument()
+    private val binding: ResidentWebPreviewBinding
+    val frame get() = binding.root
+    private val web get() = binding.web
+    private val overlay get() = binding.overlay
+    val layers get() = overlay.layers
     private var pixelRatio = 0f
-    private var token: String? = null
     private var closed = false
 
     init {
@@ -32,10 +29,11 @@ internal class SystemWebPreview(
             WebView.setDataDirectorySuffix("techlab-renderer")
             dataDirectoryConfigured = true
         }
-        check(WebViewFeature.isFeatureSupported(WebViewFeature.WEB_MESSAGE_LISTENER)) {
-            "系统 WebView 不支持本地消息桥"
+        if (!WebViewFeature.isFeatureSupported(WebViewFeature.WEB_MESSAGE_LISTENER)) {
+            error("系统 WebView 不支持本地消息桥")
         }
-        web = WebView(context).apply {
+        binding = ResidentWebPreviewBinding.inflate(LayoutInflater.from(context))
+        web.apply {
             settings.javaScriptEnabled = true
             settings.allowFileAccess = false
             settings.allowContentAccess = false
@@ -43,7 +41,7 @@ internal class SystemWebPreview(
             settings.textZoom = 100
             settings.setSupportZoom(false)
         }
-        overlay = GeometryOverlay(context, layers) { matrix ->
+        overlay.pageToView = { matrix ->
             if (pixelRatio <= 0f) {
                 false
             } else {
@@ -57,6 +55,16 @@ internal class SystemWebPreview(
             // The native loader selects the page. A fixture cannot navigate the comparison view.
             override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest) = true
 
+            override fun onPageFinished(view: WebView, url: String) {
+                if (closed || url != document.url || document.isReady) return
+                // A legacy renderer exports render(), but never installs the resident message handler.
+                view.evaluateJavascript(
+                    "typeof window.TechLabRenderer?.render === 'function' && typeof window.techLabWebView?.onmessage !== 'function'",
+                ) { legacy ->
+                    if (legacy == "true") document.checkCompatibility(url, ::navigate)
+                }
+            }
+
             override fun onReceivedError(view: WebView, request: WebResourceRequest, error: WebResourceError) {
                 pageError(request, error.description.toString())
             }
@@ -67,42 +75,35 @@ internal class SystemWebPreview(
 
             private fun pageError(request: WebResourceRequest, message: String) {
                 if (!request.isForMainFrame) return
-                val failedToken = request.url.getQueryParameter("token") ?: return
-                receive(JSONObject().put("type", "error").put("token", failedToken).put("message", message))
+                if (request.url.toString() == document.url) document.fail(message)
             }
 
             override fun onRenderProcessGone(view: WebView, detail: RenderProcessGoneDetail): Boolean {
-                if (!closed) onLost()
+                if (!closed) {
+                    document.fail("WebView 渲染进程已退出")
+                    close()
+                }
                 return true
             }
         }
         WebViewCompat.addWebMessageListener(web, "techLabWebView", setOf(PageRenderer.ORIGIN)) { view, message, _, mainFrame, reply ->
-            if (!mainFrame || !PageRenderer.isRenderPage(view.url)) return@addWebMessageListener
+            if (!mainFrame) return@addWebMessageListener
             val data = runCatching { JSONObject(message.data ?: return@addWebMessageListener) }.getOrNull()
                 ?: return@addWebMessageListener
-            val requestToken = data.optString("token")
-            if (token != requestToken) return@addWebMessageListener
-            if (data.optString("type") == "request-input") {
-                input(requestToken)?.let { reply.postMessage(it.toString()) }
-            } else {
-                receive(data)
-            }
+            if (closed || view.url != document.url) return@addWebMessageListener
+            if (data.optString("type") == "ready") {
+                document.ready { reply.postMessage(it.toString()) }
+            } else document.message(data)
         }
-        frame.addView(web, FrameLayout.LayoutParams(-1, -1))
-        frame.addView(overlay, FrameLayout.LayoutParams(-1, -1))
+        navigate()
     }
 
-    fun load(url: String, requestToken: String) {
-        token = requestToken
-        overlay.display(null)
-        web.loadUrl(url)
+    private fun navigate() {
+        document.navigating()
+        web.loadUrl(document.url)
     }
 
-    fun stop() {
-        token = null
-        web.stopLoading()
-        web.loadUrl("about:blank")
-    }
+    fun clearOverlay() = overlay.display(null)
 
     fun display(data: JSONObject) {
         pixelRatio = data.optDouble("pixelRatio").toFloat()
@@ -114,7 +115,7 @@ internal class SystemWebPreview(
     fun close() {
         if (closed) return
         closed = true
-        token = null
+        document.close()
         frame.removeView(web)
         web.destroy()
     }

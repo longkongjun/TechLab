@@ -1,17 +1,14 @@
-package dev.techlab.android.gecko
+package dev.techlab.android.gecko.engine
 
 import android.content.Context
-import android.net.Uri
 import android.os.Build
 import android.os.SystemClock
-import org.json.JSONObject
+import dev.techlab.android.gecko.QuestionCatalog
+import java.io.File
 import org.mozilla.geckoview.GeckoResult
 import org.mozilla.geckoview.GeckoRuntime
 import org.mozilla.geckoview.GeckoRuntimeSettings
-import org.mozilla.geckoview.GeckoSession
 import org.mozilla.geckoview.WebExtension
-import org.mozilla.geckoview.WebRequestError
-import java.io.File
 
 /** Native owns the catalog and the messaging bridge to the hosted renderer. */
 internal class PageRenderer private constructor(app: Context, profileName: String) {
@@ -45,68 +42,27 @@ internal class PageRenderer private constructor(app: Context, profileName: Strin
     val runtime by runtimeState
     private var extension: GeckoResult<WebExtension>? = null
 
-    private fun ensureBridge(): GeckoResult<WebExtension> = extension ?: runtime.webExtensionController.ensureBuiltIn(
+    internal fun ensureBridge(): GeckoResult<WebExtension> = extension ?: runtime.webExtensionController.ensureBuiltIn(
         "resource://android/assets/gecko/bridge/", "renderer@techlab.dev"
     ).also { pending ->
         extension = pending
         pending.accept({}, { if (extension === pending) extension = null })
     }
 
-    fun url(token: String): String = "$PAGE_URL?token=$token"
-
-    fun attach(
-        session: GeckoSession,
-        input: (String) -> JSONObject?,
-        receive: (JSONObject) -> Unit,
-        ready: () -> Unit,
-        fail: (Throwable) -> Unit,
-    ) {
-        session.navigationDelegate = object : GeckoSession.NavigationDelegate {
-            override fun onLoadError(session: GeckoSession, uri: String?, error: WebRequestError): GeckoResult<String>? {
-                if (uri != null && isRenderPage(uri)) {
-                    val token = Uri.parse(uri).getQueryParameter("token")
-                    receive(JSONObject().put("type", "error").put("token", token).put("message", "Pages 页面加载失败"))
-                }
-                return null
-            }
-        }
-        ensureBridge().accept({ installed ->
-            if (!session.isOpen) return@accept
-            if (installed == null) {
-                fail(IllegalStateException("Gecko 没有返回渲染消息桥"))
-                return@accept
-            }
-            session.webExtensionController.setMessageDelegate(installed, object : WebExtension.MessageDelegate {
-                override fun onMessage(
-                    nativeApp: String,
-                    message: Any,
-                    sender: WebExtension.MessageSender,
-                ): GeckoResult<Any>? {
-                    if (sender.session !== session || !sender.isTopLevel || !isRenderPage(sender.url) || message !is JSONObject) {
-                        return null
-                    }
-                    if (message.optString("type") == "request-input") {
-                        // Gecko's event dispatcher accepts a string reply for the JSON payload.
-                        return input(message.optString("token"))?.let { GeckoResult.fromValue<Any>(it.toString()) }
-                    }
-                    receive(message)
-                    return null
-                }
-            }, "techlab_renderer")
-            ready()
-        }, { error -> if (error != null) fail(error) })
-    }
-
     companion object {
         const val ORIGIN = "https://longkongjun.github.io"
         private const val PAGE_URL = "$ORIGIN/TechLab/geckoview/render/index.html"
 
+        // New APKs must not reuse the HTML cached before the resident protocol was deployed.
+        const val RESIDENT_URL = "$PAGE_URL?resident=1&renderer=20261118.3"
+
         private var singleton: PageRenderer? = null
         val isInitialized get() = singleton?.runtimeState?.isInitialized() == true
 
-        fun isRenderPage(url: String?): Boolean = url?.substringBefore('?')?.substringBefore('#') == PAGE_URL
+        fun preview(context: Context) = get(context, "preview")
+        fun producer(context: Context) = get(context, "producer")
 
-        fun get(context: Context, profileName: String): PageRenderer =
+        private fun get(context: Context, profileName: String): PageRenderer =
             singleton ?: PageRenderer(context.applicationContext, profileName).also { singleton = it }
     }
 }

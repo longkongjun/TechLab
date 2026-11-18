@@ -3,29 +3,22 @@ package dev.techlab.android
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.LinearLayout
-import android.widget.TextView
+import dev.techlab.android.databinding.ActivityMainBinding
+import dev.techlab.android.gecko.EXTRA_DEFER_RENDER_INPUT
 import dev.techlab.android.gecko.GeckoDemoActivity
+import dev.techlab.android.gecko.RenderWarmup
 
 class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(LinearLayout(this).apply {
-            orientation = LinearLayout.VERTICAL
-            val padding = (resources.displayMetrics.density * 16).toInt()
-            setPadding(padding, padding, padding, padding)
-            addView(TextView(this@MainActivity).apply {
-                text = "TechLab Android"
-                textSize = 24f
-            })
-            // The catalog links to a demo's entry point. Its screen and runtime stay in the demo module.
-            addView(Button(this@MainActivity).apply {
-                text = "GeckoView 题目渲染"
-                setOnClickListener {
-                    startActivity(Intent(this@MainActivity, GeckoDemoActivity::class.java))
-                }
-            })
-        })
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.openRenderer.setOnClickListener {
+            startActivity(Intent(this, GeckoDemoActivity::class.java)
+                .putExtra(EXTRA_DEFER_RENDER_INPUT, intent.getBooleanExtra(EXTRA_DEFER_RENDER_INPUT, false)))
+        }
+        if (intent.getBooleanExtra(RenderWarmup.EXTRA_ENABLED, true)) {
+            binding.root.post { RenderWarmup.start(applicationContext) }
+        }
     }
 }

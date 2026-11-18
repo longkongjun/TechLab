@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/RendererRow">
+        <Button
+            android:id="@+id/gecko_tab"
+            style="@style/RendererTab"
+            android:text="@string/gecko_tab" />
+
+        <Button
+            android:id="@+id/web_tab"
+            style="@style/RendererTab"
+            android:text="@string/web_tab" />
+
+        <Button
+            android:id="@+id/producer_tab"
+            style="@style/RendererTab"
+            android:text="@string/producer_tab" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/picker" />
+
+    <LinearLayout style="@style/RendererRow">
+        <CheckBox
+            android:id="@+id/question_boxes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:saveEnabled="false"
+            android:text="@string/question_boxes" />
+
+        <CheckBox
+            android:id="@+id/line_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:saveEnabled="false"
+            android:text="@string/line_info" />
+
+        <CheckBox
+            android:id="@+id/check_boxes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:saveEnabled="false"
+            android:text="@string/check_boxes" />
+
+        <CheckBox
+            android:id="@+id/baselines"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:saveEnabled="false"
+            android:text="@string/baselines" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/RendererRow"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/timings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingHorizontal="6dp"
+            android:paddingBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <Switch
+                android:id="@+id/fresh_instance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:saveEnabled="false"
+                android:switchPadding="8dp"
+                android:text="@string/fresh_instance" />
+
+            <Button
+                android:id="@+id/retest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/retest" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="10dp">
+
+        <FrameLayout
+            android:id="@+id/gecko_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <dev.techlab.android.gecko.GeometryOverlay
+                android:id="@+id/gecko_overlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/web_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/producer_panel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="8dp" />
+
+            <ProgressBar
+                android:id="@+id/progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/results"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
