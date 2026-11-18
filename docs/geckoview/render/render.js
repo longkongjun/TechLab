@@ -232,7 +232,11 @@ async function layout(state, input, batch) {
     reportError(state, new Error("无效的正文字号"));
     return;
   }
+  if (input.hasMath) loadMathAssets();
   document.body.classList.toggle("producer", state.offscreen);
+  const paper = document.getElementById("paper");
+  paper.style.width = batch && Number.isFinite(input.widthPx) && input.widthPx > 0
+    ? `${input.widthPx / devicePixelRatio}px` : "";
   // All headings participate in the shared number column before any coordinates are published.
   const cards = input.questions.map(question => questionShell(question));
   content.replaceChildren(...cards.map(card => {
@@ -532,11 +536,13 @@ function send(message) {
     const nav = performance.getEntriesByType("navigation")[0];
     const resources = performance.getEntriesByType("resource").filter(entry =>
       /\/(?:render|webview-bridge|katex\.min)\.(?:js|css)$/.test(new URL(entry.name).pathname));
-    message.pageTiming = { build: "20261118.1", input: Math.round(current.inputAt), result: Math.round(performance.now()),
+    message.pageTiming = { build: "20261118.3", input: Math.round(current.inputAt), result: Math.round(performance.now()),
+      settled: message.settled,
       request: nav?.requestStart, response: nav?.responseStart, responseEnd: nav?.responseEnd,
       domContentLoaded: nav?.domContentLoadedEventStart,
-      resources: resources.map(entry => [new URL(entry.name).pathname.split("/").pop(),
-        Math.round(entry.responseEnd), entry.transferSize]) };
+      // Gecko's native message bridge accepts arrays of objects but cannot marshal nested arrays.
+      resources: resources.map(entry => ({ name: new URL(entry.name).pathname.split("/").pop(),
+        responseEnd: Math.round(entry.responseEnd), transferSize: entry.transferSize })) };
     current.timingReported = true;
   }
   document.dispatchEvent(new CustomEvent("techlab-renderer", { detail: JSON.stringify(message) }));
@@ -564,6 +570,39 @@ document.addEventListener("techlab-input", event => {
   if (typeof event.detail === "string") render(JSON.parse(event.detail));
 });
 document.dispatchEvent(new Event("techlab-input-ready"));
+
+if (new URL(location.href).searchParams.get("resident") === "1") {
+  let latest;
+  const command = async raw => {
+    const message = JSON.parse(raw);
+    if (message.type === "clear") {
+      if (message.token !== latest) return;
+      latest = undefined;
+      current = undefined;
+      content.replaceChildren();
+      return;
+    }
+    if (message.type !== "setQuestions") return;
+    const input = message.input;
+    latest = input.token;
+    if (message.defer && document.readyState === "loading") {
+      await new Promise(resolve => document.addEventListener("DOMContentLoaded", resolve, { once: true }));
+      if (latest !== input.token) return;
+    }
+    window.scrollTo(0, 0);
+    render(input);
+  };
+  document.addEventListener("techlab-command", event => command(event.detail));
+  const web = window.techLabWebView;
+  if (web) {
+    web.onmessage = event => command(event.data);
+    document.addEventListener("techlab-renderer", event => web.postMessage(event.detail));
+    const ready = () => web.postMessage(JSON.stringify({ type: "ready" }));
+    ready();
+    if (document.readyState !== "complete") window.addEventListener("load", ready, { once: true });
+  }
+  document.dispatchEvent(new Event("techlab-resident-ready"));
+}
 
 let pending = false;
 new ResizeObserver(([entry]) => {
