@@ -1,4 +1,5 @@
 <resources>
     <string name="app_title">TechLab Android</string>
     <string name="open_renderer">GeckoView 题目渲染</string>
+    <string name="open_handwriting">手写画板</string>
 </resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:gravity="center_vertical" android:paddingHorizontal="6dp" android:background="#FAFCFB">
+        <Button android:id="@+id/page" style="@style/BoardButton" android:text="@string/board_blank" />
+        <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+        <Switch android:id="@+id/finger" android:layout_width="wrap_content" android:layout_height="48dp"
+            android:text="@string/board_finger" />
+        <Button android:id="@+id/export" style="@style/BoardButton" android:text="@string/board_export" />
+    </LinearLayout>
+    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="#EEF3F2" android:scrollbars="none">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:gravity="center_vertical" android:paddingHorizontal="6dp">
+            <Button android:id="@+id/pen" style="@style/BoardButton" android:text="@string/board_pen" />
+            <Button android:id="@+id/highlighter" style="@style/BoardButton" android:text="@string/board_highlighter" />
+            <Button android:id="@+id/eraser" style="@style/BoardButton" android:text="@string/board_eraser" />
+            <Button android:id="@+id/region_eraser" style="@style/BoardButton" android:text="@string/board_region_eraser" />
+            <Button android:id="@+id/trail_eraser" style="@style/BoardButton" android:text="@string/board_trail_eraser" />
+            <Button android:id="@+id/undo" style="@style/BoardButton" android:text="@string/board_undo" />
+            <Button android:id="@+id/redo" style="@style/BoardButton" android:text="@string/board_redo" />
+        </LinearLayout>
+    </HorizontalScrollView>
+    <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:padding="8dp" android:text="@string/board_loading" android:accessibilityLiveRegion="polite" />
+    <dev.techlab.android.handwriting.BoardCanvas android:id="@+id/canvas"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:contentDescription="@string/board_canvas" />
+</LinearLayout>

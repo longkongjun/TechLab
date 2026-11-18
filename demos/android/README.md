@@ -6,6 +6,7 @@
 | --- | --- |
 | `app` | Demo 入口、APK 装配。首页通过各专题的 Activity 进入 Demo。 |
 | `demo-geckoview` | 题型目录、原生筛选和叠框、两种引擎的实时预览、离屏生产端和 Pages 渲染接入。 |
+| `demo-handwriting` | Kotlin MVI 画板，使用 AndroidX Ink 1.0.0 书写、编辑、保存草稿和导出 PNG。 |
 
 ## 运行
 
@@ -16,6 +17,24 @@
 adb install -r app/build/outputs/apk/debug/app-debug.apk
 adb shell am start -n dev.techlab.android/.MainActivity
 ```
+
+### 手写画板
+
+首页点「手写画板」。左上角的页名可切换空白纸和题图，两页分别自动保存笔迹，重新进入后打开上次使用的页面。默认用笔写字，单指平移放大后的页面，双指缩放。没有触控笔时可以开启「手指书写」。再次点选中的硬笔或荧光笔可改颜色与粗细。整笔橡皮一次扫过的笔画可以一起撤销和重做。
+
+工具栏提供三种擦除方式，一次手势可以一起撤销或重做。擦除限于墨迹，缺口会随草稿和两种 PNG 导出一起保留。
+
+- **整笔擦除**：碰到笔画的可见部分，移除这条原始笔画的全部剩余墨迹。
+- **范围擦除**：沿目标区域的边缘画一圈，半透明填充显示选区。抬手时自动连接起点和终点，擦掉圈内墨迹，穿过边界的笔画会保留圈外部分。
+- **轨迹擦除**：沿墨迹拖动，擦掉圆形橡皮扫过的部分。橡皮直径固定为屏幕上的 24 dp，放大画布后可以擦得更细。
+
+「导出 PNG」可生成仅含笔迹的透明图，或包含纸面、题图和笔迹的整页图。两种图片均为 1000 × 1200 像素。Android 10 及以上保存到公共图片目录 `Pictures/TechLab`，Android 8/9 保存到应用专属的外部图片目录，完成时显示路径。
+
+状态和纯 reducer 见 [BoardState.kt](demo-handwriting/src/main/kotlin/dev/techlab/android/handwriting/BoardState.kt)。ViewModel 调度草稿与导出，画布 View 持有当前触点和视口。运行 `./gradlew :demo-handwriting:testDebugUnitTest` 验证编辑历史，连接设备执行 `./gradlew :demo-handwriting:connectedDebugAndroidTest` 验证缩放后书写、快速切页、成组擦除、存档和导出的像素。[手写专题](../../research/android-handwriting/README.md)
+
+实时笔迹通过 Ink 的 `InProgressStrokesView` 显示。S3（Android 11）上，用整块画布与纸面两个嵌套矩形构造遮罩，会让纸内笔迹直到抬笔才出现。画板改为仅遮盖纸外的边距。设备回归测试在同一笔的两次移动后分别检查系统合成截图，并检查笔划经过纸边时纸外保持干净。实体屏的刷新延迟需用实笔另测。
+
+### GeckoView 题目渲染
 
 打开首页的「GeckoView 题目渲染」，用原生选择器筛选题型。切换模式或题型时自动加载，有已完成的结果时会复用，三个模式都可用「重测当前」。离开当前模式或切换题型时取消未完成的任务。后台产图逐题输出 PNG 和 JSON，结果随回调追加到原生列表。列表绑定可见条目时才读取图片和坐标。三个模式共用题目框、行信息、优先批改框及基线开关。
 

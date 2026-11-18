@@ -1,0 +1,21 @@
+<resources>
+    <string name="handwriting_title">手写画板</string>
+    <string name="board_blank">空白纸</string>
+    <string name="board_question">题图批注</string>
+    <string name="board_finger">手指书写</string>
+    <string name="board_export">导出 PNG</string>
+    <string name="board_pen">硬笔</string>
+    <string name="board_highlighter">荧光笔</string>
+    <string name="board_eraser">整笔擦除</string>
+    <string name="board_region_eraser">范围擦除</string>
+    <string name="board_trail_eraser">轨迹擦除</string>
+    <string name="board_undo">撤销</string>
+    <string name="board_redo">重做</string>
+    <string name="board_canvas">手写区域</string>
+    <string name="board_loading">正在打开草稿…</string>
+    <string name="board_color">颜色</string>
+    <string name="board_size">粗细</string>
+    <string name="board_transparent">仅笔迹 · 透明 PNG</string>
+    <string name="board_background">含背景 · 整页 PNG</string>
+    <string name="board_choose">切换画布</string>
+</resources>
