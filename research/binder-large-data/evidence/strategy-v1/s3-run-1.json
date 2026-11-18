@@ -1,0 +1,3374 @@
+{
+  "implementation": "strategy-v1",
+  "model": "S3",
+  "android": "11",
+  "sdk": 30,
+  "abi": "arm64-v8a",
+  "buildId": "RKQ1.211119.001",
+  "clientPid": 8427,
+  "sourcePid": 8614,
+  "warmups": 2,
+  "rounds": 20,
+  "blockBytes": 32768,
+  "plan": {
+    "bin32k": [
+      "BINDER",
+      "FILE",
+      "PIPE",
+      "SHARED"
+    ],
+    "bin1m": [
+      "BINDER",
+      "FILE",
+      "PIPE",
+      "SHARED"
+    ],
+    "bin8m": [
+      "BINDER",
+      "FILE",
+      "PIPE",
+      "SHARED"
+    ],
+    "Q002": [
+      "BINDER",
+      "FILE",
+      "PIPE",
+      "SHARED"
+    ],
+    "liveQ002": [
+      "FILE",
+      "PIPE"
+    ]
+  },
+  "checks": {
+    "pages": [
+      {
+        "id": "Q001",
+        "bytes": 1702585,
+        "route": "FILE",
+        "round": 0,
+        "firstNs": 5180521,
+        "totalNs": 40877031,
+        "crc32": 966017770,
+        "x": 64,
+        "y": 148,
+        "width": 896,
+        "height": 640
+      },
+      {
+        "id": "Q002",
+        "bytes": 1705378,
+        "route": "FILE",
+        "round": 0,
+        "firstNs": 1248229,
+        "totalNs": 11692291,
+        "crc32": 711046208,
+        "x": 204,
+        "y": 208,
+        "width": 896,
+        "height": 640
+      },
+      {
+        "id": "Q003",
+        "bytes": 1703022,
+        "route": "FILE",
+        "round": 0,
+        "firstNs": 1143646,
+        "totalNs": 9580938,
+        "crc32": 3358927147,
+        "x": 344,
+        "y": 268,
+        "width": 896,
+        "height": 640
+      },
+      {
+        "id": "Q001",
+        "bytes": 1702585,
+        "route": "PIPE",
+        "round": 0,
+        "firstNs": 2920886,
+        "totalNs": 19601198,
+        "crc32": 966017770,
+        "x": 64,
+        "y": 148,
+        "width": 896,
+        "height": 640
+      },
+      {
+        "id": "Q002",
+        "bytes": 1705378,
+        "route": "PIPE",
+        "round": 0,
+        "firstNs": 11548438,
+        "totalNs": 43709688,
+        "crc32": 711046208,
+        "x": 204,
+        "y": 208,
+        "width": 896,
+        "height": 640
+      },
+      {
+        "id": "Q003",
+        "bytes": 1703022,
+        "route": "PIPE",
+        "round": 0,
+        "firstNs": 2510000,
+        "totalNs": 18265417,
+        "crc32": 3358927147,
+        "x": 344,
+        "y": 268,
+        "width": 896,
+        "height": 640
+      }
+    ],
+    "faultRounds": 4,
+    "writerErrors": 8,
+    "writersRemaining": 0,
+    "clientFdBefore": 83,
+    "clientFdAfter": 83,
+    "sourceFdBefore": 57,
+    "sourceFdAfter": 57
+  },
+  "samples": [
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "PIPE",
+      "round": 1,
+      "firstNs": 3450677,
+      "totalNs": 4640781,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "SHARED",
+      "round": 1,
+      "firstNs": 2695573,
+      "totalNs": 3348333,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "BINDER",
+      "round": 1,
+      "firstNs": 4512188,
+      "totalNs": 4527396,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "FILE",
+      "round": 1,
+      "firstNs": 2023177,
+      "totalNs": 2158906,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "SHARED",
+      "round": 2,
+      "firstNs": 4831771,
+      "totalNs": 5184166,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "BINDER",
+      "round": 2,
+      "firstNs": 7635782,
+      "totalNs": 7650782,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "FILE",
+      "round": 2,
+      "firstNs": 1732395,
+      "totalNs": 1854270,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "PIPE",
+      "round": 2,
+      "firstNs": 7800364,
+      "totalNs": 11398177,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "BINDER",
+      "round": 3,
+      "firstNs": 1781197,
+      "totalNs": 1795989,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "FILE",
+      "round": 3,
+      "firstNs": 1636979,
+      "totalNs": 1756979,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "PIPE",
+      "round": 3,
+      "firstNs": 9334739,
+      "totalNs": 15975052,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "SHARED",
+      "round": 3,
+      "firstNs": 2569584,
+      "totalNs": 4550938,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "FILE",
+      "round": 4,
+      "firstNs": 1280990,
+      "totalNs": 1370365,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "PIPE",
+      "round": 4,
+      "firstNs": 6021041,
+      "totalNs": 9293437,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "SHARED",
+      "round": 4,
+      "firstNs": 2477760,
+      "totalNs": 2694167,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "BINDER",
+      "round": 4,
+      "firstNs": 1377864,
+      "totalNs": 1390885,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "PIPE",
+      "round": 5,
+      "firstNs": 2784167,
+      "totalNs": 3875573,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "SHARED",
+      "round": 5,
+      "firstNs": 3364792,
+      "totalNs": 3600000,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "BINDER",
+      "round": 5,
+      "firstNs": 1442865,
+      "totalNs": 1456667,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "FILE",
+      "round": 5,
+      "firstNs": 1273438,
+      "totalNs": 1370886,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "SHARED",
+      "round": 6,
+      "firstNs": 2418698,
+      "totalNs": 2650469,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "BINDER",
+      "round": 6,
+      "firstNs": 1590521,
+      "totalNs": 1603125,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "FILE",
+      "round": 6,
+      "firstNs": 1241511,
+      "totalNs": 1329584,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "PIPE",
+      "round": 6,
+      "firstNs": 5663750,
+      "totalNs": 8943906,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "BINDER",
+      "round": 7,
+      "firstNs": 1599844,
+      "totalNs": 1613438,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "FILE",
+      "round": 7,
+      "firstNs": 1389011,
+      "totalNs": 1538125,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "PIPE",
+      "round": 7,
+      "firstNs": 6249011,
+      "totalNs": 10556250,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "SHARED",
+      "round": 7,
+      "firstNs": 2847031,
+      "totalNs": 3112813,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "FILE",
+      "round": 8,
+      "firstNs": 1467240,
+      "totalNs": 1574219,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "PIPE",
+      "round": 8,
+      "firstNs": 6175313,
+      "totalNs": 8896771,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "SHARED",
+      "round": 8,
+      "firstNs": 5002604,
+      "totalNs": 5631354,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "BINDER",
+      "round": 8,
+      "firstNs": 2698802,
+      "totalNs": 2725677,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "PIPE",
+      "round": 9,
+      "firstNs": 3795990,
+      "totalNs": 5162240,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "SHARED",
+      "round": 9,
+      "firstNs": 4885313,
+      "totalNs": 5105886,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "BINDER",
+      "round": 9,
+      "firstNs": 3648750,
+      "totalNs": 3678230,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "FILE",
+      "round": 9,
+      "firstNs": 2653281,
+      "totalNs": 2850104,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "SHARED",
+      "round": 10,
+      "firstNs": 4400000,
+      "totalNs": 4991250,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "BINDER",
+      "round": 10,
+      "firstNs": 2942031,
+      "totalNs": 2965469,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "FILE",
+      "round": 10,
+      "firstNs": 2214479,
+      "totalNs": 2375990,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "PIPE",
+      "round": 10,
+      "firstNs": 4452343,
+      "totalNs": 6525833,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "BINDER",
+      "round": 11,
+      "firstNs": 2201406,
+      "totalNs": 2221302,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "FILE",
+      "round": 11,
+      "firstNs": 1900885,
+      "totalNs": 2039531,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "PIPE",
+      "round": 11,
+      "firstNs": 7150781,
+      "totalNs": 10456250,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "SHARED",
+      "round": 11,
+      "firstNs": 5888645,
+      "totalNs": 8731979,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "FILE",
+      "round": 12,
+      "firstNs": 1932187,
+      "totalNs": 2052344,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "PIPE",
+      "round": 12,
+      "firstNs": 9567084,
+      "totalNs": 13692865,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "SHARED",
+      "round": 12,
+      "firstNs": 3021146,
+      "totalNs": 3286511,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "BINDER",
+      "round": 12,
+      "firstNs": 1710469,
+      "totalNs": 1726458,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "PIPE",
+      "round": 13,
+      "firstNs": 6700729,
+      "totalNs": 10120625,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "SHARED",
+      "round": 13,
+      "firstNs": 4018646,
+      "totalNs": 4349323,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "BINDER",
+      "round": 13,
+      "firstNs": 2194323,
+      "totalNs": 2214271,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "FILE",
+      "round": 13,
+      "firstNs": 1959583,
+      "totalNs": 2112135,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "SHARED",
+      "round": 14,
+      "firstNs": 3894167,
+      "totalNs": 4280625,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "BINDER",
+      "round": 14,
+      "firstNs": 2162135,
+      "totalNs": 2182344,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "FILE",
+      "round": 14,
+      "firstNs": 1907865,
+      "totalNs": 2070469,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "PIPE",
+      "round": 14,
+      "firstNs": 18398594,
+      "totalNs": 22005781,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "BINDER",
+      "round": 15,
+      "firstNs": 2492292,
+      "totalNs": 2513854,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "FILE",
+      "round": 15,
+      "firstNs": 1903854,
+      "totalNs": 2049947,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "PIPE",
+      "round": 15,
+      "firstNs": 4768542,
+      "totalNs": 5456823,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "SHARED",
+      "round": 15,
+      "firstNs": 3935000,
+      "totalNs": 4258229,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "FILE",
+      "round": 16,
+      "firstNs": 1877812,
+      "totalNs": 2019687,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "PIPE",
+      "round": 16,
+      "firstNs": 4498959,
+      "totalNs": 5080261,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "SHARED",
+      "round": 16,
+      "firstNs": 3030625,
+      "totalNs": 3292552,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "BINDER",
+      "round": 16,
+      "firstNs": 1635469,
+      "totalNs": 1651146,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "PIPE",
+      "round": 17,
+      "firstNs": 4341875,
+      "totalNs": 5001406,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "SHARED",
+      "round": 17,
+      "firstNs": 3060886,
+      "totalNs": 3341511,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "BINDER",
+      "round": 17,
+      "firstNs": 1683177,
+      "totalNs": 1699375,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "FILE",
+      "round": 17,
+      "firstNs": 1506458,
+      "totalNs": 1624948,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "SHARED",
+      "round": 18,
+      "firstNs": 3102031,
+      "totalNs": 3349427,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "BINDER",
+      "round": 18,
+      "firstNs": 1568906,
+      "totalNs": 1583490,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "FILE",
+      "round": 18,
+      "firstNs": 1415416,
+      "totalNs": 1524427,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "PIPE",
+      "round": 18,
+      "firstNs": 7135833,
+      "totalNs": 10666823,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "BINDER",
+      "round": 19,
+      "firstNs": 1731875,
+      "totalNs": 1746302,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "FILE",
+      "round": 19,
+      "firstNs": 1338125,
+      "totalNs": 1442813,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "PIPE",
+      "round": 19,
+      "firstNs": 6855000,
+      "totalNs": 9182812,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "SHARED",
+      "round": 19,
+      "firstNs": 3172708,
+      "totalNs": 3477864,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "FILE",
+      "round": 20,
+      "firstNs": 1584844,
+      "totalNs": 1695834,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "PIPE",
+      "round": 20,
+      "firstNs": 5983542,
+      "totalNs": 7928698,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "SHARED",
+      "round": 20,
+      "firstNs": 3765052,
+      "totalNs": 4134739,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin32k",
+      "bytes": 32768,
+      "route": "BINDER",
+      "round": 20,
+      "firstNs": 2137292,
+      "totalNs": 2157500,
+      "crc32": 470666780
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "PIPE",
+      "round": 1,
+      "firstNs": 7155156,
+      "totalNs": 14083281,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "SHARED",
+      "round": 1,
+      "firstNs": 7688750,
+      "totalNs": 11046614,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "BINDER",
+      "round": 1,
+      "firstNs": 1877500,
+      "totalNs": 46705990,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "FILE",
+      "round": 1,
+      "firstNs": 1507292,
+      "totalNs": 4083177,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "SHARED",
+      "round": 2,
+      "firstNs": 6287708,
+      "totalNs": 10724062,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "BINDER",
+      "round": 2,
+      "firstNs": 1820989,
+      "totalNs": 41514583,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "FILE",
+      "round": 2,
+      "firstNs": 1128698,
+      "totalNs": 2832604,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "PIPE",
+      "round": 2,
+      "firstNs": 3115260,
+      "totalNs": 10616406,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "BINDER",
+      "round": 3,
+      "firstNs": 1996615,
+      "totalNs": 58822865,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "FILE",
+      "round": 3,
+      "firstNs": 1591041,
+      "totalNs": 3488072,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "PIPE",
+      "round": 3,
+      "firstNs": 4004740,
+      "totalNs": 11310521,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "SHARED",
+      "round": 3,
+      "firstNs": 6672864,
+      "totalNs": 11001666,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "FILE",
+      "round": 4,
+      "firstNs": 1760312,
+      "totalNs": 3619740,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "PIPE",
+      "round": 4,
+      "firstNs": 7773698,
+      "totalNs": 26482500,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "SHARED",
+      "round": 4,
+      "firstNs": 12786093,
+      "totalNs": 19647916,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "BINDER",
+      "round": 4,
+      "firstNs": 2546510,
+      "totalNs": 51528802,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "PIPE",
+      "round": 5,
+      "firstNs": 10185782,
+      "totalNs": 27459271,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "SHARED",
+      "round": 5,
+      "firstNs": 10830781,
+      "totalNs": 19628177,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "BINDER",
+      "round": 5,
+      "firstNs": 2179218,
+      "totalNs": 61781198,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "FILE",
+      "round": 5,
+      "firstNs": 1245729,
+      "totalNs": 3057448,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "SHARED",
+      "round": 6,
+      "firstNs": 6477136,
+      "totalNs": 8671928,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "BINDER",
+      "round": 6,
+      "firstNs": 1764948,
+      "totalNs": 47746719,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "FILE",
+      "round": 6,
+      "firstNs": 1137552,
+      "totalNs": 2611458,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "PIPE",
+      "round": 6,
+      "firstNs": 6791510,
+      "totalNs": 35755625,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "BINDER",
+      "round": 7,
+      "firstNs": 2194479,
+      "totalNs": 59074479,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "FILE",
+      "round": 7,
+      "firstNs": 1199011,
+      "totalNs": 2771667,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "PIPE",
+      "round": 7,
+      "firstNs": 7742396,
+      "totalNs": 27702448,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "SHARED",
+      "round": 7,
+      "firstNs": 11255260,
+      "totalNs": 23764271,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "FILE",
+      "round": 8,
+      "firstNs": 4382031,
+      "totalNs": 8324895,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "PIPE",
+      "round": 8,
+      "firstNs": 5539948,
+      "totalNs": 13623959,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "SHARED",
+      "round": 8,
+      "firstNs": 11084531,
+      "totalNs": 17460677,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "BINDER",
+      "round": 8,
+      "firstNs": 3506198,
+      "totalNs": 78619375,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "PIPE",
+      "round": 9,
+      "firstNs": 7159114,
+      "totalNs": 27177031,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "SHARED",
+      "round": 9,
+      "firstNs": 10101667,
+      "totalNs": 16280365,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "BINDER",
+      "round": 9,
+      "firstNs": 4188542,
+      "totalNs": 58287553,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "FILE",
+      "round": 9,
+      "firstNs": 1277552,
+      "totalNs": 2674895,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "SHARED",
+      "round": 10,
+      "firstNs": 13042552,
+      "totalNs": 18197291,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "BINDER",
+      "round": 10,
+      "firstNs": 2026667,
+      "totalNs": 66593594,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "FILE",
+      "round": 10,
+      "firstNs": 3070677,
+      "totalNs": 6044115,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "PIPE",
+      "round": 10,
+      "firstNs": 4612292,
+      "totalNs": 22811875,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "BINDER",
+      "round": 11,
+      "firstNs": 3783230,
+      "totalNs": 61806667,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "FILE",
+      "round": 11,
+      "firstNs": 1474948,
+      "totalNs": 2816667,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "PIPE",
+      "round": 11,
+      "firstNs": 6362447,
+      "totalNs": 37028697,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "SHARED",
+      "round": 11,
+      "firstNs": 10004739,
+      "totalNs": 16151250,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "FILE",
+      "round": 12,
+      "firstNs": 2181927,
+      "totalNs": 4701354,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "PIPE",
+      "round": 12,
+      "firstNs": 7277344,
+      "totalNs": 34602344,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "SHARED",
+      "round": 12,
+      "firstNs": 10785625,
+      "totalNs": 17192031,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "BINDER",
+      "round": 12,
+      "firstNs": 2515677,
+      "totalNs": 66466406,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "PIPE",
+      "round": 13,
+      "firstNs": 6663230,
+      "totalNs": 25366511,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "SHARED",
+      "round": 13,
+      "firstNs": 13125312,
+      "totalNs": 21281302,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "BINDER",
+      "round": 13,
+      "firstNs": 2928177,
+      "totalNs": 70393229,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "FILE",
+      "round": 13,
+      "firstNs": 1391146,
+      "totalNs": 3238542,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "SHARED",
+      "round": 14,
+      "firstNs": 6723385,
+      "totalNs": 8679739,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "BINDER",
+      "round": 14,
+      "firstNs": 1716510,
+      "totalNs": 45003958,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "FILE",
+      "round": 14,
+      "firstNs": 1273750,
+      "totalNs": 2553177,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "PIPE",
+      "round": 14,
+      "firstNs": 6242187,
+      "totalNs": 11835729,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "BINDER",
+      "round": 15,
+      "firstNs": 1711771,
+      "totalNs": 41118333,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "FILE",
+      "round": 15,
+      "firstNs": 1757864,
+      "totalNs": 3184844,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "PIPE",
+      "round": 15,
+      "firstNs": 3210782,
+      "totalNs": 15441407,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "SHARED",
+      "round": 15,
+      "firstNs": 6193281,
+      "totalNs": 9534583,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "FILE",
+      "round": 16,
+      "firstNs": 2150833,
+      "totalNs": 3696615,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "PIPE",
+      "round": 16,
+      "firstNs": 9230365,
+      "totalNs": 20517136,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "SHARED",
+      "round": 16,
+      "firstNs": 8153489,
+      "totalNs": 10732083,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "BINDER",
+      "round": 16,
+      "firstNs": 2003489,
+      "totalNs": 42725208,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "PIPE",
+      "round": 17,
+      "firstNs": 7029896,
+      "totalNs": 26884167,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "SHARED",
+      "round": 17,
+      "firstNs": 9690208,
+      "totalNs": 15414427,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "BINDER",
+      "round": 17,
+      "firstNs": 1834480,
+      "totalNs": 57278750,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "FILE",
+      "round": 17,
+      "firstNs": 1549218,
+      "totalNs": 3795312,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "SHARED",
+      "round": 18,
+      "firstNs": 7822344,
+      "totalNs": 12523125,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "BINDER",
+      "round": 18,
+      "firstNs": 1842083,
+      "totalNs": 37355573,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "FILE",
+      "round": 18,
+      "firstNs": 1090208,
+      "totalNs": 2447864,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "PIPE",
+      "round": 18,
+      "firstNs": 6238437,
+      "totalNs": 34026406,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "BINDER",
+      "round": 19,
+      "firstNs": 2564896,
+      "totalNs": 78641719,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "FILE",
+      "round": 19,
+      "firstNs": 2069896,
+      "totalNs": 4965312,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "PIPE",
+      "round": 19,
+      "firstNs": 3923594,
+      "totalNs": 11404323,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "SHARED",
+      "round": 19,
+      "firstNs": 8599688,
+      "totalNs": 11073021,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "FILE",
+      "round": 20,
+      "firstNs": 1690469,
+      "totalNs": 3341875,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "PIPE",
+      "round": 20,
+      "firstNs": 5987813,
+      "totalNs": 17658906,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "SHARED",
+      "round": 20,
+      "firstNs": 7502084,
+      "totalNs": 11708281,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin1m",
+      "bytes": 1048576,
+      "route": "BINDER",
+      "round": 20,
+      "firstNs": 1767813,
+      "totalNs": 42289167,
+      "crc32": 1783149010
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "PIPE",
+      "round": 1,
+      "firstNs": 6252135,
+      "totalNs": 74693125,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "SHARED",
+      "round": 1,
+      "firstNs": 29560469,
+      "totalNs": 68154167,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "BINDER",
+      "round": 1,
+      "firstNs": 1387031,
+      "totalNs": 281640052,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "FILE",
+      "round": 1,
+      "firstNs": 988750,
+      "totalNs": 9396615,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "SHARED",
+      "round": 2,
+      "firstNs": 29000052,
+      "totalNs": 54968333,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "BINDER",
+      "round": 2,
+      "firstNs": 1316197,
+      "totalNs": 305958854,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "FILE",
+      "round": 2,
+      "firstNs": 1646875,
+      "totalNs": 10153698,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "PIPE",
+      "round": 2,
+      "firstNs": 7441250,
+      "totalNs": 69345521,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "BINDER",
+      "round": 3,
+      "firstNs": 1780000,
+      "totalNs": 306864531,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "FILE",
+      "round": 3,
+      "firstNs": 966198,
+      "totalNs": 9358177,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "PIPE",
+      "round": 3,
+      "firstNs": 2467761,
+      "totalNs": 45324115,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "SHARED",
+      "round": 3,
+      "firstNs": 29067344,
+      "totalNs": 53911927,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "FILE",
+      "round": 4,
+      "firstNs": 1339427,
+      "totalNs": 9766302,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "PIPE",
+      "round": 4,
+      "firstNs": 2513021,
+      "totalNs": 42915104,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "SHARED",
+      "round": 4,
+      "firstNs": 29159740,
+      "totalNs": 54446615,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "BINDER",
+      "round": 4,
+      "firstNs": 1204375,
+      "totalNs": 282882396,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "PIPE",
+      "round": 5,
+      "firstNs": 2208021,
+      "totalNs": 32619062,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "SHARED",
+      "round": 5,
+      "firstNs": 30130989,
+      "totalNs": 54780156,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "BINDER",
+      "round": 5,
+      "firstNs": 1303490,
+      "totalNs": 306087604,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "FILE",
+      "round": 5,
+      "firstNs": 1705573,
+      "totalNs": 12886562,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "SHARED",
+      "round": 6,
+      "firstNs": 30262708,
+      "totalNs": 56593594,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "BINDER",
+      "round": 6,
+      "firstNs": 1460573,
+      "totalNs": 269179219,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "FILE",
+      "round": 6,
+      "firstNs": 1156615,
+      "totalNs": 9895469,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "PIPE",
+      "round": 6,
+      "firstNs": 2430208,
+      "totalNs": 31978333,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "BINDER",
+      "round": 7,
+      "firstNs": 1164531,
+      "totalNs": 286622395,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "FILE",
+      "round": 7,
+      "firstNs": 1442291,
+      "totalNs": 9691510,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "PIPE",
+      "round": 7,
+      "firstNs": 2229323,
+      "totalNs": 22656719,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "SHARED",
+      "round": 7,
+      "firstNs": 34368854,
+      "totalNs": 59089375,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "FILE",
+      "round": 8,
+      "firstNs": 1940833,
+      "totalNs": 10040677,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "PIPE",
+      "round": 8,
+      "firstNs": 2180834,
+      "totalNs": 37105573,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "SHARED",
+      "round": 8,
+      "firstNs": 29425000,
+      "totalNs": 55429271,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "BINDER",
+      "round": 8,
+      "firstNs": 1302865,
+      "totalNs": 292165052,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "PIPE",
+      "round": 9,
+      "firstNs": 2341875,
+      "totalNs": 55047343,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "SHARED",
+      "round": 9,
+      "firstNs": 36363750,
+      "totalNs": 63281875,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "BINDER",
+      "round": 9,
+      "firstNs": 1373281,
+      "totalNs": 284462031,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "FILE",
+      "round": 9,
+      "firstNs": 1265208,
+      "totalNs": 11190521,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "SHARED",
+      "round": 10,
+      "firstNs": 31821303,
+      "totalNs": 59320938,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "BINDER",
+      "round": 10,
+      "firstNs": 1300052,
+      "totalNs": 276062500,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "FILE",
+      "round": 10,
+      "firstNs": 1021511,
+      "totalNs": 9197448,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "PIPE",
+      "round": 10,
+      "firstNs": 2573541,
+      "totalNs": 51568958,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "BINDER",
+      "round": 11,
+      "firstNs": 1171198,
+      "totalNs": 277677292,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "FILE",
+      "round": 11,
+      "firstNs": 1384167,
+      "totalNs": 10029532,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "PIPE",
+      "round": 11,
+      "firstNs": 2551458,
+      "totalNs": 41128177,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "SHARED",
+      "round": 11,
+      "firstNs": 29567969,
+      "totalNs": 53994948,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "FILE",
+      "round": 12,
+      "firstNs": 1680365,
+      "totalNs": 9721667,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "PIPE",
+      "round": 12,
+      "firstNs": 3229011,
+      "totalNs": 48964115,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "SHARED",
+      "round": 12,
+      "firstNs": 29102031,
+      "totalNs": 54357552,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "BINDER",
+      "round": 12,
+      "firstNs": 1253021,
+      "totalNs": 285858125,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "PIPE",
+      "round": 13,
+      "firstNs": 3467240,
+      "totalNs": 46457344,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "SHARED",
+      "round": 13,
+      "firstNs": 31461563,
+      "totalNs": 59537396,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "BINDER",
+      "round": 13,
+      "firstNs": 1307969,
+      "totalNs": 259898646,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "FILE",
+      "round": 13,
+      "firstNs": 989791,
+      "totalNs": 9340677,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "SHARED",
+      "round": 14,
+      "firstNs": 29145417,
+      "totalNs": 54280833,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "BINDER",
+      "round": 14,
+      "firstNs": 1324011,
+      "totalNs": 276283021,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "FILE",
+      "round": 14,
+      "firstNs": 970938,
+      "totalNs": 9287761,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "PIPE",
+      "round": 14,
+      "firstNs": 2499219,
+      "totalNs": 41821979,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "BINDER",
+      "round": 15,
+      "firstNs": 4155625,
+      "totalNs": 292299219,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "FILE",
+      "round": 15,
+      "firstNs": 1095313,
+      "totalNs": 9398802,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "PIPE",
+      "round": 15,
+      "firstNs": 3793333,
+      "totalNs": 47375312,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "SHARED",
+      "round": 15,
+      "firstNs": 29264688,
+      "totalNs": 53336719,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "FILE",
+      "round": 16,
+      "firstNs": 1627292,
+      "totalNs": 10064063,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "PIPE",
+      "round": 16,
+      "firstNs": 3747188,
+      "totalNs": 50807657,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "SHARED",
+      "round": 16,
+      "firstNs": 29066302,
+      "totalNs": 56213906,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "BINDER",
+      "round": 16,
+      "firstNs": 1543854,
+      "totalNs": 355061406,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "PIPE",
+      "round": 17,
+      "firstNs": 2470364,
+      "totalNs": 38476146,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "SHARED",
+      "round": 17,
+      "firstNs": 49434115,
+      "totalNs": 80444427,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "BINDER",
+      "round": 17,
+      "firstNs": 1305625,
+      "totalNs": 301259479,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "FILE",
+      "round": 17,
+      "firstNs": 2062344,
+      "totalNs": 13898750,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "SHARED",
+      "round": 18,
+      "firstNs": 32574531,
+      "totalNs": 57997864,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "BINDER",
+      "round": 18,
+      "firstNs": 1238177,
+      "totalNs": 285023854,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "FILE",
+      "round": 18,
+      "firstNs": 1894843,
+      "totalNs": 16591614,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "PIPE",
+      "round": 18,
+      "firstNs": 3023802,
+      "totalNs": 50675989,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "BINDER",
+      "round": 19,
+      "firstNs": 1050729,
+      "totalNs": 285755052,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "FILE",
+      "round": 19,
+      "firstNs": 1080573,
+      "totalNs": 9715573,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "PIPE",
+      "round": 19,
+      "firstNs": 2729322,
+      "totalNs": 65405833,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "SHARED",
+      "round": 19,
+      "firstNs": 33265000,
+      "totalNs": 58189427,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "FILE",
+      "round": 20,
+      "firstNs": 1311354,
+      "totalNs": 9512500,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "PIPE",
+      "round": 20,
+      "firstNs": 4283177,
+      "totalNs": 34768385,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "SHARED",
+      "round": 20,
+      "firstNs": 29445730,
+      "totalNs": 54520677,
+      "crc32": 2675038152
+    },
+    {
+      "id": "bin8m",
+      "bytes": 8388608,
+      "route": "BINDER",
+      "round": 20,
+      "firstNs": 1253958,
+      "totalNs": 292956875,
+      "crc32": 2675038152
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 1,
+      "firstNs": 4226563,
+      "totalNs": 14639636,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "SHARED",
+      "round": 1,
+      "firstNs": 8510104,
+      "totalNs": 11280104,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "BINDER",
+      "round": 1,
+      "firstNs": 1169010,
+      "totalNs": 51659635,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 1,
+      "firstNs": 1074062,
+      "totalNs": 2787916,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "SHARED",
+      "round": 2,
+      "firstNs": 8083125,
+      "totalNs": 10880885,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "BINDER",
+      "round": 2,
+      "firstNs": 2272917,
+      "totalNs": 66174271,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 2,
+      "firstNs": 939583,
+      "totalNs": 2645625,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 2,
+      "firstNs": 3265000,
+      "totalNs": 16043750,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "BINDER",
+      "round": 3,
+      "firstNs": 1237343,
+      "totalNs": 58201041,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 3,
+      "firstNs": 1256875,
+      "totalNs": 3030573,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 3,
+      "firstNs": 4524740,
+      "totalNs": 12933230,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "SHARED",
+      "round": 3,
+      "firstNs": 8272083,
+      "totalNs": 13994740,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 4,
+      "firstNs": 1295625,
+      "totalNs": 3058646,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 4,
+      "firstNs": 8528177,
+      "totalNs": 32306875,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "SHARED",
+      "round": 4,
+      "firstNs": 13893177,
+      "totalNs": 23734739,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "BINDER",
+      "round": 4,
+      "firstNs": 1890052,
+      "totalNs": 59701094,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 5,
+      "firstNs": 4013542,
+      "totalNs": 28751667,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "SHARED",
+      "round": 5,
+      "firstNs": 14599740,
+      "totalNs": 24739636,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "BINDER",
+      "round": 5,
+      "firstNs": 2413698,
+      "totalNs": 75374896,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 5,
+      "firstNs": 944219,
+      "totalNs": 2716875,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "SHARED",
+      "round": 6,
+      "firstNs": 8118906,
+      "totalNs": 10855156,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "BINDER",
+      "round": 6,
+      "firstNs": 1273489,
+      "totalNs": 66527448,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 6,
+      "firstNs": 950260,
+      "totalNs": 2689375,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 6,
+      "firstNs": 6356615,
+      "totalNs": 30158386,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "BINDER",
+      "round": 7,
+      "firstNs": 1541927,
+      "totalNs": 68990573,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 7,
+      "firstNs": 1427761,
+      "totalNs": 4279427,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 7,
+      "firstNs": 4731458,
+      "totalNs": 18588646,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "SHARED",
+      "round": 7,
+      "firstNs": 11653907,
+      "totalNs": 19159115,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 8,
+      "firstNs": 1400156,
+      "totalNs": 3568438,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 8,
+      "firstNs": 5781302,
+      "totalNs": 37087552,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "SHARED",
+      "round": 8,
+      "firstNs": 14139844,
+      "totalNs": 18848750,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "BINDER",
+      "round": 8,
+      "firstNs": 5782812,
+      "totalNs": 71606145,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 9,
+      "firstNs": 3545260,
+      "totalNs": 12958906,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "SHARED",
+      "round": 9,
+      "firstNs": 9003906,
+      "totalNs": 14459010,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "BINDER",
+      "round": 9,
+      "firstNs": 1264739,
+      "totalNs": 54065468,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 9,
+      "firstNs": 930937,
+      "totalNs": 2670833,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "SHARED",
+      "round": 10,
+      "firstNs": 10383698,
+      "totalNs": 13048489,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "BINDER",
+      "round": 10,
+      "firstNs": 4296771,
+      "totalNs": 55449427,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 10,
+      "firstNs": 2164063,
+      "totalNs": 4001979,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 10,
+      "firstNs": 6245833,
+      "totalNs": 28597760,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "BINDER",
+      "round": 11,
+      "firstNs": 1228594,
+      "totalNs": 57769584,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 11,
+      "firstNs": 916146,
+      "totalNs": 2639635,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 11,
+      "firstNs": 6751094,
+      "totalNs": 39075521,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "SHARED",
+      "round": 11,
+      "firstNs": 13237813,
+      "totalNs": 21010573,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 12,
+      "firstNs": 1654010,
+      "totalNs": 4145573,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 12,
+      "firstNs": 6147604,
+      "totalNs": 34990104,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "SHARED",
+      "round": 12,
+      "firstNs": 18555781,
+      "totalNs": 29761459,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "BINDER",
+      "round": 12,
+      "firstNs": 2183437,
+      "totalNs": 76417708,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 13,
+      "firstNs": 4364479,
+      "totalNs": 17128907,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "SHARED",
+      "round": 13,
+      "firstNs": 17578750,
+      "totalNs": 25136406,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "BINDER",
+      "round": 13,
+      "firstNs": 1660677,
+      "totalNs": 62956042,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 13,
+      "firstNs": 972604,
+      "totalNs": 3087343,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "SHARED",
+      "round": 14,
+      "firstNs": 7993229,
+      "totalNs": 10946146,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "BINDER",
+      "round": 14,
+      "firstNs": 1220365,
+      "totalNs": 57011198,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 14,
+      "firstNs": 1233854,
+      "totalNs": 3207031,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 14,
+      "firstNs": 4201458,
+      "totalNs": 16636927,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "BINDER",
+      "round": 15,
+      "firstNs": 1722396,
+      "totalNs": 46718073,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 15,
+      "firstNs": 894323,
+      "totalNs": 2663959,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 15,
+      "firstNs": 6742604,
+      "totalNs": 29038802,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "SHARED",
+      "round": 15,
+      "firstNs": 13598281,
+      "totalNs": 23065677,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 16,
+      "firstNs": 1941459,
+      "totalNs": 4869531,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 16,
+      "firstNs": 7523750,
+      "totalNs": 29735104,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "SHARED",
+      "round": 16,
+      "firstNs": 14630261,
+      "totalNs": 26892292,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "BINDER",
+      "round": 16,
+      "firstNs": 2356042,
+      "totalNs": 69003021,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 17,
+      "firstNs": 6484219,
+      "totalNs": 41855105,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "SHARED",
+      "round": 17,
+      "firstNs": 13463594,
+      "totalNs": 21290104,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "BINDER",
+      "round": 17,
+      "firstNs": 1633646,
+      "totalNs": 65685468,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 17,
+      "firstNs": 1002968,
+      "totalNs": 2770312,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "SHARED",
+      "round": 18,
+      "firstNs": 9719844,
+      "totalNs": 17238437,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "BINDER",
+      "round": 18,
+      "firstNs": 1631562,
+      "totalNs": 62073802,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 18,
+      "firstNs": 1005261,
+      "totalNs": 2830469,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 18,
+      "firstNs": 6234687,
+      "totalNs": 18081719,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "BINDER",
+      "round": 19,
+      "firstNs": 1383541,
+      "totalNs": 59978437,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 19,
+      "firstNs": 926510,
+      "totalNs": 2625364,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 19,
+      "firstNs": 6966302,
+      "totalNs": 34482188,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "SHARED",
+      "round": 19,
+      "firstNs": 10521927,
+      "totalNs": 13906771,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 20,
+      "firstNs": 1532969,
+      "totalNs": 3998542,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 20,
+      "firstNs": 6286615,
+      "totalNs": 15757083,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "SHARED",
+      "round": 20,
+      "firstNs": 8192656,
+      "totalNs": 13585052,
+      "crc32": 711046208
+    },
+    {
+      "id": "Q002",
+      "bytes": 1705378,
+      "route": "BINDER",
+      "round": 20,
+      "firstNs": 1250312,
+      "totalNs": 52430104,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 1,
+      "firstNs": 327113125,
+      "totalNs": 356816093,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 1,
+      "firstNs": 38682969,
+      "totalNs": 322405938,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 2,
+      "firstNs": 25107813,
+      "totalNs": 300537084,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 2,
+      "firstNs": 344455990,
+      "totalNs": 375280313,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 3,
+      "firstNs": 311924896,
+      "totalNs": 341365677,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 3,
+      "firstNs": 39026562,
+      "totalNs": 316790989,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 4,
+      "firstNs": 23856094,
+      "totalNs": 298379792,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 4,
+      "firstNs": 311952031,
+      "totalNs": 342394010,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 5,
+      "firstNs": 334277291,
+      "totalNs": 359949531,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 5,
+      "firstNs": 37773750,
+      "totalNs": 317893385,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 6,
+      "firstNs": 24289166,
+      "totalNs": 297507604,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 6,
+      "firstNs": 308568958,
+      "totalNs": 341448854,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 7,
+      "firstNs": 329722656,
+      "totalNs": 360346094,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 7,
+      "firstNs": 40066614,
+      "totalNs": 320074896,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 8,
+      "firstNs": 23788958,
+      "totalNs": 297980364,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 8,
+      "firstNs": 318454271,
+      "totalNs": 347148854,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 9,
+      "firstNs": 327453021,
+      "totalNs": 355393698,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 9,
+      "firstNs": 40696927,
+      "totalNs": 326125208,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 10,
+      "firstNs": 21708072,
+      "totalNs": 295807551,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 10,
+      "firstNs": 324944166,
+      "totalNs": 355180937,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 11,
+      "firstNs": 330050312,
+      "totalNs": 359554479,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 11,
+      "firstNs": 38796094,
+      "totalNs": 316667031,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 12,
+      "firstNs": 23911094,
+      "totalNs": 298943385,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 12,
+      "firstNs": 308841979,
+      "totalNs": 342194532,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 13,
+      "firstNs": 329108750,
+      "totalNs": 351495937,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 13,
+      "firstNs": 35725677,
+      "totalNs": 313609687,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 14,
+      "firstNs": 27641250,
+      "totalNs": 302261927,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 14,
+      "firstNs": 312190624,
+      "totalNs": 349774739,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 15,
+      "firstNs": 329451042,
+      "totalNs": 361177396,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 15,
+      "firstNs": 39917709,
+      "totalNs": 318594427,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 16,
+      "firstNs": 24856093,
+      "totalNs": 307187135,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 16,
+      "firstNs": 313244844,
+      "totalNs": 327090781,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 17,
+      "firstNs": 322073489,
+      "totalNs": 347609167,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 17,
+      "firstNs": 38422813,
+      "totalNs": 317168438,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 18,
+      "firstNs": 23933385,
+      "totalNs": 299299531,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 18,
+      "firstNs": 314172656,
+      "totalNs": 341923594,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 19,
+      "firstNs": 319137031,
+      "totalNs": 356751093,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 19,
+      "firstNs": 39819896,
+      "totalNs": 318035416,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "PIPE",
+      "round": 20,
+      "firstNs": 23605572,
+      "totalNs": 296697812,
+      "crc32": 711046208
+    },
+    {
+      "id": "liveQ002",
+      "bytes": 1705378,
+      "route": "FILE",
+      "round": 20,
+      "firstNs": 306556459,
+      "totalNs": 343969636,
+      "crc32": 711046208
+    }
+  ]
+}
