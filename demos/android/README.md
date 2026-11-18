@@ -7,6 +7,7 @@
 | `app` | Demo 入口、APK 装配。首页通过各专题的 Activity 进入 Demo。 |
 | `demo-geckoview` | 题型目录、原生筛选和叠框、两种引擎的实时预览、离屏生产端和 Pages 渲染接入。 |
 | `demo-handwriting` | Kotlin MVI 画板，使用 AndroidX Ink 1.0.0 书写、编辑、保存草稿和导出 PNG。 |
+| `demo-binder` | 在同一 APK 的两个进程间传输已存在或按需生成的字节序列，检查内容、句柄回收，测量首块和整份耗时。 |
 
 ## 运行
 
@@ -17,6 +18,28 @@
 adb install -r app/build/outputs/apk/debug/app-debug.apk
 adb shell am start -n dev.techlab.android/.MainActivity
 ```
+
+### Binder 大数据传输
+
+从首页点「Binder 大数据传输」→「运行对照」。Demo 先通过只读 FD 和可靠管道依次接收三个确定性样本，核对请求标识、解码结果、长度和 CRC32，然后执行读者中途关闭、写者失败的检查。接着在独立进程的同一份文件上比较 Binder 数组或分块、文件 FD、可靠管道和共享内存。Android 8.0 运行前三条路径，共享内存需要 Android 8.1 或更高版本。
+
+页面按输入列出首个 32 KiB 中位数、完整读取中位数、完整读取 P95。「预生成编码文件」读取现成字节，「按需编码」每次从同一份内存输入生成相同字节，用于对比先写临时文件与直接写管道。每条路径预热 2 次、采样 20 次，可中途取消。成功运行后的原始纳秒样本和两进程的检查结果保存在调试包的私有目录。复测时可关闭首页的 Gecko 预热：
+
+```bash
+adb shell am start -n dev.techlab.android/.MainActivity --ez preloadRendererPages false
+# 从首页打开 Binder Demo，点「运行对照」，等页面显示「对照完成」。
+adb exec-out run-as dev.techlab.android cat files/binder-study.json > binder-study.json
+```
+
+[方案比较和设备测量](../../research/binder-large-data/README.md)
+
+#### 阅读和扩展传输方案
+
+四个实现分别在同名 Kotlin 文件中。建议先读 [TransferStrategy](demo-binder/src/main/kotlin/dev/techlab/android/binder/TransferStrategy.kt)，再对照 [Binder 分块](demo-binder/src/main/kotlin/dev/techlab/android/binder/BinderChunkTransfer.kt) 和 [文件 FD](demo-binder/src/main/kotlin/dev/techlab/android/binder/FileFdTransfer.kt)。前者逐块调用 AIDL，后者和 [可靠管道](demo-binder/src/main/kotlin/dev/techlab/android/binder/ReliablePipeTransfer.kt) 复用描述符的读取与关闭逻辑。[共享内存](demo-binder/src/main/kotlin/dev/techlab/android/binder/SharedMemoryTransfer.kt) 从只读映射交付数据块。
+
+增加方案时，实现 `TransferStrategy`，给出唯一且稳定的 `id`、页面标题和支持的输入类型，在 `transfer` 中按顺序交付有效字节并释放资源。把实现加入 `availableStrategies()`，可在这里按 Android 版本限制注册。需要新的服务端操作时，同时扩展 AIDL 和服务端委托。共同的计时代码负责首块、完整耗时和 CRC32。运行计划写入 JSON，页面与汇总脚本据此纳入新方案。
+
+页面采用 MVI。Activity 发送运行或取消意图，并根据只读 `StateFlow` 的状态更新界面。[ViewModel](demo-binder/src/main/kotlin/dev/techlab/android/binder/TransferViewModel.kt) 管理任务，将进度、完成、失败和取消回传给[状态归约器](demo-binder/src/main/kotlin/dev/techlab/android/binder/TransferContract.kt)。取消时先进入「正在取消」，等任务退出后才允许重新运行。
 
 ### 手写画板
 

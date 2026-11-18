@@ -32,4 +32,5 @@ android {
 dependencies {
     implementation(project(":demo-geckoview"))
     implementation(project(":demo-handwriting"))
+    implementation(project(":demo-binder"))
 }

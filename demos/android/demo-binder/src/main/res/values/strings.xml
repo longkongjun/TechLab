@@ -1,0 +1,7 @@
+<resources>
+    <string name="transfer_title">Binder 大数据传输</string>
+    <string name="transfer_description">比较独立进程交付已有文件和按需生成数据 的耗时。每种输入只运行当前系统支持的方案。</string>
+    <string name="transfer_run">运行对照</string>
+    <string name="transfer_cancel">取消</string>
+    <string name="transfer_columns">首个 32 KiB 中位数 / 完整读取中位数 / 完整读取 P95</string>
+</resources>

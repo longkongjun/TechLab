@@ -21,4 +21,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/open_handwriting" />
+    <Button
+        android:id="@+id/open_binder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/open_binder" />
 </LinearLayout>

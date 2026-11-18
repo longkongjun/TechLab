@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import dev.techlab.android.databinding.ActivityMainBinding
+import dev.techlab.android.binder.TransferActivity
 import dev.techlab.android.gecko.EXTRA_DEFER_RENDER_INPUT
 import dev.techlab.android.gecko.GeckoDemoActivity
 import dev.techlab.android.gecko.RenderWarmup
@@ -14,6 +15,7 @@ class MainActivity : Activity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.openBinder.setOnClickListener { startActivity(Intent(this, TransferActivity::class.java)) }
         binding.openHandwriting.setOnClickListener {
             startActivity(Intent(this, HandwritingActivity::class.java))
         }

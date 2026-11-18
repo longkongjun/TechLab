@@ -14,4 +14,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "TechLabAndroid"
-include(":app", ":demo-geckoview", ":demo-handwriting")
+include(":app", ":demo-geckoview", ":demo-handwriting", ":demo-binder")

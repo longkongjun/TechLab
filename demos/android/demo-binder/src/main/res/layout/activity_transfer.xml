@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="16dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="@string/transfer_title" android:textSize="24sp" android:textStyle="bold" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" android:text="@string/transfer_description" />
+    <LinearLayout android:orientation="horizontal" style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:id="@+id/run_study" style="?android:attr/buttonBarButtonStyle" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="@string/transfer_run" />
+        <Button android:id="@+id/cancel_study" style="?android:attr/buttonBarButtonStyle" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="@string/transfer_cancel" />
+    </LinearLayout>
+    <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:accessibilityLiveRegion="polite" android:textStyle="bold" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" android:text="@string/transfer_columns" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <TextView android:id="@+id/results" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textIsSelectable="true" android:textSize="16sp" />
+    </ScrollView>
+</LinearLayout>
