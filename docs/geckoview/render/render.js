@@ -140,13 +140,19 @@ function appendChoiceAnswer(stem) {
   tail.append(anchor);
 }
 
-function questionCard(question, child = false) {
+function questionShell(question, child = false) {
   const card = element("article", child ? "subquestion" : "question");
   card.dataset.question = question.id;
   card.dataset.label = question.label;
   const heading = element("div", "question-heading");
   heading.append(element("span", "question-number", question.label + "."), element("span", "baseline-probe"));
-  const body = element("div", "question-body");
+  card.append(heading, element("div", "question-body"));
+  for (const sub of question.parts || []) card.append(questionShell(sub, true));
+  return card;
+}
+
+function fillQuestion(card, question) {
+  const body = card.children[1];
   const stem = element("div", "stem");
   if (question.answerLine) {
     const line = element("span", "blank");
@@ -178,15 +184,39 @@ function questionCard(question, child = false) {
     });
     body.append(options);
   }
-  card.append(heading, body);
-  (question.parts || []).forEach(sub => card.append(questionCard(sub, true)));
-  return card;
+  (question.parts || []).forEach((sub, i) => fillQuestion(card.children[i + 2], sub));
+}
+
+function loadMathAssets() {
+  // Cached v1 HTML includes KaTeX before render.js.
+  return window.techLabLoadMath?.() ?? Promise.resolve(Boolean(window.katex));
+}
+
+function typeset(formulas, available) {
+  let fallbacks = 0;
+  for (const formula of formulas) {
+    if (available) {
+      try {
+        katex.render(formula.dataset.tex, formula, { trust: false, strict: "ignore" });
+        continue;
+      } catch (_) { /* Preserve the source when KaTeX rejects a formula. */ }
+    }
+    formula.textContent = formula.dataset.tex;
+    formula.dataset.fallback = "tex";
+    fallbacks++;
+  }
+  return fallbacks;
 }
 
 function render(input) {
   const batch = input?.presentation === "batch";
-  const state = { token: input?.token, settled: false, offscreen: batch || input?.presentation === "single" };
+  const state = { token: input?.token, settled: false, formulaFallbacks: 0, inputAt: performance.now(),
+    offscreen: batch || input?.presentation === "single" };
   current = state;
+  return layout(state, input, batch).catch(error => reportError(state, error));
+}
+
+async function layout(state, input, batch) {
   if (typeof state.token !== "string" || !Array.isArray(input.questions) || input.questions.length === 0) {
     reportError(state, new Error("缺少有效的渲染输入"));
     return;
@@ -203,7 +233,8 @@ function render(input) {
     return;
   }
   document.body.classList.toggle("producer", state.offscreen);
-  const cards = input.questions.map(question => questionCard(question));
+  // All headings participate in the shared number column before any coordinates are published.
+  const cards = input.questions.map(question => questionShell(question));
   content.replaceChildren(...cards.map(card => {
     if (!batch) return card;
     // Other cards can still be loading when native captures this fixed document region.
@@ -211,41 +242,86 @@ function render(input) {
     slot.append(card);
     return slot;
   }));
-  const fallback = [];
-  for (const formula of content.querySelectorAll("[data-tex]")) {
-    try {
-      katex.render(formula.dataset.tex, formula, { trust: false, strict: "ignore" });
-    } catch (_) {
-      formula.textContent = formula.dataset.tex;
-      formula.dataset.fallback = "tex";
-      fallback.push(formula.dataset.tex);
-    }
-  }
   if (batch) {
-    // Flush style/layout to start the fonts used by the new content before reading fonts.ready.
-    content.getBoundingClientRect();
-    for (const card of cards) prepareBatchQuestion(state, card);
+    await renderBatch(state, cards, input.questions);
     return;
   }
-  const images = [...content.querySelectorAll("img")];
-  if (!state.offscreen) {
-    layoutOptions();
-    frame().then(() => publish(state));
+  cards.forEach((card, i) => fillQuestion(card, input.questions[i]));
+  const formulas = content.querySelectorAll("[data-tex]");
+  if (formulas.length) {
+    const available = await loadMathAssets();
+    if (current !== state) return;
+    state.formulaFallbacks = typeset(formulas, available);
   }
-  Promise.all([
+  const images = [...content.querySelectorAll("img")];
+  layoutOptions();
+  content.getBoundingClientRect(); // Start used fonts before reading fonts.ready.
+  const needsFinalLayout = images.length > 0 || document.fonts.status === "loading";
+  state.layoutReady = true;
+  // Native can place the full overlay for the next draw while fonts and images finish.
+  if (!state.offscreen && needsFinalLayout) publish(state);
+  await Promise.all([
     document.fonts.ready,
     ...images.map(img => img.decode().catch(() => {})),
-  ]).then(() => {
-    if (current === state) layoutOptions();
-    // Offscreen capture needs a painted frame from the final option layout.
-    return frame();
-  }).then(frame).then(() => {
-    if (current !== state) return;
-    state.settled = true;
-    state.formulaFallbacks = fallback.length;
-    state.missingImages = images.filter(img => !img.naturalWidth).length;
-    publish(state);
-  }).catch(error => reportError(state, error));
+  ]);
+  if (current !== state) return;
+  if (needsFinalLayout) layoutOptions();
+  if (state.offscreen) await frame().then(frame);
+  if (current !== state) return;
+  state.settled = true;
+  state.missingImages = images.filter(img => !img.naturalWidth).length;
+  publish(state);
+}
+
+async function renderBatch(state, cards, questions) {
+  // Post only one group at a time so the engine can handle a capture between groups without vsync.
+  const tasks = new MessageChannel();
+  const nextTurn = () => new Promise(resolve => { tasks.port1.onmessage = resolve; tasks.port2.postMessage(null); });
+  const groupSize = 3;
+  const waitingForMath = [];
+  let assets;
+  let mathAvailable;
+  function finishMath(group) {
+    for (const [card, formulas] of group) typeset(formulas, mathAvailable);
+    content.getBoundingClientRect();
+    for (const [card] of group) prepareBatchQuestion(state, card);
+  }
+  let start = 0;
+  try {
+    while (current === state && (start < cards.length || waitingForMath.length)) {
+      if (waitingForMath.length && mathAvailable !== undefined) {
+        finishMath(waitingForMath.shift());
+      } else if (start < cards.length) {
+        const group = cards.slice(start, start + groupSize);
+        group.forEach((card, i) => fillQuestion(card, questions[start + i]));
+        start += group.length;
+        content.getBoundingClientRect();
+        const mathCards = [];
+        for (const card of group) {
+          const formulas = card.querySelectorAll("[data-tex]");
+          if (formulas.length) mathCards.push([card, formulas]);
+          else prepareBatchQuestion(state, card);
+        }
+        if (mathCards.length) {
+          if (mathAvailable !== undefined) finishMath(mathCards);
+          else {
+            waitingForMath.push(mathCards);
+            assets ??= loadMathAssets().then(available => {
+              mathAvailable = available;
+              if (current === state) finishMath(waitingForMath.shift());
+            });
+          }
+        }
+      } else {
+        await assets;
+        continue;
+      }
+      if (start < cards.length || waitingForMath.length) await nextTurn();
+    }
+  } finally {
+    tasks.port1.close();
+    tasks.port2.close();
+  }
 }
 
 async function prepareBatchQuestion(state, card) {
@@ -451,13 +527,29 @@ function measure(root = content) {
 }
 
 function send(message) {
+  if (!current.timingReported && !message.error &&
+      (message.type === "geometry" || message.type === "question-ready")) {
+    const nav = performance.getEntriesByType("navigation")[0];
+    const resources = performance.getEntriesByType("resource").filter(entry =>
+      /\/(?:render|webview-bridge|katex\.min)\.(?:js|css)$/.test(new URL(entry.name).pathname));
+    message.pageTiming = { build: "20261118.1", input: Math.round(current.inputAt), result: Math.round(performance.now()),
+      request: nav?.requestStart, response: nav?.responseStart, responseEnd: nav?.responseEnd,
+      domContentLoaded: nav?.domContentLoadedEventStart,
+      resources: resources.map(entry => [new URL(entry.name).pathname.split("/").pop(),
+        Math.round(entry.responseEnd), entry.transferSize]) };
+    current.timingReported = true;
+  }
   document.dispatchEvent(new CustomEvent("techlab-renderer", { detail: JSON.stringify(message) }));
 }
 
 function publish(state) {
   if (current !== state) return;
+  const geometry = measure();
+  const bounds = content.getBoundingClientRect();
+  state.width = bounds.width;
+  state.height = bounds.height;
   send({ type: "geometry", token: state.token, coordinateSpace: "document-css-pixels",
-    settled: state.settled, pixelRatio: devicePixelRatio, geometry: measure(), missingImages: state.missingImages,
+    settled: state.settled, pixelRatio: devicePixelRatio, geometry, missingImages: state.missingImages,
     formulaFallbacks: state.formulaFallbacks });
 }
 
@@ -471,10 +563,12 @@ window.TechLabRenderer = { render };
 document.addEventListener("techlab-input", event => {
   if (typeof event.detail === "string") render(JSON.parse(event.detail));
 });
+document.dispatchEvent(new Event("techlab-input-ready"));
 
 let pending = false;
-new ResizeObserver(() => {
-  if (!current || current.offscreen || pending) return;
+new ResizeObserver(([entry]) => {
+  if (!current?.layoutReady || current.offscreen || pending) return;
+  if (entry.contentRect.width === current.width && entry.contentRect.height === current.height) return;
   const state = current;
   pending = true;
   requestAnimationFrame(() => {

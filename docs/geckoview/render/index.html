@@ -3,13 +3,77 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https://longkongjun.github.io; frame-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-AFDXX6gtcuiWtS4a5gvKoiUAJFtR98cXu5BZb/kz48A='; style-src 'self' 'unsafe-inline'; img-src 'self' https://longkongjun.github.io; frame-src 'none'; base-uri 'none'; form-action 'none'">
   <title>题目渲染</title>
-  <link rel="stylesheet" href="katex/katex.min.css">
+  <!-- The CSP hash above covers this exact startup script. -->
+  <script>
+"use strict";
+
+(() => {
+  const params = new URL(location.href).searchParams;
+  let mathAssets;
+  window.techLabLoadMath = () => {
+    if (mathAssets) return mathAssets;
+    const load = node => new Promise(resolve => {
+      node.onload = () => resolve(true);
+      node.onerror = () => { node.remove(); resolve(false); };
+      document.head.append(node);
+    });
+    const css = document.querySelector('link[rel="stylesheet"][href="katex/katex.min.css"]');
+    mathAssets = Promise.all([
+      css?.sheet || load(Object.assign(document.createElement("link"), { rel: "stylesheet", href: "katex/katex.min.css" })),
+      window.katex || load(Object.assign(document.createElement("script"), { src: "katex/katex.min.js" })),
+    ]).then(resources => {
+      const available = resources.every(Boolean);
+      if (!available) mathAssets = null;
+      return available;
+    });
+    return mathAssets;
+  };
+
+  if (params.has("math")) {
+    window.techLabLoadMath();
+    // These faces are used by the digits and variables in the math catalog.
+    for (const face of ["Main-Regular", "Math-Italic"]) {
+      const link = document.createElement("link");
+      Object.assign(link, { rel: "preload", as: "font", type: "font/woff2", crossOrigin: "anonymous",
+        href: "katex/fonts/KaTeX_" + face + ".woff2" });
+      document.head.append(link);
+    }
+  }
+  const bridge = window.techLabWebView;
+  const token = params.get("token");
+  if (!bridge || !token) return;
+
+  document.addEventListener("techlab-renderer", event => bridge.postMessage(event.detail));
+  const domReady = new Promise(resolve =>
+    document.addEventListener("DOMContentLoaded", resolve, { once: true }));
+  const listenerReady = Promise.race([
+    domReady, new Promise(resolve => document.addEventListener("techlab-input-ready", resolve, { once: true })),
+  ]);
+  let requestedAtDom = params.get("input") !== "early";
+  const request = () => bridge.postMessage(JSON.stringify({ type: "request-input", token }));
+  bridge.onmessage = async event => {
+    if (event.data === "") {
+      if (!requestedAtDom) {
+        requestedAtDom = true;
+        await domReady;
+        request();
+      }
+      return;
+    }
+    await listenerReady;
+    document.dispatchEvent(new CustomEvent("techlab-input", { detail: event.data }));
+  };
+  if (requestedAtDom) {
+    domReady.then(request);
+  } else {
+    request();
+  }
+})();
+</script>
   <link rel="stylesheet" href="render.css">
-  <script defer src="katex/katex.min.js"></script>
-  <script defer src="render.js"></script>
-  <script defer src="webview-bridge.js"></script>
+  <script defer src="render.js?v=2"></script>
 </head>
 <body>
   <main id="paper"><div id="content"></div></main>
