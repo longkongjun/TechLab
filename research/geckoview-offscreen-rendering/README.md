@@ -1,6 +1,8 @@
 # GeckoView 题目排版与离屏渲染
 
-验证同一套 HTML 能否在 GeckoView 和系统 WebView 中直接排版展示，同时由 Android 后台 Service 逐题输出图片及几何信息。渲染页由 TechLab Pages 提供。语料来自五份试卷和一组口算，覆盖数学与英语、不同篇幅、行内公式、配图、选择项和材料小题。
+**已完结 · 2026-11-18**。用户在 S3 上验证了重构版的 GeckoView 实时排版、系统 WebView 实时排版和 Gecko 后台产图，三种模式均通过功能验收。Demo 保留首页预加载常驻 HTML 的方案，普通换题通过消息桥发送新题目。旧版首屏变慢的原因、预热的净收益和两个实时引擎的速度排序仍缺少受控对照。[结题记录与版本](evaluation.md)
+
+三种模式共用 TechLab Pages 上的一套 HTML 排版实现。语料来自五份试卷和一组口算，覆盖数学与英语、不同篇幅、行内公式、配图、选择项和材料小题。
 
 ## 验证方式
 
@@ -19,4 +21,4 @@
 
 性能记录包括冷进程或热进程的首题可消费耗时、整批耗时，以及渲染宿主进程在每次回调时采样的 PSS。多进程总内存和对照基线需要同设备同条件补测。
 
-[运行说明](../../demos/android/README.md) · [首轮评估](evaluation.md) · [GeckoView 的离屏绘制接口](https://mozilla.github.io/geckoview/javadoc/mozilla-central/org/mozilla/geckoview/GeckoDisplay.html) · [CSSOM Range 坐标接口](https://drafts.csswg.org/cssom-view-1/#extensions-to-the-range-interface)
+[运行说明](../../demos/android/README.md) · [结题评估与历次实验](evaluation.md) · [GeckoView 的离屏绘制接口](https://mozilla.github.io/geckoview/javadoc/mozilla-central/org/mozilla/geckoview/GeckoDisplay.html) · [CSSOM Range 坐标接口](https://drafts.csswg.org/cssom-view-1/#extensions-to-the-range-interface)

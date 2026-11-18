@@ -1,0 +1,48 @@
+TechLab S3 · 2026-11-17 · 启动日志摘录
+来源为当时保存的 logcat -d -v threadtime 输出。以下按设备时间合并 TechLabWarmup、GeckoRuntime、ActivityManager 三个标签的相关行。两次应用启动分别使用主进程 6850 和 8203。日志未记录导航 token。
+
+11-17 18:43:22.192  1538  1651 I ActivityManager: Start proc 6888:dev.techlab.android:producer/u0a92 for service {dev.techlab.android/dev.techlab.android.gecko.ProducerService}
+11-17 18:43:24.066  6850  6850 I TechLabWarmup: WebView 预热完成 1974 ms
+11-17 18:43:24.074  6850  6850 I TechLabWarmup: Gecko 预热完成 2303 ms
+11-17 18:43:24.270  6888  6888 I GeckoRuntime: Adding debug configuration from: /data/user/0/dev.techlab.android/files/gecko/producer/runtime.yaml
+11-17 18:43:25.371  6850  6850 I TechLabWarmup: 后台预热完成 1311 ms
+11-17 18:44:50.268  1538  3044 I ActivityManager: Process dev.techlab.android:producer (pid 6888) has died: cch+5 CEM
+11-17 18:44:50.276  1538  3044 W ActivityManager: Scheduling restart of crashed service dev.techlab.android/.gecko.ProducerService in 1000ms for connection
+11-17 18:44:56.392  1538  1651 I ActivityManager: Start proc 7925:dev.techlab.android:producer/u0a92 for service {dev.techlab.android/dev.techlab.android.gecko.ProducerService}
+11-17 18:44:57.771  7925  7925 I GeckoRuntime: Adding debug configuration from: /data/user/0/dev.techlab.android/files/gecko/producer/runtime.yaml
+11-17 18:45:00.508  6850  6850 I TechLabWarmup: 后台预热完成 2989 ms
+11-17 18:45:31.178  8203  8203 I GeckoRuntime: Adding debug configuration from: /data/user/0/dev.techlab.android/files/gecko/preview/runtime.yaml
+11-17 18:45:31.392  1538  1651 I ActivityManager: Start proc 8243:dev.techlab.android:producer/u0a92 for service {dev.techlab.android/dev.techlab.android.gecko.ProducerService}
+11-17 18:45:32.567  1538  1651 I ActivityManager: Start proc 8326:com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0/u0i260 for  {dev.techlab.android/org.chromium.content.app.SandboxedProcessService0:0}
+11-17 18:45:33.139  8203  8203 I TechLabWarmup: WebView 预热完成 1826 ms
+11-17 18:45:33.147  8203  8203 I TechLabWarmup: Gecko 预热完成 2157 ms
+11-17 18:45:33.295  8243  8243 I GeckoRuntime: Adding debug configuration from: /data/user/0/dev.techlab.android/files/gecko/producer/runtime.yaml
+11-17 18:45:35.113  8203  8203 I TechLabWarmup: 后台预热完成 1701 ms
+11-17 18:45:35.728  1538  1651 I ActivityManager: Start proc 8476:dev.techlab.android:isolatedTab_disable_art_image_0:org.mozilla.gecko.process.GeckoChildProcessServices$isolatedTab0:de05e1be948d492ca9fbcc20ccd64faf/u0i261 for service {dev.techlab.android/org.mozilla.gecko.process.GeckoChildProcessServices$isolatedTab0:de05e1be948d492ca9fbcc20ccd64faf}
+11-17 18:45:37.111  1538  1651 I ActivityManager: Start proc 8538:dev.techlab.android:isolatedTab_disable_art_image_0:org.mozilla.gecko.process.GeckoChildProcessServices$isolatedTab0:4829f1dc811f45c1bd12c8760147acd3/u0i262 for service {dev.techlab.android/org.mozilla.gecko.process.GeckoChildProcessServices$isolatedTab0:4829f1dc811f45c1bd12c8760147acd3}
+11-17 18:45:39.040  1538  1651 I ActivityManager: Start proc 8594:dev.techlab.android:isolatedTab_disable_art_image_0:org.mozilla.gecko.process.GeckoChildProcessServices$isolatedTab0:ab0867cc145149fca51c1fe4318541e1/u0i263 for service {dev.techlab.android/org.mozilla.gecko.process.GeckoChildProcessServices$isolatedTab0:ab0867cc145149fca51c1fe4318541e1}
+11-17 18:45:53.709  1538  3047 I ActivityManager: Process dev.techlab.android:isolatedTab_disable_art_image_0:org.mozilla.gecko.process.GeckoChildProcessServices$isolatedTab0:de05e1be948d492ca9fbcc20ccd64faf (pid 8476) has died: cch CACC
+11-17 18:46:01.252  1538  4221 I ActivityManager: Process dev.techlab.android:isolatedTab_disable_art_image_0:org.mozilla.gecko.process.GeckoChildProcessServices$isolatedTab0:4f4798a8d2dc42339db6295e78e68363 (pid 8789) has died: cch+5 CEM
+
+TechLab S3 · 2026-11-18 · 设备已有 HTTP 缓存
+URL = https://longkongjun.github.io/TechLab/geckoview/render/render.js
+方法 = 用 run-as 只读定位 TechLab 缓存中含完整 URL 的条目，校验 gzip 解压结束标记，逐字节比对响应正文。三份响应的压缩长度为 6391 字节，解压后均为 18575 字节。
+body_sha256 = ce45b7add47a962d18cc696646716b925e5056225405f64e6f26aac09984ead8
+etag = W/"6afc1108-488f"
+last-modified = Tue, 17 Nov 2026 08:32:08 GMT
+repo_reference = git show 819fe0c:docs/geckoview/render/render.js
+各行依次为模式、设备缓存文件修改时间（北京时间）、gzip 起始偏移、缓存文件 SHA-256 和 TechLab 内相对路径。
+preview  11-17 18:54:16  0   11c6229744ba988e76ba61c478a737100ff58882966448f08424ce748b483c44  cache/preview/cache2/entries/0D442283AEA99B5CC37B0B9C1A0D428806D6C143
+producer 11-17 18:54:37  0   79def4be99ac9edfe29574fc2d0a45ec52d2b3eaa008fa3eba6aebf35ae02fb4  cache/producer/cache2/entries/0D442283AEA99B5CC37B0B9C1A0D428806D6C143
+webview  11-17 18:54:23  92  2704d7785eb9f93eb9a848764d3f2996cc67d77e0787b3e031d37f27cba70dd1  cache/webview_techlab-renderer/Default/HTTP Cache/Cache_Data/23867b00896e4eb1_0
+
+同一公开 URL · 主机 GET · 2026-11-18 10:22 北京时间
+HTTP/2 200
+date: Wed, 18 Nov 2026 02:22:00 GMT
+last-modified: Tue, 17 Nov 2026 11:13:38 GMT
+etag: W/"6afc36e2-4e9a"
+cache-control: max-age=600
+decoded_bytes = 20122
+body_sha256 = 0c01930cb6d76ffe597596119ea9c424895ab9b8fc6db9b9eaa8390acec157d9
+repo_reference = git show a1e86df:docs/geckoview/render/render.js
+此前 11-17 18:48 主机保存的同 URL 响应正文也匹配 819fe0c。
