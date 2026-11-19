@@ -1,0 +1,129 @@
+{
+  "libxml2": "2.14.6",
+  "cases": [
+    {
+      "id": "html.emphasis",
+      "bytes": 26,
+      "decoder_schedules": 27,
+      "tree": [
+        "div",
+        [
+          "em",
+          "一二"
+        ]
+      ],
+      "pause": {
+        "open": [
+          "div",
+          "em"
+        ],
+        "preview_only_suffix": "</em></div>"
+      },
+      "html_schedules": 27,
+      "incremental_input_bytes": 26,
+      "replay_input_bytes": 351,
+      "first_preview_with_text_after_bytes": 12
+    },
+    {
+      "id": "html.void",
+      "bytes": 21,
+      "decoder_schedules": 22,
+      "tree": [
+        "div",
+        "一",
+        [
+          "br"
+        ],
+        "二"
+      ],
+      "pause": {
+        "open": [
+          "div"
+        ],
+        "preview_only_suffix": "</div>"
+      },
+      "html_schedules": 22,
+      "incremental_input_bytes": 21,
+      "replay_input_bytes": 231,
+      "first_preview_with_text_after_bytes": 8
+    },
+    {
+      "id": "html.optional-li",
+      "bytes": 19,
+      "decoder_schedules": 20,
+      "tree": [
+        "ul",
+        [
+          "li",
+          "A"
+        ],
+        [
+          "li",
+          "B"
+        ]
+      ],
+      "pause": {
+        "open": [
+          "ul",
+          "li"
+        ],
+        "preview_only_suffix": "</li></ul>"
+      },
+      "html_schedules": 20,
+      "incremental_input_bytes": 19,
+      "replay_input_bytes": 190,
+      "first_preview_with_text_after_bytes": 9
+    },
+    {
+      "id": "md.setext",
+      "bytes": 11,
+      "decoder_schedules": 12,
+      "prefix_html": "<p>标题</p>",
+      "final_html": "<h2>标题</h2>"
+    },
+    {
+      "id": "md.reference",
+      "bytes": 18,
+      "decoder_schedules": 19,
+      "prefix_html": "<p>[甲][r]</p>",
+      "final_html": "<p><a href=\"/a\">甲</a></p>"
+    },
+    {
+      "id": "md.literal",
+      "bytes": 18,
+      "decoder_schedules": 19,
+      "prefix_html": "<pre class=\"text\"><code>&lt;div&gt;\n</code></pre>",
+      "final_html": "<pre class=\"text\"><code>&lt;div&gt;</code></pre>"
+    },
+    {
+      "id": "uml.branch",
+      "bytes": 70,
+      "decoder_schedules": 71,
+      "preview_svg_labels": [
+        "alt",
+        "[OK]",
+        "send end"
+      ],
+      "final_svg_labels": [
+        "alt",
+        "[OK]",
+        "send end",
+        "[FAIL]",
+        "retry"
+      ]
+    },
+    {
+      "id": "tex.slot",
+      "bytes": 11,
+      "decoder_schedules": 12,
+      "prefix_as_finished_math": {
+        "exit": 1,
+        "xdv": false
+      },
+      "final": {
+        "exit": 0,
+        "xdv": true
+      }
+    }
+  ]
+}

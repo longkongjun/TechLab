@@ -1,0 +1,48 @@
+[
+  {
+    "id": "html.emphasis", "format": "html",
+    "chunks": ["<div><em>一", "二</e", "m></div>"],
+    "at_first_pause": {"open": ["div", "em"], "preview_only_suffix": "</em></div>"},
+    "expected_tree": ["div", ["em", "一二"]]
+  },
+  {
+    "id": "html.void", "format": "html",
+    "chunks": ["<div>一<br", ">二</div>"],
+    "at_first_pause": {"open": ["div"], "preview_only_suffix": "</div>"},
+    "expected_tree": ["div", "一", ["br"], "二"]
+  },
+  {
+    "id": "html.optional-li", "format": "html",
+    "chunks": ["<ul><li>A", "<li>B</ul>"],
+    "at_first_pause": {"open": ["ul","li"], "preview_only_suffix": "</li></ul>"},
+    "expected_tree": ["ul", ["li", "A"], ["li", "B"]]
+  },
+  {
+    "id": "md.setext", "format": "markdown",
+    "chunks": ["标题\n", "---\n"],
+    "prefix_html": "<p>标题</p>", "final_html": "<h2>标题</h2>"
+  },
+  {
+    "id": "md.reference", "format": "markdown",
+    "chunks": ["[甲][r]\n\n", "[r]: /a\n"],
+    "prefix_html": "<p>[甲][r]</p>", "final_html": "<p><a href=\"/a\">甲</a></p>"
+  },
+  {
+    "id": "md.literal", "format": "markdown",
+    "chunks": ["~~~text\n<div>\n", "~~~\n"],
+    "prefix_html": "<pre class=\"text\"><code>&lt;div&gt;\n</code></pre>",
+    "final_html": "<pre class=\"text\"><code>&lt;div&gt;</code></pre>"
+  },
+  {
+    "id": "uml.branch", "format": "plantuml",
+    "chunks": ["@startuml\nalt OK\nA -> B: send end\n", "else FAIL\nB -> A: retry\nend\n@enduml\n"],
+    "preview_only_suffix": "end\n@enduml\n",
+    "preview_labels": ["alt","[OK]","send end"], "final_labels": ["alt","[OK]","send end","[FAIL]","retry"]
+  },
+  {
+    "id": "tex.slot", "format": "latex",
+    "chunks": ["\\frac{1}", "{2}"],
+    "designed_pause": {"missing_role":"denominator","anchor_utf8":[8,8],"copy_source":"\\frac{1}"},
+    "closed_math_at_pause_produces_xdv": false, "final_produces_xdv": true
+  }
+]
