@@ -1,0 +1,1865 @@
+{
+  "fixture": "M1",
+  "tools": {
+    "pandoc": "pandoc 3.14",
+    "plantuml": "PlantUML version 1.2026.10 / a00edda [2026-11-11 11:04:35 UTC]"
+  },
+  "source_bytes": 97,
+  "frames": [
+    {
+      "route": {
+        "received_end": 7,
+        "decoded_end": 7,
+        "consumed": 7,
+        "completed_line_end": 7,
+        "outer": {
+          "session": "running",
+          "first_block": {
+            "kind": "paragraph_provisional",
+            "occurrence": "paragraph@0",
+            "text_span": [
+              0,
+              6
+            ],
+            "source_span": [
+              0,
+              7
+            ]
+          },
+          "active_route": "outer",
+          "open_stack": [
+            "paragraph"
+          ],
+          "fence": null
+        },
+        "child": null,
+        "source_version": 1
+      },
+      "projection": {
+        "child_visualization": "absent",
+        "synthetic_items": []
+      },
+      "route_if_eof_here": {
+        "source_version": 1,
+        "outer_session": "ended",
+        "first_block_kind": "paragraph",
+        "outer_fence_end": null,
+        "child_final": "absent",
+        "child_final_boundary": null,
+        "child_body_content": null,
+        "child_visualization": "absent",
+        "diagnostics": [],
+        "synthetic_items": []
+      },
+      "pandoc_ast_for_prefix": {
+        "pandoc-api-version": [
+          1,
+          23,
+          1,
+          2
+        ],
+        "meta": {},
+        "blocks": [
+          {
+            "t": "Para",
+            "c": [
+              {
+                "t": "Str",
+                "c": "标题"
+              }
+            ]
+          }
+        ]
+      },
+      "plantuml_render_copy": {
+        "status": "not_run",
+        "reason": "no_message_in_child"
+      }
+    },
+    {
+      "route": {
+        "received_end": 11,
+        "decoded_end": 11,
+        "consumed": 11,
+        "completed_line_end": 11,
+        "outer": {
+          "session": "running",
+          "first_block": {
+            "kind": "heading_2",
+            "occurrence": "heading_2@0",
+            "text_span": [
+              0,
+              6
+            ],
+            "source_span": [
+              0,
+              11
+            ]
+          },
+          "active_route": "outer",
+          "open_stack": [],
+          "fence": null
+        },
+        "child": null,
+        "source_version": 2
+      },
+      "projection": {
+        "child_visualization": "absent",
+        "synthetic_items": []
+      },
+      "route_if_eof_here": {
+        "source_version": 2,
+        "outer_session": "ended",
+        "first_block_kind": "heading_2",
+        "outer_fence_end": null,
+        "child_final": "absent",
+        "child_final_boundary": null,
+        "child_body_content": null,
+        "child_visualization": "absent",
+        "diagnostics": [],
+        "synthetic_items": []
+      },
+      "pandoc_ast_for_prefix": {
+        "pandoc-api-version": [
+          1,
+          23,
+          1,
+          2
+        ],
+        "meta": {},
+        "blocks": [
+          {
+            "t": "Header",
+            "c": [
+              2,
+              [
+                "",
+                [],
+                []
+              ],
+              [
+                {
+                  "t": "Str",
+                  "c": "标题"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "plantuml_render_copy": {
+        "status": "not_run",
+        "reason": "no_message_in_child"
+      }
+    },
+    {
+      "route": {
+        "received_end": 23,
+        "decoded_end": 23,
+        "consumed": 23,
+        "completed_line_end": 23,
+        "outer": {
+          "session": "running",
+          "first_block": {
+            "kind": "heading_2",
+            "occurrence": "heading_2@0",
+            "text_span": [
+              0,
+              6
+            ],
+            "source_span": [
+              0,
+              11
+            ]
+          },
+          "active_route": "child",
+          "open_stack": [
+            "fence"
+          ],
+          "fence": {
+            "kind": "fenced_code",
+            "opening_span": [
+              11,
+              23
+            ],
+            "info": "plantuml",
+            "body_span": [
+              23,
+              23
+            ],
+            "closing_span": null,
+            "status": "open"
+          }
+        },
+        "child": {
+          "language": "plantuml",
+          "input_state": "open",
+          "diagram_state": "await_start",
+          "source_span": [
+            23,
+            23
+          ],
+          "received_end": 0,
+          "consumed": 0,
+          "completed_line_end": 0,
+          "outer_fence_end_not_forwarded": false,
+          "last_branch": null,
+          "open_group_stack": [],
+          "branches": [],
+          "messages": [],
+          "terminator_span": null,
+          "final_boundary": null
+        },
+        "source_version": 3
+      },
+      "projection": {
+        "child_visualization": "literal",
+        "synthetic_items": [
+          {
+            "kind": "close_fence_view",
+            "owner": "fence",
+            "anchor": [
+              23,
+              23
+            ],
+            "source_span": null
+          }
+        ]
+      },
+      "route_if_eof_here": {
+        "source_version": 3,
+        "outer_session": "ended",
+        "first_block_kind": "heading_2",
+        "outer_fence_end": "natural_at_eof",
+        "child_final": "error",
+        "child_final_boundary": "outer_eof",
+        "child_body_content": "preserve_source_body",
+        "child_visualization": "literal_with_diagnostic",
+        "diagnostics": [
+          {
+            "layer": "plantuml",
+            "code": "missing_diagram_start",
+            "source_span": [
+              23,
+              23
+            ],
+            "child_span": [
+              0,
+              0
+            ]
+          }
+        ],
+        "synthetic_items": []
+      },
+      "pandoc_ast_for_prefix": {
+        "pandoc-api-version": [
+          1,
+          23,
+          1,
+          2
+        ],
+        "meta": {},
+        "blocks": [
+          {
+            "t": "Header",
+            "c": [
+              2,
+              [
+                "",
+                [],
+                []
+              ],
+              [
+                {
+                  "t": "Str",
+                  "c": "标题"
+                }
+              ]
+            ]
+          },
+          {
+            "t": "CodeBlock",
+            "c": [
+              [
+                "",
+                [
+                  "plantuml"
+                ],
+                []
+              ],
+              ""
+            ]
+          }
+        ]
+      },
+      "plantuml_render_copy": {
+        "status": "not_run",
+        "reason": "no_message_in_child"
+      }
+    },
+    {
+      "route": {
+        "received_end": 33,
+        "decoded_end": 33,
+        "consumed": 33,
+        "completed_line_end": 33,
+        "outer": {
+          "session": "running",
+          "first_block": {
+            "kind": "heading_2",
+            "occurrence": "heading_2@0",
+            "text_span": [
+              0,
+              6
+            ],
+            "source_span": [
+              0,
+              11
+            ]
+          },
+          "active_route": "child",
+          "open_stack": [
+            "fence"
+          ],
+          "fence": {
+            "kind": "fenced_code",
+            "opening_span": [
+              11,
+              23
+            ],
+            "info": "plantuml",
+            "body_span": [
+              23,
+              33
+            ],
+            "closing_span": null,
+            "status": "open"
+          }
+        },
+        "child": {
+          "language": "plantuml",
+          "input_state": "open",
+          "diagram_state": "in_body",
+          "source_span": [
+            23,
+            33
+          ],
+          "received_end": 10,
+          "consumed": 10,
+          "completed_line_end": 10,
+          "outer_fence_end_not_forwarded": false,
+          "last_branch": null,
+          "open_group_stack": [],
+          "branches": [],
+          "messages": [],
+          "terminator_span": null,
+          "final_boundary": null
+        },
+        "source_version": 4
+      },
+      "projection": {
+        "child_visualization": "diagram_provisional",
+        "synthetic_items": [
+          {
+            "kind": "close_diagram",
+            "owner": "diagram",
+            "anchor": [
+              33,
+              33
+            ],
+            "source_span": null
+          },
+          {
+            "kind": "close_fence_view",
+            "owner": "fence",
+            "anchor": [
+              33,
+              33
+            ],
+            "source_span": null
+          }
+        ]
+      },
+      "route_if_eof_here": {
+        "source_version": 4,
+        "outer_session": "ended",
+        "first_block_kind": "heading_2",
+        "outer_fence_end": "natural_at_eof",
+        "child_final": "error",
+        "child_final_boundary": "outer_eof",
+        "child_body_content": "preserve_source_body",
+        "child_visualization": "literal_with_diagnostic",
+        "diagnostics": [
+          {
+            "layer": "plantuml",
+            "code": "missing_diagram_end",
+            "source_span": [
+              33,
+              33
+            ],
+            "child_span": [
+              10,
+              10
+            ]
+          }
+        ],
+        "synthetic_items": []
+      },
+      "pandoc_ast_for_prefix": {
+        "pandoc-api-version": [
+          1,
+          23,
+          1,
+          2
+        ],
+        "meta": {},
+        "blocks": [
+          {
+            "t": "Header",
+            "c": [
+              2,
+              [
+                "",
+                [],
+                []
+              ],
+              [
+                {
+                  "t": "Str",
+                  "c": "标题"
+                }
+              ]
+            ]
+          },
+          {
+            "t": "CodeBlock",
+            "c": [
+              [
+                "",
+                [
+                  "plantuml"
+                ],
+                []
+              ],
+              "@startuml\n"
+            ]
+          }
+        ]
+      },
+      "plantuml_render_copy": {
+        "status": "not_run",
+        "reason": "no_message_in_child"
+      }
+    },
+    {
+      "route": {
+        "received_end": 40,
+        "decoded_end": 40,
+        "consumed": 40,
+        "completed_line_end": 40,
+        "outer": {
+          "session": "running",
+          "first_block": {
+            "kind": "heading_2",
+            "occurrence": "heading_2@0",
+            "text_span": [
+              0,
+              6
+            ],
+            "source_span": [
+              0,
+              11
+            ]
+          },
+          "active_route": "child",
+          "open_stack": [
+            "fence"
+          ],
+          "fence": {
+            "kind": "fenced_code",
+            "opening_span": [
+              11,
+              23
+            ],
+            "info": "plantuml",
+            "body_span": [
+              23,
+              40
+            ],
+            "closing_span": null,
+            "status": "open"
+          }
+        },
+        "child": {
+          "language": "plantuml",
+          "input_state": "open",
+          "diagram_state": "in_body",
+          "source_span": [
+            23,
+            40
+          ],
+          "received_end": 17,
+          "consumed": 17,
+          "completed_line_end": 17,
+          "outer_fence_end_not_forwarded": false,
+          "last_branch": "OK",
+          "open_group_stack": [
+            "alt"
+          ],
+          "branches": [
+            "OK"
+          ],
+          "messages": [],
+          "terminator_span": null,
+          "final_boundary": null
+        },
+        "source_version": 5
+      },
+      "projection": {
+        "child_visualization": "diagram_provisional",
+        "synthetic_items": [
+          {
+            "kind": "close_group",
+            "owner": "alt",
+            "anchor": [
+              40,
+              40
+            ],
+            "source_span": null
+          },
+          {
+            "kind": "close_diagram",
+            "owner": "diagram",
+            "anchor": [
+              40,
+              40
+            ],
+            "source_span": null
+          },
+          {
+            "kind": "close_fence_view",
+            "owner": "fence",
+            "anchor": [
+              40,
+              40
+            ],
+            "source_span": null
+          }
+        ]
+      },
+      "route_if_eof_here": {
+        "source_version": 5,
+        "outer_session": "ended",
+        "first_block_kind": "heading_2",
+        "outer_fence_end": "natural_at_eof",
+        "child_final": "error",
+        "child_final_boundary": "outer_eof",
+        "child_body_content": "preserve_source_body",
+        "child_visualization": "literal_with_diagnostic",
+        "diagnostics": [
+          {
+            "layer": "plantuml",
+            "code": "missing_group_end",
+            "source_span": [
+              40,
+              40
+            ],
+            "child_span": [
+              17,
+              17
+            ],
+            "related_source_span": [
+              33,
+              40
+            ],
+            "related_child_span": [
+              10,
+              17
+            ]
+          }
+        ],
+        "synthetic_items": []
+      },
+      "pandoc_ast_for_prefix": {
+        "pandoc-api-version": [
+          1,
+          23,
+          1,
+          2
+        ],
+        "meta": {},
+        "blocks": [
+          {
+            "t": "Header",
+            "c": [
+              2,
+              [
+                "",
+                [],
+                []
+              ],
+              [
+                {
+                  "t": "Str",
+                  "c": "标题"
+                }
+              ]
+            ]
+          },
+          {
+            "t": "CodeBlock",
+            "c": [
+              [
+                "",
+                [
+                  "plantuml"
+                ],
+                []
+              ],
+              "@startuml\nalt OK\n"
+            ]
+          }
+        ]
+      },
+      "plantuml_render_copy": {
+        "status": "not_run",
+        "reason": "no_message_in_child"
+      }
+    },
+    {
+      "route": {
+        "received_end": 57,
+        "decoded_end": 57,
+        "consumed": 57,
+        "completed_line_end": 57,
+        "outer": {
+          "session": "running",
+          "first_block": {
+            "kind": "heading_2",
+            "occurrence": "heading_2@0",
+            "text_span": [
+              0,
+              6
+            ],
+            "source_span": [
+              0,
+              11
+            ]
+          },
+          "active_route": "child",
+          "open_stack": [
+            "fence"
+          ],
+          "fence": {
+            "kind": "fenced_code",
+            "opening_span": [
+              11,
+              23
+            ],
+            "info": "plantuml",
+            "body_span": [
+              23,
+              57
+            ],
+            "closing_span": null,
+            "status": "open"
+          }
+        },
+        "child": {
+          "language": "plantuml",
+          "input_state": "open",
+          "diagram_state": "in_body",
+          "source_span": [
+            23,
+            57
+          ],
+          "received_end": 34,
+          "consumed": 34,
+          "completed_line_end": 34,
+          "outer_fence_end_not_forwarded": false,
+          "last_branch": "OK",
+          "open_group_stack": [
+            "alt"
+          ],
+          "branches": [
+            "OK"
+          ],
+          "messages": [
+            {
+              "branch": "OK",
+              "sender": "A",
+              "receiver": "B",
+              "label": "send end",
+              "source_span": [
+                40,
+                56
+              ],
+              "label_source_span": [
+                48,
+                56
+              ],
+              "line_source_span": [
+                40,
+                57
+              ]
+            }
+          ],
+          "terminator_span": null,
+          "final_boundary": null
+        },
+        "source_version": 6
+      },
+      "projection": {
+        "child_visualization": "diagram_provisional",
+        "synthetic_items": [
+          {
+            "kind": "close_group",
+            "owner": "alt",
+            "anchor": [
+              57,
+              57
+            ],
+            "source_span": null
+          },
+          {
+            "kind": "close_diagram",
+            "owner": "diagram",
+            "anchor": [
+              57,
+              57
+            ],
+            "source_span": null
+          },
+          {
+            "kind": "close_fence_view",
+            "owner": "fence",
+            "anchor": [
+              57,
+              57
+            ],
+            "source_span": null
+          }
+        ]
+      },
+      "route_if_eof_here": {
+        "source_version": 6,
+        "outer_session": "ended",
+        "first_block_kind": "heading_2",
+        "outer_fence_end": "natural_at_eof",
+        "child_final": "error",
+        "child_final_boundary": "outer_eof",
+        "child_body_content": "preserve_source_body",
+        "child_visualization": "literal_with_diagnostic",
+        "diagnostics": [
+          {
+            "layer": "plantuml",
+            "code": "missing_group_end",
+            "source_span": [
+              57,
+              57
+            ],
+            "child_span": [
+              34,
+              34
+            ],
+            "related_source_span": [
+              33,
+              40
+            ],
+            "related_child_span": [
+              10,
+              17
+            ]
+          }
+        ],
+        "synthetic_items": []
+      },
+      "pandoc_ast_for_prefix": {
+        "pandoc-api-version": [
+          1,
+          23,
+          1,
+          2
+        ],
+        "meta": {},
+        "blocks": [
+          {
+            "t": "Header",
+            "c": [
+              2,
+              [
+                "",
+                [],
+                []
+              ],
+              [
+                {
+                  "t": "Str",
+                  "c": "标题"
+                }
+              ]
+            ]
+          },
+          {
+            "t": "CodeBlock",
+            "c": [
+              [
+                "",
+                [
+                  "plantuml"
+                ],
+                []
+              ],
+              "@startuml\nalt OK\nA -> B: send end\n"
+            ]
+          }
+        ]
+      },
+      "plantuml_render_copy": {
+        "status": "rendered",
+        "source_body_bytes": 34,
+        "temporary_suffix": "end\n@enduml\n",
+        "temporary_suffix_bytes": 12,
+        "svg_text_labels": [
+          "A",
+          "B",
+          "A",
+          "B",
+          "alt",
+          "[OK]",
+          "send end"
+        ]
+      }
+    },
+    {
+      "route": {
+        "received_end": 67,
+        "decoded_end": 67,
+        "consumed": 67,
+        "completed_line_end": 67,
+        "outer": {
+          "session": "running",
+          "first_block": {
+            "kind": "heading_2",
+            "occurrence": "heading_2@0",
+            "text_span": [
+              0,
+              6
+            ],
+            "source_span": [
+              0,
+              11
+            ]
+          },
+          "active_route": "child",
+          "open_stack": [
+            "fence"
+          ],
+          "fence": {
+            "kind": "fenced_code",
+            "opening_span": [
+              11,
+              23
+            ],
+            "info": "plantuml",
+            "body_span": [
+              23,
+              67
+            ],
+            "closing_span": null,
+            "status": "open"
+          }
+        },
+        "child": {
+          "language": "plantuml",
+          "input_state": "open",
+          "diagram_state": "in_body",
+          "source_span": [
+            23,
+            67
+          ],
+          "received_end": 44,
+          "consumed": 44,
+          "completed_line_end": 44,
+          "outer_fence_end_not_forwarded": false,
+          "last_branch": "FAIL",
+          "open_group_stack": [
+            "alt"
+          ],
+          "branches": [
+            "OK",
+            "FAIL"
+          ],
+          "messages": [
+            {
+              "branch": "OK",
+              "sender": "A",
+              "receiver": "B",
+              "label": "send end",
+              "source_span": [
+                40,
+                56
+              ],
+              "label_source_span": [
+                48,
+                56
+              ],
+              "line_source_span": [
+                40,
+                57
+              ]
+            }
+          ],
+          "terminator_span": null,
+          "final_boundary": null
+        },
+        "source_version": 7
+      },
+      "projection": {
+        "child_visualization": "diagram_provisional",
+        "synthetic_items": [
+          {
+            "kind": "close_group",
+            "owner": "alt",
+            "anchor": [
+              67,
+              67
+            ],
+            "source_span": null
+          },
+          {
+            "kind": "close_diagram",
+            "owner": "diagram",
+            "anchor": [
+              67,
+              67
+            ],
+            "source_span": null
+          },
+          {
+            "kind": "close_fence_view",
+            "owner": "fence",
+            "anchor": [
+              67,
+              67
+            ],
+            "source_span": null
+          }
+        ]
+      },
+      "route_if_eof_here": {
+        "source_version": 7,
+        "outer_session": "ended",
+        "first_block_kind": "heading_2",
+        "outer_fence_end": "natural_at_eof",
+        "child_final": "error",
+        "child_final_boundary": "outer_eof",
+        "child_body_content": "preserve_source_body",
+        "child_visualization": "literal_with_diagnostic",
+        "diagnostics": [
+          {
+            "layer": "plantuml",
+            "code": "missing_group_end",
+            "source_span": [
+              67,
+              67
+            ],
+            "child_span": [
+              44,
+              44
+            ],
+            "related_source_span": [
+              33,
+              40
+            ],
+            "related_child_span": [
+              10,
+              17
+            ]
+          }
+        ],
+        "synthetic_items": []
+      },
+      "pandoc_ast_for_prefix": {
+        "pandoc-api-version": [
+          1,
+          23,
+          1,
+          2
+        ],
+        "meta": {},
+        "blocks": [
+          {
+            "t": "Header",
+            "c": [
+              2,
+              [
+                "",
+                [],
+                []
+              ],
+              [
+                {
+                  "t": "Str",
+                  "c": "标题"
+                }
+              ]
+            ]
+          },
+          {
+            "t": "CodeBlock",
+            "c": [
+              [
+                "",
+                [
+                  "plantuml"
+                ],
+                []
+              ],
+              "@startuml\nalt OK\nA -> B: send end\nelse FAIL\n"
+            ]
+          }
+        ]
+      },
+      "plantuml_render_copy": {
+        "status": "rendered",
+        "source_body_bytes": 44,
+        "temporary_suffix": "end\n@enduml\n",
+        "temporary_suffix_bytes": 12,
+        "svg_text_labels": [
+          "A",
+          "B",
+          "A",
+          "B",
+          "alt",
+          "[OK]",
+          "send end",
+          "[FAIL]"
+        ]
+      }
+    },
+    {
+      "route": {
+        "received_end": 81,
+        "decoded_end": 81,
+        "consumed": 81,
+        "completed_line_end": 81,
+        "outer": {
+          "session": "running",
+          "first_block": {
+            "kind": "heading_2",
+            "occurrence": "heading_2@0",
+            "text_span": [
+              0,
+              6
+            ],
+            "source_span": [
+              0,
+              11
+            ]
+          },
+          "active_route": "child",
+          "open_stack": [
+            "fence"
+          ],
+          "fence": {
+            "kind": "fenced_code",
+            "opening_span": [
+              11,
+              23
+            ],
+            "info": "plantuml",
+            "body_span": [
+              23,
+              81
+            ],
+            "closing_span": null,
+            "status": "open"
+          }
+        },
+        "child": {
+          "language": "plantuml",
+          "input_state": "open",
+          "diagram_state": "in_body",
+          "source_span": [
+            23,
+            81
+          ],
+          "received_end": 58,
+          "consumed": 58,
+          "completed_line_end": 58,
+          "outer_fence_end_not_forwarded": false,
+          "last_branch": "FAIL",
+          "open_group_stack": [
+            "alt"
+          ],
+          "branches": [
+            "OK",
+            "FAIL"
+          ],
+          "messages": [
+            {
+              "branch": "OK",
+              "sender": "A",
+              "receiver": "B",
+              "label": "send end",
+              "source_span": [
+                40,
+                56
+              ],
+              "label_source_span": [
+                48,
+                56
+              ],
+              "line_source_span": [
+                40,
+                57
+              ]
+            },
+            {
+              "branch": "FAIL",
+              "sender": "B",
+              "receiver": "A",
+              "label": "retry",
+              "source_span": [
+                67,
+                80
+              ],
+              "label_source_span": [
+                75,
+                80
+              ],
+              "line_source_span": [
+                67,
+                81
+              ]
+            }
+          ],
+          "terminator_span": null,
+          "final_boundary": null
+        },
+        "source_version": 8
+      },
+      "projection": {
+        "child_visualization": "diagram_provisional",
+        "synthetic_items": [
+          {
+            "kind": "close_group",
+            "owner": "alt",
+            "anchor": [
+              81,
+              81
+            ],
+            "source_span": null
+          },
+          {
+            "kind": "close_diagram",
+            "owner": "diagram",
+            "anchor": [
+              81,
+              81
+            ],
+            "source_span": null
+          },
+          {
+            "kind": "close_fence_view",
+            "owner": "fence",
+            "anchor": [
+              81,
+              81
+            ],
+            "source_span": null
+          }
+        ]
+      },
+      "route_if_eof_here": {
+        "source_version": 8,
+        "outer_session": "ended",
+        "first_block_kind": "heading_2",
+        "outer_fence_end": "natural_at_eof",
+        "child_final": "error",
+        "child_final_boundary": "outer_eof",
+        "child_body_content": "preserve_source_body",
+        "child_visualization": "literal_with_diagnostic",
+        "diagnostics": [
+          {
+            "layer": "plantuml",
+            "code": "missing_group_end",
+            "source_span": [
+              81,
+              81
+            ],
+            "child_span": [
+              58,
+              58
+            ],
+            "related_source_span": [
+              33,
+              40
+            ],
+            "related_child_span": [
+              10,
+              17
+            ]
+          }
+        ],
+        "synthetic_items": []
+      },
+      "pandoc_ast_for_prefix": {
+        "pandoc-api-version": [
+          1,
+          23,
+          1,
+          2
+        ],
+        "meta": {},
+        "blocks": [
+          {
+            "t": "Header",
+            "c": [
+              2,
+              [
+                "",
+                [],
+                []
+              ],
+              [
+                {
+                  "t": "Str",
+                  "c": "标题"
+                }
+              ]
+            ]
+          },
+          {
+            "t": "CodeBlock",
+            "c": [
+              [
+                "",
+                [
+                  "plantuml"
+                ],
+                []
+              ],
+              "@startuml\nalt OK\nA -> B: send end\nelse FAIL\nB -> A: retry\n"
+            ]
+          }
+        ]
+      },
+      "plantuml_render_copy": {
+        "status": "rendered",
+        "source_body_bytes": 58,
+        "temporary_suffix": "end\n@enduml\n",
+        "temporary_suffix_bytes": 12,
+        "svg_text_labels": [
+          "A",
+          "B",
+          "A",
+          "B",
+          "alt",
+          "[OK]",
+          "send end",
+          "[FAIL]",
+          "retry"
+        ]
+      }
+    },
+    {
+      "route": {
+        "received_end": 85,
+        "decoded_end": 85,
+        "consumed": 85,
+        "completed_line_end": 85,
+        "outer": {
+          "session": "running",
+          "first_block": {
+            "kind": "heading_2",
+            "occurrence": "heading_2@0",
+            "text_span": [
+              0,
+              6
+            ],
+            "source_span": [
+              0,
+              11
+            ]
+          },
+          "active_route": "child",
+          "open_stack": [
+            "fence"
+          ],
+          "fence": {
+            "kind": "fenced_code",
+            "opening_span": [
+              11,
+              23
+            ],
+            "info": "plantuml",
+            "body_span": [
+              23,
+              85
+            ],
+            "closing_span": null,
+            "status": "open"
+          }
+        },
+        "child": {
+          "language": "plantuml",
+          "input_state": "open",
+          "diagram_state": "in_body",
+          "source_span": [
+            23,
+            85
+          ],
+          "received_end": 62,
+          "consumed": 62,
+          "completed_line_end": 62,
+          "outer_fence_end_not_forwarded": false,
+          "last_branch": null,
+          "open_group_stack": [],
+          "branches": [
+            "OK",
+            "FAIL"
+          ],
+          "messages": [
+            {
+              "branch": "OK",
+              "sender": "A",
+              "receiver": "B",
+              "label": "send end",
+              "source_span": [
+                40,
+                56
+              ],
+              "label_source_span": [
+                48,
+                56
+              ],
+              "line_source_span": [
+                40,
+                57
+              ]
+            },
+            {
+              "branch": "FAIL",
+              "sender": "B",
+              "receiver": "A",
+              "label": "retry",
+              "source_span": [
+                67,
+                80
+              ],
+              "label_source_span": [
+                75,
+                80
+              ],
+              "line_source_span": [
+                67,
+                81
+              ]
+            }
+          ],
+          "terminator_span": null,
+          "final_boundary": null
+        },
+        "source_version": 9
+      },
+      "projection": {
+        "child_visualization": "diagram_provisional",
+        "synthetic_items": [
+          {
+            "kind": "close_diagram",
+            "owner": "diagram",
+            "anchor": [
+              85,
+              85
+            ],
+            "source_span": null
+          },
+          {
+            "kind": "close_fence_view",
+            "owner": "fence",
+            "anchor": [
+              85,
+              85
+            ],
+            "source_span": null
+          }
+        ]
+      },
+      "route_if_eof_here": {
+        "source_version": 9,
+        "outer_session": "ended",
+        "first_block_kind": "heading_2",
+        "outer_fence_end": "natural_at_eof",
+        "child_final": "error",
+        "child_final_boundary": "outer_eof",
+        "child_body_content": "preserve_source_body",
+        "child_visualization": "literal_with_diagnostic",
+        "diagnostics": [
+          {
+            "layer": "plantuml",
+            "code": "missing_diagram_end",
+            "source_span": [
+              85,
+              85
+            ],
+            "child_span": [
+              62,
+              62
+            ]
+          }
+        ],
+        "synthetic_items": []
+      },
+      "pandoc_ast_for_prefix": {
+        "pandoc-api-version": [
+          1,
+          23,
+          1,
+          2
+        ],
+        "meta": {},
+        "blocks": [
+          {
+            "t": "Header",
+            "c": [
+              2,
+              [
+                "",
+                [],
+                []
+              ],
+              [
+                {
+                  "t": "Str",
+                  "c": "标题"
+                }
+              ]
+            ]
+          },
+          {
+            "t": "CodeBlock",
+            "c": [
+              [
+                "",
+                [
+                  "plantuml"
+                ],
+                []
+              ],
+              "@startuml\nalt OK\nA -> B: send end\nelse FAIL\nB -> A: retry\nend\n"
+            ]
+          }
+        ]
+      },
+      "plantuml_render_copy": {
+        "status": "rendered",
+        "source_body_bytes": 62,
+        "temporary_suffix": "@enduml\n",
+        "temporary_suffix_bytes": 8,
+        "svg_text_labels": [
+          "A",
+          "B",
+          "A",
+          "B",
+          "alt",
+          "[OK]",
+          "send end",
+          "[FAIL]",
+          "retry"
+        ]
+      }
+    },
+    {
+      "route": {
+        "received_end": 93,
+        "decoded_end": 93,
+        "consumed": 93,
+        "completed_line_end": 93,
+        "outer": {
+          "session": "running",
+          "first_block": {
+            "kind": "heading_2",
+            "occurrence": "heading_2@0",
+            "text_span": [
+              0,
+              6
+            ],
+            "source_span": [
+              0,
+              11
+            ]
+          },
+          "active_route": "child",
+          "open_stack": [
+            "fence"
+          ],
+          "fence": {
+            "kind": "fenced_code",
+            "opening_span": [
+              11,
+              23
+            ],
+            "info": "plantuml",
+            "body_span": [
+              23,
+              93
+            ],
+            "closing_span": null,
+            "status": "open"
+          }
+        },
+        "child": {
+          "language": "plantuml",
+          "input_state": "open",
+          "diagram_state": "body_complete",
+          "source_span": [
+            23,
+            93
+          ],
+          "received_end": 70,
+          "consumed": 70,
+          "completed_line_end": 70,
+          "outer_fence_end_not_forwarded": false,
+          "last_branch": null,
+          "open_group_stack": [],
+          "branches": [
+            "OK",
+            "FAIL"
+          ],
+          "messages": [
+            {
+              "branch": "OK",
+              "sender": "A",
+              "receiver": "B",
+              "label": "send end",
+              "source_span": [
+                40,
+                56
+              ],
+              "label_source_span": [
+                48,
+                56
+              ],
+              "line_source_span": [
+                40,
+                57
+              ]
+            },
+            {
+              "branch": "FAIL",
+              "sender": "B",
+              "receiver": "A",
+              "label": "retry",
+              "source_span": [
+                67,
+                80
+              ],
+              "label_source_span": [
+                75,
+                80
+              ],
+              "line_source_span": [
+                67,
+                81
+              ]
+            }
+          ],
+          "terminator_span": [
+            85,
+            93
+          ],
+          "final_boundary": null
+        },
+        "source_version": 10
+      },
+      "projection": {
+        "child_visualization": "diagram_confirmed",
+        "synthetic_items": [
+          {
+            "kind": "close_fence_view",
+            "owner": "fence",
+            "anchor": [
+              93,
+              93
+            ],
+            "source_span": null
+          }
+        ]
+      },
+      "route_if_eof_here": {
+        "source_version": 10,
+        "outer_session": "ended",
+        "first_block_kind": "heading_2",
+        "outer_fence_end": "natural_at_eof",
+        "child_final": "finished",
+        "child_final_boundary": "outer_eof",
+        "child_body_content": "preserve_source_body",
+        "child_visualization": "diagram_confirmed",
+        "diagnostics": [],
+        "synthetic_items": []
+      },
+      "pandoc_ast_for_prefix": {
+        "pandoc-api-version": [
+          1,
+          23,
+          1,
+          2
+        ],
+        "meta": {},
+        "blocks": [
+          {
+            "t": "Header",
+            "c": [
+              2,
+              [
+                "",
+                [],
+                []
+              ],
+              [
+                {
+                  "t": "Str",
+                  "c": "标题"
+                }
+              ]
+            ]
+          },
+          {
+            "t": "CodeBlock",
+            "c": [
+              [
+                "",
+                [
+                  "plantuml"
+                ],
+                []
+              ],
+              "@startuml\nalt OK\nA -> B: send end\nelse FAIL\nB -> A: retry\nend\n@enduml\n"
+            ]
+          }
+        ]
+      },
+      "plantuml_render_copy": {
+        "status": "rendered",
+        "source_body_bytes": 70,
+        "temporary_suffix": "",
+        "temporary_suffix_bytes": 0,
+        "svg_text_labels": [
+          "A",
+          "B",
+          "A",
+          "B",
+          "alt",
+          "[OK]",
+          "send end",
+          "[FAIL]",
+          "retry"
+        ]
+      }
+    },
+    {
+      "route": {
+        "received_end": 97,
+        "decoded_end": 97,
+        "consumed": 97,
+        "completed_line_end": 97,
+        "outer": {
+          "session": "running",
+          "first_block": {
+            "kind": "heading_2",
+            "occurrence": "heading_2@0",
+            "text_span": [
+              0,
+              6
+            ],
+            "source_span": [
+              0,
+              11
+            ]
+          },
+          "active_route": "outer",
+          "open_stack": [],
+          "fence": {
+            "kind": "fenced_code",
+            "opening_span": [
+              11,
+              23
+            ],
+            "info": "plantuml",
+            "body_span": [
+              23,
+              93
+            ],
+            "closing_span": [
+              93,
+              97
+            ],
+            "status": "explicit"
+          }
+        },
+        "child": {
+          "language": "plantuml",
+          "input_state": "finished",
+          "diagram_state": "finished",
+          "source_span": [
+            23,
+            93
+          ],
+          "received_end": 70,
+          "consumed": 70,
+          "completed_line_end": 70,
+          "outer_fence_end_not_forwarded": true,
+          "last_branch": null,
+          "open_group_stack": [],
+          "branches": [
+            "OK",
+            "FAIL"
+          ],
+          "messages": [
+            {
+              "branch": "OK",
+              "sender": "A",
+              "receiver": "B",
+              "label": "send end",
+              "source_span": [
+                40,
+                56
+              ],
+              "label_source_span": [
+                48,
+                56
+              ],
+              "line_source_span": [
+                40,
+                57
+              ]
+            },
+            {
+              "branch": "FAIL",
+              "sender": "B",
+              "receiver": "A",
+              "label": "retry",
+              "source_span": [
+                67,
+                80
+              ],
+              "label_source_span": [
+                75,
+                80
+              ],
+              "line_source_span": [
+                67,
+                81
+              ]
+            }
+          ],
+          "terminator_span": [
+            85,
+            93
+          ],
+          "final_boundary": "outer_fence"
+        },
+        "source_version": 11
+      },
+      "projection": {
+        "child_visualization": "diagram_confirmed",
+        "synthetic_items": []
+      },
+      "route_if_eof_here": {
+        "source_version": 11,
+        "outer_session": "ended",
+        "first_block_kind": "heading_2",
+        "outer_fence_end": "explicit",
+        "child_final": "finished",
+        "child_final_boundary": "outer_fence",
+        "child_body_content": "preserve_source_body",
+        "child_visualization": "diagram_confirmed",
+        "diagnostics": [],
+        "synthetic_items": []
+      },
+      "pandoc_ast_for_prefix": {
+        "pandoc-api-version": [
+          1,
+          23,
+          1,
+          2
+        ],
+        "meta": {},
+        "blocks": [
+          {
+            "t": "Header",
+            "c": [
+              2,
+              [
+                "",
+                [],
+                []
+              ],
+              [
+                {
+                  "t": "Str",
+                  "c": "标题"
+                }
+              ]
+            ]
+          },
+          {
+            "t": "CodeBlock",
+            "c": [
+              [
+                "",
+                [
+                  "plantuml"
+                ],
+                []
+              ],
+              "@startuml\nalt OK\nA -> B: send end\nelse FAIL\nB -> A: retry\nend\n@enduml"
+            ]
+          }
+        ]
+      },
+      "plantuml_render_copy": {
+        "status": "rendered",
+        "source_body_bytes": 70,
+        "temporary_suffix": "",
+        "temporary_suffix_bytes": 0,
+        "svg_text_labels": [
+          "A",
+          "B",
+          "A",
+          "B",
+          "alt",
+          "[OK]",
+          "send end",
+          "[FAIL]",
+          "retry"
+        ]
+      }
+    }
+  ],
+  "final_route": {
+    "source_version": 11,
+    "outer_session": "ended",
+    "first_block_kind": "heading_2",
+    "outer_fence_end": "explicit",
+    "child_final": "finished",
+    "child_final_boundary": "outer_fence",
+    "child_body_content": "preserve_source_body",
+    "child_visualization": "diagram_confirmed",
+    "diagnostics": [],
+    "synthetic_items": []
+  },
+  "delivery_check": {
+    "schedule_count": 98,
+    "internal_one_cut_count": 96,
+    "modes_per_schedule": [
+      "no_preview",
+      "two_preview_reads_per_block"
+    ],
+    "blocks_across_schedules": 290,
+    "repeated_mode_preview_calls": 580,
+    "route_and_eof_runs": 196
+  }
+}

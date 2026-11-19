@@ -32,3 +32,23 @@
 本轮在 macOS arm64 上使用 Python 3.12.0、lxml 6.0.2／libxml2 2.14.6、Pandoc 3.14 的 CommonMark 阅读器、PlantUML 1.2026.10 和 Tectonic 0.17.0。用包含 lxml 的解释器运行同目录的 `probe.py` 即可将 JSON 打印到标准输出；三个命令行工具应在 PATH 中。Tectonic 采用已有 LaTeX 资源缓存并输出 XDV。该机器首次尝试转 PDF 时缺少转档字体，公式语法的验收因此选择排版器直接写出的 XDV。脚本中的断言任一不符即以非零状态结束。
 
 标签识别器只实现表中用到的标签、文字及列表项规则。libxml2 用作这三个样例的独立结构对照。Markdown 的证据是批量解析器对两个文本前缀的输出；PlantUML 的证据是批量渲染独立副本所得的 SVG；LaTeX 的证据是数学环境显式结束后的编译结果。混合围栏子会话与补丁发布另见下文的补充实验。一般 Markdown 的增量失效与真实设备上的资源耗尽仍需在具体实现上验证。
+
+## 补充验证 · 混合 Markdown 与 PlantUML 的 M1 向量
+
+[M1 手标规格](../../../engineering-monographs/streaming-structured-text/vectors/mixed.json) 的原文为 97 个 UTF-8 字节，按 11 行分块。Markdown 的第一块由段落预览变为二级标题，随后打开带 `plantuml` 信息串的围栏。内层正文在原文 `[23,93)`，共 70 字节。内层以 `[85,93)` 的 `@enduml` 完成图内容，外层再以 `[93,97)` 的围栏结束行关闭子输入。围栏结束字节没有进入内层正文。[混合观测记录](mixed-observations.json) · [复跑脚本](mixed_probe.py)
+
+| 核验面 | 实际运行与观察 |
+| --- | --- |
+| Markdown 的每个前缀 | 真实 Pandoc 3.14 对 11 帧分别执行 CommonMark → JSON AST。第 1 帧为 `Para`，第 2 帧为二级 `Header`。第 3 帧起另有带 `plantuml` 类的 `CodeBlock`。第 10 帧保留内层末尾 LF，第 11 帧围栏关闭后该 AST 字符串少一个 LF。增量路由保留子来源的全部 70 字节，未用 Pandoc 的代码字符串反算原文。 |
+| 有消息的 PlantUML 副本 | 真实 PlantUML 1.2026.10 渲染第 6–11 帧。第 6–8 帧副本追加 12 字节，第 9 帧追加 8 字节，第 10–11 帧无需追加。第 6 帧 SVG 有 `[OK]` 和 `send end`。第 7 帧已出现 `[FAIL]`，还没有 `retry`。第 8 帧及以后两条消息均可见。第 3 帧没有图，第 4–5 帧只有结构骨架，本次未将这些无消息前缀交给绘图器，未由 SVG 验证其可视骨架。 |
+| 保留状态的行路由 | 探针用增量 UTF-8 解码器、未完成行缓冲及子路由状态处理输入。11 个原分块检查点分别核对块角色与发生 ID、路由、围栏和消息范围、分支栈、临时项及从该检查点独立 EOF 的结果。EOF 诊断与预览项来自探针按手标规格执行的规则。 |
+| 不同切分与多次读取 | 另跑整块、96 个内部单切点和逐字节共 98 种投喂。每种各跑从不读取预览、每块连续读取两次预览两条路径，共 196 次路由及 EOF、580 次中途读取。两次读取结果相同，读前后路由快照不变。所有终态的结构和子原文相同，源版本按实际非空块数比较。 |
+
+复跑时使用 Python 3.12、本机可调用的 Pandoc 与 PlantUML。此脚本只依赖 Python 标准库，从 TechLab 根目录可执行以下命令。默认路径要求 `engineering-monographs` 和 `TechLab` 并列检出，也可用 `--vector` 指定手标文件。
+
+```bash
+python3.12 research/streaming-structured-text/mixed_probe.py > /tmp/mixed-observations.json
+cmp research/streaming-structured-text/mixed-observations.json /tmp/mixed-observations.json
+```
+
+路由探针只实现 M1 所需的 LF、根层 Setext 标题、无缩进波浪号围栏及一个平面的时序分组。它没有覆盖一般 CommonMark 与 PlantUML 语法、真实补丁应用、取消或异步发布。切分检查只对这份输入运行路由，Pandoc 和 PlantUML 只核对上表的规定帧。记录中的 `pandoc_ast_for_prefix`、`plantuml_render_copy` 是批量工具输出，`route`、`projection`、`route_if_eof_here` 是本地探针的独立执行结果。
