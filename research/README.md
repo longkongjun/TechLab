@@ -3,6 +3,7 @@
 每个专题说明要做哪项技术决定、比较过哪些方案，以及结论适用于什么条件。资料调研给出规范、文档或源码依据；做过快速验证的专题同时链接实验输入、结果和复跑入口。
 
 - [Rust + 跨平台原生 LaTeX 内容展示](latex-native-rendering/README.md) 核对现有引擎、布局模型和绘图输出接口，记录复用范围、待补能力与许可证。
+- [Rust 原生 PlantUML 排版与渲染](plantuml-rust/README.md) 以 Omaspec 和 RaTeX 为参考项，研究解析、图布局和跨平台绘制。
 - [Android Binder 跨进程传输大数据](binder-large-data/README.md) 评估有界消息、已有文件和按需字节流的交付方式，比较首块响应、完整读取和异常回收。
 
 - [GeckoView 题目排版与离屏渲染](geckoview-offscreen-rendering/README.md)（已完结，2026-11-18）。S3 已验证同一套 Pages 排版可用于 GeckoView、系统 WebView 实时展示及独立进程逐题产图。
