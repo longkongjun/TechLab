@@ -1,0 +1,263 @@
+{
+  "scope": "Pandoc complete projections and synchronous event replay of a small publication model; no product concurrency, timing, or real resource-release measurement.",
+  "contract": "engineering-monographs/streaming-structured-text/vectors/contract.json",
+  "environment": {
+    "python": "3.12.0",
+    "machine": "arm64",
+    "pandoc": "pandoc 3.14"
+  },
+  "counts": {
+    "independent_pandoc_projections": 2,
+    "patch_attempts": 6,
+    "patches_accepted": 1,
+    "patches_rejected": 5,
+    "callback_schedules": 3,
+    "callback_attempts": 6,
+    "callbacks_accepted": 2,
+    "callbacks_rejected": 4
+  },
+  "patch_publication": {
+    "source_prefixes": [
+      "标题\n",
+      "标题\n---\n"
+    ],
+    "pandoc_projections": [
+      {
+        "session": "setext",
+        "channel": "main",
+        "r": 1,
+        "v": 1,
+        "blocks": [
+          {
+            "occurrence": "P",
+            "kind": "paragraph",
+            "text": "标题",
+            "source_span": [
+              0,
+              7
+            ],
+            "text_span": [
+              0,
+              6
+            ],
+            "underline": null
+          }
+        ],
+        "selection": [
+          0,
+          6
+        ]
+      },
+      {
+        "session": "setext",
+        "channel": "main",
+        "r": 2,
+        "v": 2,
+        "blocks": [
+          {
+            "occurrence": "H",
+            "kind": "heading_2",
+            "text": "标题",
+            "source_span": [
+              0,
+              11
+            ],
+            "text_span": [
+              0,
+              6
+            ],
+            "underline": [
+              7,
+              10
+            ]
+          }
+        ],
+        "selection": [
+          0,
+          6
+        ]
+      }
+    ],
+    "applied_view_equals_independent_full_projection": true,
+    "attempts": [
+      {
+        "id": "setext-replace",
+        "before_v": 1,
+        "base_v": 1,
+        "target_v": 2,
+        "accepted": true,
+        "v": 2,
+        "validated_operations": 1,
+        "applied_operations": 1
+      },
+      {
+        "id": "replay-same-applied-patch",
+        "before_v": 2,
+        "base_v": 1,
+        "target_v": 2,
+        "accepted": false,
+        "reason": "duplicate-target",
+        "v": 2,
+        "validated_operations": 0,
+        "applied_operations": 0
+      },
+      {
+        "id": "future-base",
+        "before_v": 1,
+        "base_v": 2,
+        "target_v": 3,
+        "accepted": false,
+        "reason": "future-base",
+        "v": 1,
+        "validated_operations": 0,
+        "applied_operations": 0
+      },
+      {
+        "id": "duplicate",
+        "before_v": 3,
+        "base_v": 2,
+        "target_v": 3,
+        "accepted": false,
+        "reason": "duplicate-target",
+        "v": 3,
+        "validated_operations": 0,
+        "applied_operations": 0
+      },
+      {
+        "id": "expired-base",
+        "before_v": 3,
+        "base_v": 1,
+        "target_v": 4,
+        "accepted": false,
+        "reason": "expired-base",
+        "v": 3,
+        "validated_operations": 0,
+        "applied_operations": 0
+      },
+      {
+        "id": "bad-second-operation",
+        "before_v": 1,
+        "base_v": 1,
+        "target_v": 2,
+        "accepted": false,
+        "reason": "unknown-or-ambiguous-occurrence",
+        "v": 1,
+        "validated_operations": 1,
+        "applied_operations": 0
+      }
+    ]
+  },
+  "callback_schedules": [
+    {
+      "id": "new-then-old",
+      "cancelled_before_callbacks": false,
+      "completions": [
+        {
+          "q": 62,
+          "r": 10,
+          "before_v": 41,
+          "after_v": 42,
+          "accepted": true,
+          "reason": null,
+          "callback_lease_released": true,
+          "before_visible_branches": [],
+          "after_visible_branches": [
+            "OK",
+            "FAIL"
+          ]
+        },
+        {
+          "q": 58,
+          "r": 6,
+          "before_v": 42,
+          "after_v": 42,
+          "accepted": false,
+          "reason": "stale-request",
+          "callback_lease_released": true,
+          "before_visible_branches": [
+            "OK",
+            "FAIL"
+          ],
+          "after_visible_branches": [
+            "OK",
+            "FAIL"
+          ]
+        }
+      ],
+      "final_v": 42,
+      "visible_branches": [
+        "OK",
+        "FAIL"
+      ],
+      "callback_leases_released": 2
+    },
+    {
+      "id": "old-then-new",
+      "cancelled_before_callbacks": false,
+      "completions": [
+        {
+          "q": 58,
+          "r": 6,
+          "before_v": 41,
+          "after_v": 41,
+          "accepted": false,
+          "reason": "stale-request",
+          "callback_lease_released": true,
+          "before_visible_branches": [],
+          "after_visible_branches": []
+        },
+        {
+          "q": 62,
+          "r": 10,
+          "before_v": 41,
+          "after_v": 42,
+          "accepted": true,
+          "reason": null,
+          "callback_lease_released": true,
+          "before_visible_branches": [],
+          "after_visible_branches": [
+            "OK",
+            "FAIL"
+          ]
+        }
+      ],
+      "final_v": 42,
+      "visible_branches": [
+        "OK",
+        "FAIL"
+      ],
+      "callback_leases_released": 2
+    },
+    {
+      "id": "cancel-then-both-complete",
+      "cancelled_before_callbacks": true,
+      "completions": [
+        {
+          "q": 62,
+          "r": 10,
+          "before_v": 41,
+          "after_v": 41,
+          "accepted": false,
+          "reason": "cancelled",
+          "callback_lease_released": true,
+          "before_visible_branches": [],
+          "after_visible_branches": []
+        },
+        {
+          "q": 58,
+          "r": 6,
+          "before_v": 41,
+          "after_v": 41,
+          "accepted": false,
+          "reason": "cancelled",
+          "callback_lease_released": true,
+          "before_visible_branches": [],
+          "after_visible_branches": []
+        }
+      ],
+      "final_v": 41,
+      "visible_branches": [],
+      "callback_leases_released": 2
+    }
+  ]
+}

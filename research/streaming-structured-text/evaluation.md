@@ -52,3 +52,16 @@ cmp research/streaming-structured-text/mixed-observations.json /tmp/mixed-observ
 ```
 
 路由探针只实现 M1 所需的 LF、根层 Setext 标题、无缩进波浪号围栏及一个平面的时序分组。它没有覆盖一般 CommonMark 与 PlantUML 语法、真实补丁应用、取消或异步发布。切分检查只对这份输入运行路由，Pandoc 和 PlantUML 只核对上表的规定帧。记录中的 `pandoc_ast_for_prefix`、`plantuml_render_copy` 是批量工具输出，`route`、`projection`、`route_if_eof_here` 是本地探针的独立执行结果。
+
+## 补充验证 · 补丁的原子性与过期回调
+
+向发布模型输入「标题」和换行，再输入 Setext 下划线行。补丁载荷来自手标向量，两帧完整块结构单独用 Pandoc 3.14 获取。从基线 `v1` 发布出的标题与第二帧的完整投影相符，文字选区仍指向原文 `[0,6)`。共执行 6 次补丁尝试，1 次成功，其余分别因基线或定位问题被拒绝。有一项把补丁的第二个目标换成无效 ID，第一项已通过验证，最终实际应用数仍是零。[输入契约](../../../engineering-monographs/streaming-structured-text/vectors/contract.json) · [逐次结果](publication-observations.json)
+
+给单一显示区先后请求 `q58` 与 `q62`，再依次回放「新版先到」「旧版先到」「取消后两版才到」。6 次回调中 2 次发布、4 次拒绝。前两条时序最后都显示 `v42` 的两个分支，取消路径保留 `v41`。探针同步重放事件，释放字段是模型的回调计数；产品线程竞态、实际资源回收和界面耗时应单独测量。[发布探针](publication_probe.py)
+
+从 TechLab 根目录运行以下命令。脚本读取并列检出的工程专论向量。逐字节对照包括结果中的 Python 与 Pandoc 版本。
+
+```bash
+python3.12 research/streaming-structured-text/publication_probe.py > /tmp/publication-observations.json
+cmp research/streaming-structured-text/publication-observations.json /tmp/publication-observations.json
+```
